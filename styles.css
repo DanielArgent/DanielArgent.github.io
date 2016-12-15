@@ -1,3 +1,8 @@
-*{
+* {
     background-color: #FFFFFF;
+}
+#head{
+    background-color: #003153;
+    color: #FFFFFF;
+    font-family: sans-serif;
 }
