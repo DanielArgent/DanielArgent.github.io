@@ -1,56 +1,55 @@
 body {
-    	font: 12pt Arial, Helvetica, sans-serif;
-    	margin: 0; 
+	font: 12pt Arial, Helvetica, sans-serif;
+	margin: 0; 
 	background-color: #ECECEC;
 }
 
 #header { 
-   	background: #632D56;
-   	padding: 10px;
+	background: #632D56;
+	padding: 10px;
 	color: #ECECEC;
-   	font-family: sans-serif;
-   	font-size: 100%;
+	font-family: sans-serif;
+	font-size: 100%;
 	cursor: url(fox.png), pointer;
-   }
+}
 
 #sidebar {
-    float: left;
-    width: 20%;
+	float: left;
+	width: 20%;
 	background: #632D56;
 	color: #ECECEC;
-    padding: 5px;
-    margin: 10px 10px 20px 5px;
+	padding: 5px;
+	margin: 10px 10px 20px 5px;
 }
 
-   #content {
-    margin: 10px 5px 20px 25%;
-    padding: 5px;
-    border: 1px solid #333;
+#content {
+	margin: 10px 5px 20px 25%;
+	padding: 5px;
+	border: 1px solid #333;
 }
 
- #footer { 
-    background: #632D56;
-    padding: 5px;
-    color: #ECECEC;
-    clear: left;
- }
+#footer { 
+	background: #632D56;
+	padding: 5px;
+	color: #ECECEC;
+	clear: left;
+}
 
 a:link {
-  color: #ECECEC; 
- text-decoration: none;
+	color: #ECECEC; 
+	text-decoration: none;
 }
 
 a:visited {
-  color: #FFFFFF;
- text-decoration: none;
+	color: #FFFFFF;
+	text-decoration: none;
 }
-
 a:hover {
-  color: #FFFFFF; 
- text-decoration: none;
+	color: #FFFFFF; 
+	text-decoration: none;
 }
 
 a:active {
-  color: #ECECEC; 
+ color: #ECECEC; 
  text-decoration: none;
 }
