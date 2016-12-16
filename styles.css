@@ -4,6 +4,10 @@ body {
 	background-color: #ECECEC;
 }
 
+#delimiter{
+	background: #ECECEC;	
+}
+
 #header { 
    	background: #632D56;
    	padding: 10px;
