@@ -1,6 +1,6 @@
 body {
 	font: 12pt Arial, Helvetica, sans-serif;
-  margin: 0; 
+ 	margin: 0; 
 	background-color: #ECECEC;
 }
 
@@ -9,27 +9,27 @@ body {
 }
 
 #header { 
-  background: #632D56;
-  padding: 10px;
+  	background: #632D56;
+  	padding: 10px;
 	color: #ECECEC;
-  font-family: sans-serif;
-  font-size: 100%;
+  	font-family: sans-serif;
+  	font-size: 100%;
 	cursor: url(fox.png), pointer;
 }
 
 @media screen and (max-width: 800px) {
-    nav {
-				display: none;
-    }
+    	nav {
+		display: none;
+    	}
 }
 
 #sidebar {
 	float: left;
-  width: 20%;
-  background: #632D56;
+  	width: 20%;
+  	background: #632D56;
 	color: #ECECEC;
-  padding: 5px;
-  margin: 10px 10px 20px 5px;
+  	padding: 5px;
+  	margin: 10px 10px 20px 5px;
 }
 
 #post{
@@ -41,16 +41,16 @@ body {
 #headpost{
 	background: #632D56;
 	color: #ECECEC;
-  font-family: sans-serif;
+  	font-family: sans-serif;
 	padding: 2px;
-  font-size: 20px;
+  	font-size: 20px;
 }
 
 #contentpost{
 	padding: 2px;
 	background: #FFFFFF;
 	color: #632D56;
-  font-family: sans-serif;
+  	font-family: sans-serif;
 }
 
 #footer { 
@@ -68,16 +68,16 @@ a:link {
 }
 
 a:visited {
-  color: #FFFFFF;
+  	color: #FFFFFF;
  	text-decoration: none;
 }
 
 a:hover {
-  color: #FFFFFF; 
+  	color: #FFFFFF; 
  	text-decoration: none;
 }
 
 a:active {
-  color: #ECECEC; 
+  	color: #ECECEC; 
  	text-decoration: none;
 }
