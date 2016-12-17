@@ -36,18 +36,13 @@ footer {
 
 @media screen and (max-width: 800px) {
     	nav {
-		display: none;
 		width: 0%;
+		margin: 0px 0px 0px 0px;
+		display: none;
     	}
 	article{
 		margin-left: 5px;
 		width: 100%;	
-	}
-	#headpost{
-		width: 100%;
-	}
-	#contentpost{
-		width: 100%;
 	}
 }
 
