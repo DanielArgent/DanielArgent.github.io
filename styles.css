@@ -41,6 +41,7 @@ footer {
 		display: none;
     	}
 	article{
+		float: left;
 		margin-left: 5px;
 		width: 100%;	
 	}
