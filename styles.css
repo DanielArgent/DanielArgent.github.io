@@ -45,6 +45,12 @@ footer {
 		margin-left: 5px;
 		width: 100%;	
 	}
+	#headpost{
+		float: left;
+	}
+	#contentpost{
+		float:left;	
+	}
 }
 
 article{
