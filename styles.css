@@ -28,6 +28,7 @@ footer {
     	background: #632D56;
    	padding: 5px;
     	color: #ECECEC;
+	clear:bottom;
 }
 
 article{
@@ -36,7 +37,7 @@ article{
 	margin-right: 5px;
 	margin-top: 10px;
 	margin-left: auto;
-	width: auto;	
+	width: 77%;	
 	border: 1px solid #632D56;
 }
 
