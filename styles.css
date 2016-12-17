@@ -40,6 +40,9 @@ footer {
 		margin: 0px 0px 0px 0px;
 		display: none;
     	}
+	footer{
+	display:none;	
+	}
 	article{
 		margin-left: 5px;
 		width: 90%;	
@@ -49,7 +52,7 @@ footer {
 article{
 	float:right;
 	margin-right: 5px;
-	margin-top: 20px;
+	margin-top: 10px;
 	margin-left: auto;
 	width: 77%;	
 	border: 1px solid #632D56;
