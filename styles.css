@@ -5,6 +5,7 @@ body {
 }
 
 header { 
+  width: 102%;
   display:block;
   padding: 0px;
   background: #2D2D30;
@@ -22,7 +23,6 @@ nav {
 
 #headimg{
   width: 100%;
-  padding: 0px;
 }
 
 /* ссылки */
