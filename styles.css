@@ -48,7 +48,9 @@ footer {
 
 article{
 	float:right;
-	margin: auto;
+	margin-right: 5px;
+	margin-top: 20px;
+	margin-left: auto;
 	width: 77%;	
 	border: 1px solid #632D56;
 }
