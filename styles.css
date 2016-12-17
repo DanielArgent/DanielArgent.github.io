@@ -50,11 +50,42 @@ a:active {
   color: #2D2D30;
 }
 
-/* Smartphones (горизонтальная) ----------- 
+
+/* Smartphones (горизонтальная) ----------- */
 @media only screen and (min-width: 321px) {
- стили 
+  nav {
+    width: 100%;
+    text-align: center;
+    background: #ECECEC;
+    padding: 5px;
+    margin-top: 10px;
+  }
+  
+  a:link {
+    text-decoration: none;
+    font: 150% Consolas; 
+    color: #2D2D30;
+  }
+
+  a:visited {
+    text-decoration: none;
+    font: 150% Consolas; 
+    color: #2D2D30;
+  } 
+
+  a:hover {
+    text-decoration: none;
+    font: 150% Consolas; 
+    color: #2D2D30;
+  }
+
+  a:active {
+    text-decoration: none;
+    font: 150% Consolas; 
+    color: #2D2D30;
+  }
 }
- 
+ /*
 Smartphones (вертикальная) ----------- 
 @media only screen and (max-width: 320px) {
   #headimg{
@@ -78,7 +109,7 @@ iPads (вертикальная и горизонтальная) -----------
 }
 */
 
-@media only screen and (min-width : 0px) and (max-width : 477px) {
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
 
   header{
     font-size: 350%;
