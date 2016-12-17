@@ -38,6 +38,13 @@ footer {
     	nav {
 		display: none;
     	}
+	#post{
+		margin: 10px 10px 20px 5px;
+		width: 100%;	
+	}
+	#headpost{
+		width: 100%;
+	}
 }
 
 #post{
