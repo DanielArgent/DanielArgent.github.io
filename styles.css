@@ -23,14 +23,6 @@ nav {
   	margin: 10px 10px 20px 5px;
 }
 
-footer { 
-	float:bottom;
-    	background: #632D56;
-   	padding: 5px;
-    	color: #ECECEC;
-	clear:bottom;
-}
-
 article{
 	display:block; 
 	float:right;
