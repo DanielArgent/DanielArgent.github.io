@@ -37,6 +37,7 @@ footer {
 @media screen and (max-width: 800px) {
     	nav {
 		display: none;
+		width: 0%;
     	}
 	article{
 		margin-left: 5px;
