@@ -14,6 +14,22 @@ header {
 	cursor: url(fox.png), pointer;
 }
 
+nav {
+	float: left;
+  	width: 20%;
+  	background: #632D56;
+	color: #ECECEC;
+  	padding: 5px;
+  	margin: 10px 10px 20px 5px;
+}
+
+footer { 
+    	background: #632D56;
+   	padding: 5px;
+    	color: #ECECEC;
+    	clear: left;
+}
+
 #delimiter{
 	background: #ECECEC;	
 }
@@ -22,15 +38,6 @@ header {
     	nav {
 		display: none;
     	}
-}
-
-nav {
-	float: left;
-  	width: 20%;
-  	background: #632D56;
-	color: #ECECEC;
-  	padding: 5px;
-  	margin: 10px 10px 20px 5px;
 }
 
 #post{
@@ -53,14 +60,6 @@ nav {
 	color: #632D56;
   	font-family: sans-serif;
 }
-
-#footer { 
-    	background: #632D56;
-   	padding: 5px;
-    	color: #ECECEC;
-    	clear: left;
-}
-
 
 /* ссылки */
 a:link {
