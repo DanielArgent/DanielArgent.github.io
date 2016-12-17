@@ -52,25 +52,25 @@ article{
 /* ссылки */
 a:link {
  	text-decoration: none;
-	font: 14pt Consolas; 
+	font: 17px Consolas; 
 	color: #ECECEC;
 }
 
 a:visited {
  	text-decoration: none;
-	font: 14pt Consolas; 
+	font: 17px Consolas; 
 	color: #ECECEC;
 }
 
 a:hover {
  	text-decoration: none;
-	font: 14pt Consolas; 
+	font: 17px Consolas; 
 	color: #ECECEC;
 }
 
 a:active {
  	text-decoration: none;
-	font: 14pt Consolas; 
+	font: 17px Consolas; 
 	color: #ECECEC;
 }
 
@@ -98,25 +98,25 @@ a:active {
 	
 	a:link {
  		text-decoration: none;
-		font: 17pt Consolas; 
+		font: 17px Consolas; 
 		color: #ECECEC;
 	}
 
 	a:visited {
  		text-decoration: none;
-		font: 17pt Consolas; 
+		font: 17px Consolas; 
 		color: #ECECEC;
 	}	
 
 	a:hover {
  		text-decoration: none;
-		font: 17pt Consolas; 
+		font: 17px Consolas; 
 		color: #ECECEC;
 	}
 
 	a:active {
  		text-decoration: none;
-		font: 17pt Consolas; 
+		font: 17px Consolas; 
 		color: #ECECEC;
 	}
 }
