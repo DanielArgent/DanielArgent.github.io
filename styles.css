@@ -63,24 +63,24 @@ article{
 /* ссылки */
 a:link {
  	text-decoration: none;
-	font: 15pt Consolas; 
+	font: 14pt Consolas; 
 	color: #ECECEC;
 }
 
 a:visited {
  	text-decoration: none;
-	font: 15pt Consolas; 
+	font: 14pt Consolas; 
 	color: #ECECEC;
 }
 
 a:hover {
  	text-decoration: none;
-	font: 15pt Consolas; 
+	font: 14pt Consolas; 
 	color: #ECECEC;
 }
 
 a:active {
  	text-decoration: none;
-	font: 15pt Consolas; 
+	font: 14pt Consolas; 
 	color: #ECECEC;
 }
