@@ -33,9 +33,9 @@ article{
 
 @media screen and (max-width: 1100px) {
     	nav {
-		width: 0%;
+		/*width: 0%;
 		padding:0px;
-		margin: 0px 0px 0px 0px;
+		margin: 0px 0px 0px 0px;*/
 		display: none;
     	}
 	
@@ -49,7 +49,7 @@ article{
 }
 
 #headpost{
-	font: 20pt Consolas; 
+	font: 15pt Consolas; 
 	background: #632D56;
 	color: #ECECEC;
 	padding: 2px;
@@ -66,19 +66,23 @@ article{
 a:link {
 	color: #ECECEC; 
  	text-decoration: none;
+	font: 15pt Consolas; 
 }
 
 a:visited {
-  	color: #FFFFFF;
+	color: #ECECEC; 
  	text-decoration: none;
+	font: 15pt Consolas; 
 }
 
 a:hover {
-  	color: #FFFFFF; 
+	color: #ECECEC; 
  	text-decoration: none;
+	font: 15pt Consolas; 
 }
 
 a:active {
-  	color: #ECECEC; 
+	color: #ECECEC; 
  	text-decoration: none;
+	font: 15pt Consolas; 
 }
