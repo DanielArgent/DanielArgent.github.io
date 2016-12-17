@@ -96,7 +96,27 @@ a:active {
 		width: 98%;	
 	}
 	
-	a{
-		font-size: 35px;	
+		a:link {
+ 		text-decoration: none;
+		font: 40px Consolas; 
+		color: #ECECEC;
+	}
+
+	a:visited {
+ 		text-decoration: none;
+		font: 40px Consolas; 
+		color: #ECECEC;
+	}	
+
+	a:hover {
+ 		text-decoration: none;
+		font: 40px Consolas; 
+		color: #ECECEC;
+	}
+
+	a:active {
+ 		text-decoration: none;
+		font: 40px Consolas; 
+		color: #ECECEC;
 	}
 }
