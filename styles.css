@@ -1,16 +1,15 @@
 body {
-	font: 12pt Consolas, sans-serif; 
 	margin:0px;
 	background-color: #ECECEC;
+	font: 12pt Consolas, sans-serif; 
 }
 
 header { 
-	display:block; 
+	padding: 20px;
   	background: #632D56;
-  	padding: 20px;
 	color: #ECECEC;
+	font-size: 200%;
   	font-family: Consolas, sans-serif;
-  	font-size: 200%;
 	cursor: url(fox.png), default;
 }
 
@@ -24,7 +23,6 @@ nav {
 }
 
 article{
-	display:block; 
 	float:right;
 	margin-right: 5px;
 	margin-top: 10px;
@@ -51,18 +49,17 @@ article{
 }
 
 #headpost{
+	font: 20pt Consolas; 
 	background: #632D56;
 	color: #ECECEC;
-  	font-family: sans-serif;
 	padding: 2px;
-  	font-size: 20px;
 }
 
 #contentpost{
 	padding: 2px;
 	background: #FFFFFF;
 	color: #632D56;
-  	font-family: sans-serif;
+  	font: 12pt Consolas; 
 }
 
 /* ссылки */
