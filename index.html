@@ -1,64 +1,28 @@
 <!DOCTYPE html>
+<!-- Тут главная страница -->
 <html>
 	<head>
 		<meta charset="utf-8">
   		<title>Язык программирования Klischee</title>
 		<link rel="stylesheet" href="styles.css">
+		<!-- Для старых браузеров ради совместимости с HTML5 -->
 		<!--[if lt IE 9]>
   			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   		<![endif]-->
 	</head>
+
  	<body>
+ 		<!--Шапка сайта-->
 		<header>
-			<div> KLISCHEE </div>
+			<img id="headimg" src="header.png">
 		</header>
+
   		<nav>
-			<p>
-				<a href="index.html" title = "Вернуться на главную страницу.">На главную</a>
-			</p>
-			<hr>
-			<p>
-				<a href="load.html" title = "Скачать интерпретатор Klischee.">Скачать</a>
-			</p>
-			<hr>
-    			<p>
-				<a href="documentation.html" title = "Узнать о Klischee больше.">Справочник</a>
-			</p>
+			<a href="index.html" title = "Вернуться на главную страницу.">На главную</a>
+			<a href="index.html" title = "Вернуться на главную страницу.">|</a>
+			<a href="load.html" title = "Скачать интерпретатор Klischee.">Скачать</a>
+			<a href="index.html" title = "Вернуться на главную страницу.">|</a>
+			<a href="documentation.html" title = "Узнать о Klischee больше.">Справочник</a>
   		</nav>
-		
-		<article>
-			<div id = "headpost">
-				Что нового?
-			</div>
-			<div id = "contentpost">
-				+ Командная строка CKI
-				<br>
-				- mutable - функции
-				<br>
-				+ Срезы массивов
-				<br>
-				+ Чтение вида a = read
-				<br>
-				+ program - поля
-				<br>
-				+ Работа с файлами
-				<br>
-				+ Конструкция switch-case-default
-				<br>
-				+ Кострукция try-catch-finally
-				<br>
-				+ Реверс теперь по !
-				<br>
-				+ Конвертация строк в числа унарным плюсом и унарным минусом
-				<br>
-				+ Генерация массивов в виде x to y step z
-				<br>
-				+ Цикл foreach заменён циклом for-in
-				<br>
-				+ Рефакторинг
-				<br>
-				+ Числовые литералы различного основания 2x01010101010100110010
-			</div>
-		</article> 
  	</body>
 </html>
