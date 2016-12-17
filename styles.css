@@ -24,6 +24,7 @@ nav {
 }
 
 footer { 
+	float:bottom;
     	background: #632D56;
    	padding: 5px;
     	color: #ECECEC;
@@ -47,10 +48,6 @@ article{
 		margin: 0px 0px 0px 0px;
 		display: none;
     	}
-	
-	footer{
-		display:none;	
-	}
 	
 	article{
 		display:block; 
