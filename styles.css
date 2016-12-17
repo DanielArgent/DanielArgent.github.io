@@ -30,6 +30,16 @@ footer {
     	clear: left;
 }
 
+article{
+	display:block; 
+	float:right;
+	margin-right: 5px;
+	margin-top: 10px;
+	margin-left: auto;
+	width: 77%;	
+	border: 1px solid #632D56;
+}
+
 @media screen and (max-width: 800px) {
     	nav {
 		width: 0%;
@@ -48,16 +58,6 @@ footer {
 		margin-left: 5px;
 		width: 90%;	
 	}
-}
-
-article{
-	display:block; 
-	float:right;
-	margin-right: 5px;
-	margin-top: 10px;
-	margin-left: auto;
-	width: 77%;	
-	border: 1px solid #632D56;
 }
 
 #headpost{
