@@ -8,10 +8,10 @@ body {
 	background: #ECECEC;	
 }
 
-#header { 
+header { 
   	background: #632D56;
   	padding: 10px;
-	color: #FFFFFF;
+	color: #ECECEC;
   	font-family: 'Oswald', sans-serif;;
   	font-size: 150%;
 	cursor: url(fox.png), pointer;
