@@ -51,6 +51,8 @@ article header {
   background-color: #ECECEC;
   /* Устанавливаем шрифт */
   font: 150% Cabin; 
+  
+  cursor: default;
 }
 
 /* Контент постов */
