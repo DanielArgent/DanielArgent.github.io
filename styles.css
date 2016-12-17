@@ -1,56 +1,115 @@
-body {
-  margin:0px;
-  background-color: #ECECEC;
-  font: 100% Cabin; 
+/* Тут мы загружаем свой шрифт */
+@font-face {
+  /* Гарнитура шрифта */
+  font-family: Cabin;
+  /* Путь к файлу со шрифтом */
+  src: url(comfortaa.ttf);
 }
 
+/* Применяется для всех body */
+body {
+  /* Убираем отступы от края HTML */
+  margin: 0px;
+  /* Устанавливаем общий шрифт для всей страницы */
+  font: 100% Cabin;
+  background-color: #ECECEC;
+}
+
+/* Шапки сайта и постов */
 header { 
-  background-color: #2D2D30;
+  /* Не знаю почему, на при значении 100% справа появляется белая полоса */
   width: 102%;
   display: block;
-  padding-right: 0px;
   cursor: url(fox.png), default;
+  background-color: #2D2D30;
 }
 
-@font-face {
-    font-family: Cabin; /* Гарнитура шрифта */
-    src: url(comfortaa.ttf); /* Путь к файлу со шрифтом */
-   }
-
+/* Меню */
 nav {
+  /* На всю ширину окна */
   width: 100%;
+  /* Отступ от шапки */
+  margin-top: 20px;
   display: block;
+  /* Выравниваем по центру */
   text-align: center;
-  background: #ECECEC;
-  padding: 10px;
-  margin-top: 10px;
 }
 
-.rigth{
-  float:right;
-  margin-left: auto;
-}
-
-article{
+/* Пост */
+article {
+  /* По умолчанию - выравниваем по левому краю */
   float: left;
+  /* Ширина поста */
   width: 40%;
+  /* Отступы */
   margin: 5%;
 }
 
+/* Шапки постов */
 article header {
+  /* Изменяем цвет фона (перекрываем свойство обычного header) */
   background-color: #ECECEC;
+  /* Устанавливаем шрифт */
   font: 150% Cabin; 
 }
 
+/* Контент постов */
 article body {
-   margin-left: 1px;
+  /* Перекрываем свойство основного body */
+  margin-left: 1px;
 }
 
-#headimg {
-  width: 100%;
+/* Для правых постов */
+.rigth {
+  /* Выравниваем по правому краю */
+  float:right;
+  /* Задаём автоматический отступ */
+  margin-left: auto;
 }
 
+/* Секция подсветки синтаксиса для кода Klischee */
+
+/* Операторы */
+.operator{
+  /* Выделяем жирным */
+  font-weight: bolder;
+  color: #E61647;
+}
+
+/* Типы данных */
+.type{
+  /* Выделяем жирным */
+  font-weight: bolder;
+  color: #A09AF5;
+}
+/* Строки */
+.string{
+  color: #F57E3D;
+}
+
+/* Комментарии */
+.comment{
+  color: #686868;
+}
+
+/* Функции */
+.function{
+  /* Выделяем жирным */
+  font-weight: bolder;
+  color: #B55AC0;
+}
+/* Операторы прыжков */
+.jumps{
+  /* Выделяем жирным */
+  font-weight: bolder;
+  color: #E61647;
+}
+
+/* Конец секции подсветки кода */
+
+/* Фенотип ссылок */
 a:link {
+  /* Убираем подчёркивание */
   text-decoration: none;
   font: 150% Cabin; 
   color: #2D2D30;
@@ -74,37 +133,47 @@ a:active {
   color: #2D2D30;
 }
 
-/*Smartphones (вертикальная) ----------- */
+/* ID картинки главной шапки */
+#headimg {
+  /* По всей ширине хедера */
+  width: 100%;
+}
+
+#nl{
+  display: none;
+}
+
+/* Медиа-эапрос для вертикальной ориентации смартфонов */
 @media only screen and (max-width: 320px) {
-  nav {
-    width: 100%;
-    text-align: center;
-    background: #ECECEC;
-    padding: 5px;
-    margin-top: 10px;
+  #delimiter{
+    display: none;
+  }
+
+  #nl{
+    display: block;
   }
   
   a:link {
     text-decoration: none;
-    font: 150% Cabin; 
+    font: 200% Cabin; 
     color: #2D2D30;
   }
 
   a:visited {
     text-decoration: none;
-    font: 150% Cabin; 
+    font: 200% Cabin; 
     color: #2D2D30;
   } 
 
   a:hover {
     text-decoration: none;
-    font: 150% Cabin; 
+    font: 200% Cabin; 
     color: #2D2D30;
   }
 
   a:active {
     text-decoration: none;
-    font: 150% Cabin; 
+    font: 200% Cabin; 
     color: #2D2D30;
   }
 }
