@@ -74,7 +74,14 @@ a:active {
 	color: #ECECEC;
 }
 
-@media screen and (max-width: 1000px) {
+#smallmenu{
+	display:none;	
+}
+
+@media screen and (max-width: 1100px) {
+	#smallmenu{
+		display:block;
+	}
     	nav {
 		width: 0%;
 		padding:0px;
