@@ -11,7 +11,7 @@ body {
 #header { 
   	background: #632D56;
   	padding: 10px;
-	color: #ECECEC;
+	color: #FFFFFF;
   	font-family: 'Oswald', sans-serif;;
   	font-size: 150%;
 	cursor: url(fox.png), pointer;
@@ -54,10 +54,10 @@ body {
 }
 
 #footer { 
-    background: #632D56;
-    padding: 5px;
-    color: #ECECEC;
-    clear: left;
+    	background: #632D56;
+   	padding: 5px;
+    	color: #ECECEC;
+    	clear: left;
 }
 
 
