@@ -11,7 +11,7 @@ header {
 	color: #ECECEC;
   	font-family: Consolas, sans-serif;
   	font-size: 200%;
-	cursor: url(fox.png), pointer;
+	cursor: url(fox.png), default;
 }
 
 nav {
