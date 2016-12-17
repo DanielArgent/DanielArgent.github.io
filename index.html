@@ -12,19 +12,25 @@
 	</head>
 
  	<body>
- 		<!--Шапка сайта-->
+ 		<!-- Шапка сайта -->
 		<header>
 			<img id="headimg" src="header.png">
 		</header>
-
+		<!-- Менюшка -->
   		<nav>
 			<a href="index.html" title = "Вернуться на главную страницу.">На главную</a>
-			<a href="index.html">|</a>
+			<a id = "delimiter"href="index.html">|</a>
+			<a id = "nl"href="index.html"><br></a>
 			<a href="load.html" title = "Скачать интерпретатор Klischee.">Скачать</a>
-			<a href="index.html">|</a>
+			<a id = "delimiter" href="index.html">|</a>
+			<a id = "nl" href="index.html"><br></a>
 			<a href="documentation.html" title = "Узнать о Klischee больше.">Справочник</a>
   		</nav>
 
+  		<!-- Дальше идёт секция постов -->
+  		<!-- Пост находится в тегах article -->
+  		<!-- У поста есть заголовок - header и контент - body -->
+  		<!-- Посты бывают правые и левые. У правых имеется класс rigth -->
   		<article>
   			<header>
   			  	Что такое Klischee?<hr>
@@ -34,21 +40,33 @@
   			</body>
   		</article>
 
-  		<!--<article class="rigth">
+  		<article class="rigth">
   			<header>
   			  	Почему стоит начать с него?<hr>
   			</header>
   			<div>
   				Klischee - динамический язык программирования, позволяющий упростить обучение программированию, а также написание простых скриптов.
   			</div>
-  		</article>-->
+  		</article>
 
-  		<article class="rigth">
+  		<article>
   			<header>
   			  	В чём преимущества Klischee по сравнению с другими языками?<hr>
   			</header>
   			<body>
-  				404
+  				ТЫ ШТО, ЕБАНУТЫЙ ШТОЛЕ?
+  			</body>
+  		</article>
+
+  		  <article class="rigth">
+  			<header>
+  			  	Пример кода<hr>
+  			</header>
+  			<body>
+  				<span class="operator">using </span>console<br><br>
+  				a = <span class="string">"Hello, wolrd!!!"</span><br>
+  				<span class="operator">println </span>a<br>	
+  				<span class="operator">read null</span>
   			</body>
   		</article>
  	</body>
