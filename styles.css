@@ -1,5 +1,6 @@
 body {
 	font: 12pt Arial, Helvetica, sans-serif; 
+	margin:0px;
 	background-color: #ECECEC;
 }
 
@@ -32,12 +33,15 @@ footer {
 @media screen and (max-width: 800px) {
     	nav {
 		width: 0%;
+		padding:0px;
 		margin: 0px 0px 0px 0px;
 		display: none;
     	}
+	
 	footer{
-	display:none;	
+		display:none;	
 	}
+	
 	article{
 		float:left;
 		margin-left: 5px;
