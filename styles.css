@@ -43,7 +43,13 @@ footer {
 		width: 100%;	
 	}
 	#headpost{
-		width: 100%;
+		padding: 2px;
+		width: 99%;
+		margin: 10px 10px 20px 5px;
+	}
+	#contentpost{
+		padding: 2px;
+		width: 99%;
 	}
 }
 
