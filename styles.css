@@ -1,116 +1,78 @@
-/* Тут мы загружаем свой шрифт */
 @font-face {
-  /* Гарнитура шрифта */
   font-family: Cabin;
-  /* Путь к файлу со шрифтом */
   src: url(comfortaa.ttf);
 }
 
-/* Применяется для всех body */
 body {
-  /* Убираем отступы от края HTML */
   margin: 0px;
-  /* Устанавливаем общий шрифт для всей страницы */
   font: 100% Cabin;
   background-color: #ECECEC;
 }
 
-/* Шапки сайта и постов */
 header { 
-  /* Не знаю почему, на при значении 100% справа появляется белая полоса */
   width: 102%;
   display: block;
   cursor: url(fox.png), default;
   background-color: #2D2D30;
 }
 
-/* Меню */
 nav {
-  /* На всю ширину окна */
   width: 100%;
-  /* Отступ от шапки */
   margin-top: 20px;
   display: block;
-  /* Выравниваем по центру */
   text-align: center;
 }
 
-/* Пост */
 article {
-  /* По умолчанию - выравниваем по левому краю */
   float: left;
-  /* Ширина поста */
   width: 40%;
-  /* Отступы */
   margin: 5%;
 }
 
-/* Шапки постов */
 article header {
-  /* Изменяем цвет фона (перекрываем свойство обычного header) */
   background-color: #ECECEC;
-  /* Устанавливаем шрифт */
   font: 150% Cabin; 
   cursor: default;
 }
 
-/* Контент постов */
 article body {
-  /* Перекрываем свойство основного body */
   margin-left: 1px;
 }
 
-/* Для правых постов */
 .rigth {
-  /* Выравниваем по правому краю */
   float:right;
-  /* Задаём автоматический отступ */
   margin-left: auto;
 }
 
-/* Секция подсветки синтаксиса для кода Klischee */
-
-/* Операторы */
 .operator{
-  /* Выделяем жирным */
   font-weight: bolder;
   color: #E61647;
 }
 
-/* Типы данных */
 .type{
-  /* Выделяем жирным */
   font-weight: bolder;
   color: #A09AF5;
 }
-/* Строки */
+
 .string{
   color: #F57E3D;
 }
 
-/* Комментарии */
 .comment{
   color: #686868;
 }
 
-/* Функции */
 .function{
-  /* Выделяем жирным */
   font-weight: bolder;
   color: #B55AC0;
 }
-/* Операторы прыжков */
+
 .jumps{
-  /* Выделяем жирным */
   font-weight: bolder;
   color: #E61647;
 }
 
-/* Конец секции подсветки кода */
-
-/* Фенотип ссылок */
 a:link {
-  /* Убираем подчёркивание */
   text-decoration: none;
   font: 150% Cabin; 
   color: #2D2D30;
@@ -134,9 +96,7 @@ a:active {
   color: #2D2D30;
 }
 
-/* ID картинки главной шапки */
 #headimg {
-  /* По всей ширине хедера */
   width: 100%;
 }
 
@@ -158,10 +118,12 @@ a:active {
   cursor: pointer;
   padding: 10px 30px;
 }
+
 .loadButton:hover {
   background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
   background-color:#e9e9e9;
 }
+
 .loadButton:active {
   position:relative;
   top:1px;
