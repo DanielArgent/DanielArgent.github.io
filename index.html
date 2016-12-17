@@ -8,18 +8,13 @@
   			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   		<![endif]-->
 		<?php
-			function setheight(){
-  				var clientWidth = document.body.clientWidth;
-  				$('#post').width(clientWidth);
+			function setMargin() {
+   	 			$('#post').css({
+        				margin: 10px 10px 20px 5px;
+    				});
 			}
 
-			$(document).ready(function() {
-   				function setheight();
-			});
-
-			$(window).resize(function(){
-   				function setheight();
-			});
+			$(window).resize( setMargin );
 		?>
 	</head>
  	<body>
