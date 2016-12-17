@@ -9,12 +9,14 @@
   		<![endif]-->
 		<?php
 			function setheight(){
-  				var clientHeight = document.body.clientHeight;
-  				$('.hei').height(clientHeight);
+  				var clientWidth = document.body.clientWidth;
+  				$('#post').width(clientWidth);
 			}
+
 			$(document).ready(function() {
    				function setheight();
 			});
+
 			$(window).resize(function(){
    				function setheight();
 			});
