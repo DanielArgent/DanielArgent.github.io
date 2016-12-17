@@ -95,4 +95,28 @@ a:active {
 		margin-right: 1%;
 		width: 98%;	
 	}
+	
+	a:link {
+ 		text-decoration: none;
+		font: 17pt Consolas; 
+		color: #ECECEC;
+	}
+
+	a:visited {
+ 		text-decoration: none;
+		font: 17pt Consolas; 
+		color: #ECECEC;
+	}	
+
+	a:hover {
+ 		text-decoration: none;
+		font: 17pt Consolas; 
+		color: #ECECEC;
+	}
+
+	a:active {
+ 		text-decoration: none;
+		font: 17pt Consolas; 
+		color: #ECECEC;
+	}
 }
