@@ -31,25 +31,8 @@ article{
 	margin-right: 1%;
 	margin-top: 10px;
 	margin-left: 1%;
-	width: 60%;	
+	width: 72%;	
 	border: 1px solid #632D56;
-}
-
-@media screen and (max-width: 1100px) {
-    	nav {
-		width: 0%;
-		padding:0px;
-		margin: 0px 0px 0px 0px;
-		display:none;
-    	}
-	
-	article{
-		display:block;
-		float:left;
-		margin-left: 1%;
-		margin-right: 1%;
-		width: 98%;	
-	}
 }
 
 #headpost{
@@ -89,4 +72,21 @@ a:active {
  	text-decoration: none;
 	font: 14pt Consolas; 
 	color: #ECECEC;
+}
+
+@media screen and (max-width: 1100px) {
+    	nav {
+		width: 0%;
+		padding:0px;
+		margin: 0px 0px 0px 0px;
+		display:none;
+    	}
+	
+	article{
+		display:block;
+		float:left;
+		margin-left: 1%;
+		margin-right: 1%;
+		width: 98%;	
+	}
 }
