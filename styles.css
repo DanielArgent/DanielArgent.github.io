@@ -47,7 +47,8 @@ footer {
 }
 
 article{
-	margin: 10px 10px 20px 22%;
+	float:right;
+	margin: auto;
 	width: 77%;	
 	border: 1px solid #632D56;
 }
