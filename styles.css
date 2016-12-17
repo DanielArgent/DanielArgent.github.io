@@ -4,11 +4,8 @@ body {
 	background-color: #ECECEC;
 }
 
-#delimiter{
-	background: #ECECEC;	
-}
-
 header { 
+	display:block; 
   	background: #632D56;
   	padding: 10px;
 	color: #ECECEC;
@@ -17,13 +14,17 @@ header {
 	cursor: url(fox.png), pointer;
 }
 
+#delimiter{
+	background: #ECECEC;	
+}
+
 @media screen and (max-width: 800px) {
     	nav {
 		display: none;
     	}
 }
 
-#sidebar {
+nav {
 	float: left;
   	width: 20%;
   	background: #632D56;
