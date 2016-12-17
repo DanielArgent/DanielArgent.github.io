@@ -45,7 +45,8 @@ article{
 		display:block; 
 		float:left;
 		margin-left: 5px;
-		width: 98%;	
+		margin-right: 5px;
+		width: auto;	
 	}
 }
 
