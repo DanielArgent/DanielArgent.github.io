@@ -1,122 +1,119 @@
 body {
-	margin:0px;
-	background-color: #ECECEC;
-	font: 12pt Consolas, sans-serif; 
+  margin:0px;
+  background-color: #ECECEC;
+  font: 12pt Consolas, sans-serif; 
 }
 
 header { 
-	display:block;
-	padding: 20px;
-  	background: #632D56;
-	color: #ECECEC;
-	font-size: 250%;
-  	font-family: Consolas, sans-serif;
-	cursor: url(fox.png), default;
+  display:block;
+  padding: 0px;
+  background: #2D2D30;
+  cursor: url(fox.png), default;
 }
 
 nav {
-	display:block;
-	float: left;
-  	width: 20%;
-  	background: #632D56;
-  	padding: 5px;
-	margin-left: 1%;
-	margin-right: 0%;
-	margin-top: 10px;
+  width: 100%;
+  display: block;
+  text-align: center;
+  background: #ECECEC;
+  padding: 5px;
+  margin-top: 10px;
 }
 
-article{
-	display:block;
-	float:right;
-	margin-right: 1%;
-	margin-top: 10px;
-	margin-left: 1%;
-	width: 75%;	
-	border: 1px solid #632D56;
-}
-
-#headpost{
-	font: 14pt Consolas; 
-	background: #632D56;
-	color: #ECECEC;
-	padding: 2px;
-}
-
-#contentpost{
-	padding: 2px;
-	background: #FFFFFF;
-	color: #632D56;
-  	font: 12pt Consolas; 
+#headimg{
+  width: 100%;
+  padding: 0px;
 }
 
 /* ссылки */
 a:link {
- 	text-decoration: none;
-	font: 17px Consolas; 
-	color: #ECECEC;
+  text-decoration: none;
+  font: 150% Consolas; 
+  color: #2D2D30;
 }
 
 a:visited {
- 	text-decoration: none;
-	font: 17px Consolas; 
-	color: #ECECEC;
+  text-decoration: none;
+  font: 150% Consolas; 
+  color: #2D2D30;
 }
 
 a:hover {
- 	text-decoration: none;
-	font: 17px Consolas; 
-	color: #ECECEC;
+  text-decoration: none;
+  font: 150% Consolas; 
+  color: #2D2D30;
 }
 
 a:active {
- 	text-decoration: none;
-	font: 17px Consolas; 
-	color: #ECECEC;
+  text-decoration: none;
+  font: 150% Consolas; 
+  color: #2D2D30;
 }
 
-@media only screen and (min-width : 0px) and (max-width : 1000px) {
-	header{
-		font-size: 350%;
-	}
-	
-	nav {
-		font-size: 1%;
-		margin-left: 1%;
-		margin-right: 1%;
-		float: top;
-		width: 97%;
-		text-align:center;
-    	}
-	
-	article{
-		display:block;
-		float:left;
-		margin-left: 1%;
-		margin-right: 1%;
-		width: 98%;	
-	}
-	
-		a:link {
- 		text-decoration: none;
-		font: 40px Consolas; 
-		color: #ECECEC;
-	}
+/* Smartphones (горизонтальная) ----------- 
+@media only screen and (min-width: 321px) {
+ стили 
+}
+ 
+Smartphones (вертикальная) ----------- 
+@media only screen and (max-width: 320px) {
+  #headimg{
+    display: none;
+  }
+}
+ 
+iPads (вертикальная и горизонтальная) ----------- 
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+ стили 
+}
+ 
+ Настольные компьютеры и ноутбуки ----------- 
+@media only screen  and (min-width: 1224px) {
+стили 
+}
+ 
+ Большие экраны ----------- 
+@media only screen  and (min-width: 1824px) {
+ стили 
+}
+*/
 
-	a:visited {
- 		text-decoration: none;
-		font: 40px Consolas; 
-		color: #ECECEC;
-	}	
+@media only screen and (min-width : 0px) and (max-width : 477px) {
 
-	a:hover {
- 		text-decoration: none;
-		font: 40px Consolas; 
-		color: #ECECEC;
-	}
+  header{
+    font-size: 350%;
+  }
+  
+  nav {
+    width: 100%;
+    display: block;
+    text-align: center;
+    background: #ECECEC;
+    padding: 5px;
+    margin-top: 10px;
+  }
+  
+    a:link {
+  text-decoration: none;
+  font: 100% Consolas; 
+  color: #2D2D30;
+  }
 
-	a:active {
- 		text-decoration: none;
-		font: 40px Consolas; 
-		color: #ECECEC;
-	}
+  a:visited {
+  text-decoration: none;
+  font: 100% Consolas; 
+  color: #2D2D30;
+  } 
+
+  a:hover {
+  text-decoration: none;
+  font: 100% Consolas; 
+  color: #2D2D30;
+  }
+
+  a:active {
+  text-decoration: none;
+  font: 100% Consolas; 
+  color: #2D2D30;
+  }
 }
