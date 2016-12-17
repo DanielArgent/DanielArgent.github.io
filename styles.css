@@ -43,6 +43,7 @@ footer {
 	}
 	
 	article{
+		display:block; 
 		float:left;
 		margin-left: 5px;
 		width: 90%;	
@@ -50,6 +51,7 @@ footer {
 }
 
 article{
+	display:block; 
 	float:right;
 	margin-right: 5px;
 	margin-top: 10px;
