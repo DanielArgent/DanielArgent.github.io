@@ -38,7 +38,7 @@ footer {
     	nav {
 		display: none;
     	}
-	#post{
+	article{
 		margin: 10px 10px 20px 5px;
 		width: 100%;	
 	}
@@ -52,7 +52,7 @@ footer {
 	}
 }
 
-#post{
+article{
 	margin: 10px 10px 20px 22%;
 	width: 77%;	
 	border: 1px solid #632D56;
