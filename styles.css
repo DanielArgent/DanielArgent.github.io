@@ -1,58 +1,81 @@
 body {
   margin:0px;
   background-color: #ECECEC;
-  font: 12pt Consolas, sans-serif; 
+  font: 100% Cabin; 
 }
 
 header { 
+  background-color: #2D2D30;
   width: 102%;
-  display:block;
-  padding: 0px;
-  background: #2D2D30;
+  display: block;
+  padding-right: 0px;
   cursor: url(fox.png), default;
 }
+
+@font-face {
+    font-family: Cabin; /* Гарнитура шрифта */
+    src: url(comfortaa.ttf); /* Путь к файлу со шрифтом */
+   }
 
 nav {
   width: 100%;
   display: block;
   text-align: center;
   background: #ECECEC;
-  padding: 5px;
+  padding: 10px;
   margin-top: 10px;
 }
 
-#headimg{
+.rigth{
+  float:right;
+  margin-left: auto;
+}
+
+article{
+  float: left;
+  width: 40%;
+  margin: 5%;
+}
+
+article header {
+  background-color: #ECECEC;
+  font: 150% Cabin; 
+}
+
+article body {
+   margin-left: 1px;
+}
+
+#headimg {
   width: 100%;
 }
 
-/* ссылки */
 a:link {
   text-decoration: none;
-  font: 150% Consolas; 
+  font: 150% Cabin; 
   color: #2D2D30;
 }
 
 a:visited {
   text-decoration: none;
-  font: 150% Consolas; 
+  font: 150% Cabin; 
   color: #2D2D30;
 }
 
 a:hover {
   text-decoration: none;
-  font: 150% Consolas; 
+  font: 150% Cabin; 
   color: #2D2D30;
 }
 
 a:active {
   text-decoration: none;
-  font: 150% Consolas; 
+  font: 150% Cabin; 
   color: #2D2D30;
 }
 
-
-/* Smartphones (горизонтальная) ----------- */
-@media only screen and (min-width: 321px) {
+/*Smartphones (вертикальная) ----------- */
+@media only screen and (max-width: 320px) {
   nav {
     width: 100%;
     text-align: center;
@@ -63,88 +86,25 @@ a:active {
   
   a:link {
     text-decoration: none;
-    font: 150% Consolas; 
+    font: 150% Cabin; 
     color: #2D2D30;
   }
 
   a:visited {
     text-decoration: none;
-    font: 150% Consolas; 
+    font: 150% Cabin; 
     color: #2D2D30;
   } 
 
   a:hover {
     text-decoration: none;
-    font: 150% Consolas; 
+    font: 150% Cabin; 
     color: #2D2D30;
   }
 
   a:active {
     text-decoration: none;
-    font: 150% Consolas; 
+    font: 150% Cabin; 
     color: #2D2D30;
-  }
-}
- /*
-Smartphones (вертикальная) ----------- 
-@media only screen and (max-width: 320px) {
-  #headimg{
-    display: none;
-  }
-}
- 
-iPads (вертикальная и горизонтальная) ----------- 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
- стили 
-}
- 
- Настольные компьютеры и ноутбуки ----------- 
-@media only screen  and (min-width: 1224px) {
-стили 
-}
- 
- Большие экраны ----------- 
-@media only screen  and (min-width: 1824px) {
- стили 
-}
-*/
-
-@media only screen and (min-width : 768px) and (max-width : 1024px) {
-
-  header{
-    font-size: 350%;
-  }
-  
-  nav {
-    width: 100%;
-    display: block;
-    text-align: center;
-    background: #ECECEC;
-    padding: 5px;
-    margin-top: 10px;
-  }
-  
-    a:link {
-  text-decoration: none;
-  font: 100% Consolas; 
-  color: #2D2D30;
-  }
-
-  a:visited {
-  text-decoration: none;
-  font: 100% Consolas; 
-  color: #2D2D30;
-  } 
-
-  a:hover {
-  text-decoration: none;
-  font: 100% Consolas; 
-  color: #2D2D30;
-  }
-
-  a:active {
-  text-decoration: none;
-  font: 100% Consolas; 
-  color: #2D2D30;
   }
 }
