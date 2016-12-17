@@ -37,7 +37,7 @@ article{
 	margin-right: 5px;
 	margin-top: 10px;
 	margin-left: auto;
-	width: 77%;	
+	width: auto;	
 	border: 1px solid #632D56;
 }
 
@@ -53,7 +53,7 @@ article{
 		display:block; 
 		float:left;
 		margin-left: 5px;
-		width: 100%;	
+		width: 99%;	
 	}
 }
 
