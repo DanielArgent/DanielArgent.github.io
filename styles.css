@@ -19,8 +19,6 @@ nav {
 	float: left;
   	width: 20%;
   	background: #632D56;
-	font: 15pt Consolas; 
-	color: #ECECEC;
   	padding: 5px;
   	margin: 10px 10px 20px 5px;
 }
@@ -69,16 +67,24 @@ article{
 /* ссылки */
 a:link {
  	text-decoration: none;
+	font: 15pt Consolas; 
+	color: #ECECEC;
 }
 
 a:visited {
  	text-decoration: none;
+	font: 15pt Consolas; 
+	color: #ECECEC;
 }
 
 a:hover {
  	text-decoration: none;
+	font: 15pt Consolas; 
+	color: #ECECEC;
 }
 
 a:active {
  	text-decoration: none;
+	font: 15pt Consolas; 
+	color: #ECECEC;
 }
