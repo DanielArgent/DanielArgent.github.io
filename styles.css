@@ -19,6 +19,7 @@ nav {
 	float: left;
   	width: 20%;
   	background: #632D56;
+	font: 15pt Consolas; 
 	color: #ECECEC;
   	padding: 5px;
   	margin: 10px 10px 20px 5px;
@@ -52,7 +53,7 @@ article{
 }
 
 #headpost{
-	font: 15pt Consolas; 
+	font: 14pt Consolas; 
 	background: #632D56;
 	color: #ECECEC;
 	padding: 2px;
@@ -67,25 +68,17 @@ article{
 
 /* ссылки */
 a:link {
-	color: #ECECEC; 
  	text-decoration: none;
-	font: 15pt Consolas; 
 }
 
 a:visited {
-	color: #ECECEC; 
  	text-decoration: none;
-	font: 15pt Consolas; 
 }
 
 a:hover {
-	color: #ECECEC; 
  	text-decoration: none;
-	font: 15pt Consolas; 
 }
 
 a:active {
-	color: #ECECEC; 
  	text-decoration: none;
-	font: 15pt Consolas; 
 }
