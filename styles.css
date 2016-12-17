@@ -83,10 +83,14 @@ a:active {
 		display:block;
 	}
     	nav {
-		width: 0%;
+		/*width: 0%;
 		padding:0px;
 		margin: 0px 0px 0px 0px;
-		display:none;
+		display:none;*/
+		margin-left: 1%;
+		margin-right: 1%;
+		float:top;
+		width: 98%;
     	}
 	
 	article{
