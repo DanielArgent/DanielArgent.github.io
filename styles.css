@@ -80,7 +80,7 @@ a:active {
 	}
 	
 	nav {
-		text-align: center;
+		font-size: 1%;
 		margin-left: 1%;
 		margin-right: 1%;
 		float: top;
@@ -93,6 +93,26 @@ a:active {
 		margin-left: 1%;
 		margin-right: 1%;
 		width: 98%;	
+	}
+	
+	a:link {
+ 		text-decoration: none;
+		font: 14pt Consolas; 
+	}
+
+	a:visited {
+ 		text-decoration: none;
+		font: 14pt Consolas; 
+	}
+
+	a:hover {
+ 		text-decoration: none;
+		font: 14pt Consolas; 
+	}
+
+	a:active {
+ 		text-decoration: none;
+		font: 14pt Consolas; 
 	}
 }
 
