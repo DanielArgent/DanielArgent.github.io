@@ -5,7 +5,7 @@
         Header set Cache-Control "max-age=43200"
     </FilesMatch>
     # Все css, javascript и текстовые файлы будут храниться в кэше браузера одну неделю
-    <FilesMatch "\.(js|css|txt)$">
+    <FilesMatch "\.(js|css|txt|ttf)$">
         Header set Cache-Control "max-age=604800"
     </FilesMatch>
     # Все флэш файлы и изображения будут храниться в кэше браузера один месяц
