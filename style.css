@@ -1,0 +1,53 @@
+article{
+    padding:5%;
+    margin-left: 5%;
+}
+
+.zad{
+    width: 50%;
+     padding-left:5%;
+}
+
+.accordion {
+    font-family: Calibri;
+    width: 50%;
+ /*   padding:10px;*/
+}
+
+.accordion [type=radio], .accordion [type=checkbox] {
+    display:none;
+}
+
+.accordion label {
+    display:block;
+    background: #2D2D30;
+    color: #ECECEC;
+    cursor:pointer;
+}
+
+.accordion .content {
+  /*  padding:0 10px;*/
+    overflow:hidden;
+    border:1px solid #fff;
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+}
+
+.vertical ul li {
+    overflow:hidden;
+    margin:0 0 1px;
+}
+
+.vertical ul li label {
+    padding:10px;
+}
+
+.vertical ul li .content {
+    height:0px;
+    border-top:0;
+    transition: all .5s ease-out;
+}
+.vertical [type=checkbox]:checked ~ label ~ .content {
+    height:170px;
+    border:1px solid #2D2D30;
+}
