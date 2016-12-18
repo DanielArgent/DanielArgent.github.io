@@ -1,18 +1,21 @@
-@font-face {
-  font-family: Cabin;
-  src: url(comfortaa.ttf);
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+
+#headimg {
+  width: 100%;
+  cursor: url(fox.png), default;
 }
 
 body {
   margin: 0px;
-  font: 100% Cabin;
+  font: 100% Comfortaa, Calibri;
   background-color: #ECECEC;
+  cursor: default;
 }
 
 nav {
+  display: block;
   width: 100%;
   margin-top: 20px;
-  display: block;
   text-align: center;
 }
 
@@ -22,45 +25,39 @@ article {
   margin: 5%;
 }
 
+.rigth {
+  float:right;
+  margin-left: auto;
+}
+
 article header {
-  background-color: #ECECEC;
-  font: 150% Cabin; 
-  cursor: default;
+  font: 150% Comfortaa, Calibri; 
 }
 
 article body {
   margin-left: 1px;
 }
 
-.rigth {
-  float:right;
-  margin-left: auto;
-}
-
 a:link {
   text-decoration: none;
-  font: 150% Cabin; 
+  font: 150% Comfortaa, Calibri; 
   color: #2D2D30;
 }
 
 a:visited {
   text-decoration: none;
-  font: 150% Cabin; 
+  font: 150% Comfortaa, Calibri; 
   color: #2D2D30;
 }
 
 a:hover {
   text-decoration: none;
-  font: 150% Cabin; 
+  font: 150% Comforta, Calibri; 
   color: #2D2D30;
 }
 
 a:active {
   text-decoration: none;
-  font: 150% Cabin; 
+  font: 150% Comfortaa, Calibri; 
   color: #2D2D30;
-}
-
-#headimg {
-  width: 100%;
 }
