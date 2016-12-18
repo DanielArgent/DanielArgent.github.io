@@ -1,1 +1,13 @@
+body{
+	margin: 0px;
+  	font: 100% Calibri;
+  	background-color: #ECECEC;
+  	cursor: default;
+}
 
+header{
+	padding: 5%;
+	font: 200% Calibri;
+	color: #ECECEC;
+	background-color: #2D2D30;
+}
