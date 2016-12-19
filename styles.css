@@ -8,6 +8,19 @@
   cursor: url(fox.png), default;
 }
 
+.examples {
+  margin-top: 40%;
+  text-align: center;
+}
+
+.examples img{
+  width: 75%;
+}
+
+.examples div {
+  font: 150% Comfortaa, Calibri; 
+}
+
 body {
   margin: 0px;
   font: 100% Comfortaa, Calibri;
@@ -16,6 +29,7 @@ body {
 }
 
 nav {
+  display: block;
   width: 100%;
   margin-top: 20px;
   text-align: center;
