@@ -1,6 +1,22 @@
+@font-face {
+  font-family: Comfortaa;
+  src: url(comfortaa.ttf);
+}
+
+body {
+  margin: 0px;
+  font: 100% Comfortaa, Calibri;
+  background-color: #ECECEC;
+  cursor: default;
+}
+
 article{
-    padding:5%;
-    margin-left: 5%;
+    padding:2%;
+}
+
+#headimg {
+  width: 100%;
+  cursor: url(fox.png), default;
 }
 
 .zad{
@@ -11,7 +27,6 @@ article{
 .accordion {
     font-family: Calibri;
     width: 50%;
- /*   padding:10px;*/
 }
 
 .accordion [type=radio], .accordion [type=checkbox] {
@@ -26,7 +41,6 @@ article{
 }
 
 .accordion .content {
-  /*  padding:0 10px;*/
     overflow:hidden;
     border:1px solid #fff;
     -webkit-transition: all .5s ease-out;
@@ -36,6 +50,7 @@ article{
 .vertical ul li {
     overflow:hidden;
     margin:0 0 1px;
+    background-color: #2D2D30;
 }
 
 .vertical ul li label {
@@ -50,4 +65,5 @@ article{
 .vertical [type=checkbox]:checked ~ label ~ .content {
     height:170px;
     border:1px solid #2D2D30;
+    color: white;
 }
