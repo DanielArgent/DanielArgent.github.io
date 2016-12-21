@@ -1,0 +1,69 @@
+@font-face {
+  font-family: Comfortaa;
+  src: url(comfortaa.ttf);
+}
+
+body {
+  margin: 0px;
+  font: 100% Comfortaa, Calibri;
+  background-color: #ECECEC;
+  cursor: default;
+}
+
+article{
+    padding:2%;
+}
+
+#headimg {
+  width: 100%;
+  cursor: url(fox.png), default;
+}
+
+.zad{
+    width: 50%;
+     padding-left:5%;
+}
+
+.accordion {
+    font-family: Calibri;
+    width: 50%;
+}
+
+.accordion [type=radio], .accordion [type=checkbox] {
+    display:none;
+}
+
+.accordion label {
+    display:block;
+    background: #2D2D30;
+    color: #ECECEC;
+    cursor:pointer;
+}
+
+.accordion .content {
+    overflow:hidden;
+    border:1px solid #fff;
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+}
+
+.vertical ul li {
+    overflow:hidden;
+    margin:0 0 1px;
+    background-color: #2D2D30;
+}
+
+.vertical ul li label {
+    padding:10px;
+}
+
+.vertical ul li .content {
+    height:0px;
+    border-top:0;
+    transition: all .5s ease-out;
+}
+.vertical [type=checkbox]:checked ~ label ~ .content {
+    height:170px;
+    border:1px solid #2D2D30;
+    color: white;
+}
