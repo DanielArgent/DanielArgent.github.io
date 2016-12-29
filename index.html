@@ -25,14 +25,13 @@
         		});         
      
     			$(window).scroll(function(){
-				var h_mrg = document.documentElement.clientWidth - ((333 * document.documentElement.clientWidth) / 1349);    // отступ когда шапка уже не видна
     				var h_hght = (333 * document.documentElement.clientWidth) / 1349;
         			top = $(this).scrollTop();
 
-        			if (top + h_mrg < h_hght) {
+        			if (top < h_hght) {
          				 elem.css('top', (h_hght-top));
        				} else {
-            				elem.css('top', h_mrg);
+            				elem.css('top', 0);
         			}
     				});
 			});
