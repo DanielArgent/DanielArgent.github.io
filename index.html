@@ -8,6 +8,31 @@
   		Язык программирования Klischee
   	</title>
 		<link rel="stylesheet" href="style.css">
+		<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+		<script>
+			var h_hght = 333; // высота шапки
+			var h_mrg = 0;    // отступ когда шапка уже не видна
+                 
+			$(function(){
+    		var elem = $('nav');
+    		var top = $(this).scrollTop();
+     
+    		if(top > h_hght){
+        	elem.css('top', h_mrg);
+    		}	           
+     
+    	$(window).scroll(function(){
+        top = $(this).scrollTop();
+         
+        if (top + h_mrg < h_hght) {
+            elem.css('top', (h_hght-top));
+        } else {
+            elem.css('top', h_mrg);
+        }
+    	});
+		});
+		</script>
+
 	</head>
 
 	<body>
@@ -33,6 +58,26 @@
 		</nav>
 
 		<article>
+  		<body>
+  			Klischee - это язык программирования, благодаря которому вы напишете свою первую программу уже сегодня!
+  		</body>
+  	</article>
+  			<article>
+  		<body>
+  			Klischee - это язык программирования, благодаря которому вы напишете свою первую программу уже сегодня!
+  		</body>
+  	</article>
+  			<article>
+  		<body>
+  			Klischee - это язык программирования, благодаря которому вы напишете свою первую программу уже сегодня!
+  		</body>
+  	</article>
+  			<article>
+  		<body>
+  			Klischee - это язык программирования, благодаря которому вы напишете свою первую программу уже сегодня!
+  		</body>
+  	</article>
+  			<article>
   		<body>
   			Klischee - это язык программирования, благодаря которому вы напишете свою первую программу уже сегодня!
   		</body>
