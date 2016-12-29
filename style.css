@@ -26,8 +26,8 @@ nav {
 	min-width: 500px;
 	width: 100%;
 	background-color: #2D2D30;
-	position: fixed; /*фиксированное положение*/
-	z-index: 100; /*ориентация выше всех*/
+	position: fixed;
+	z-index: 100;
 }
 
 nav ul {
@@ -37,6 +37,15 @@ nav ul {
 nav ul li {
 	display: table-cell;
 	width: auto;
+	height: 50px;
+	text-align: center;
+	vertical-align: bottom;
+}
+
+#logo {
+	padding-left: 20px;
+	display: table-cell;
+	width: 70px;
 	height: 50px;
 	text-align: center;
 	vertical-align: bottom;
