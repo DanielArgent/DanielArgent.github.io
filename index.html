@@ -10,16 +10,13 @@
 		<link rel="stylesheet" href="style.css">
 		<script src="https://code.jquery.com/jquery-3.0.0.min.js"> </script>
 		<script type="text/javascript">
-			$('nav').css('top', (333 * document.documentElement.clientWidth) / 1349);
-			
 			$(function(){
 				var h_hght = (333 * document.documentElement.clientWidth) / 1349;
     				var elem = $('nav');
     				var top = $(this).scrollTop();
     				if(top > h_hght){
-        				elem.css('top', h_mrg);
+        				elem.css('top', 0);
     				}	   
-
     			$(window).resize(function() {
             			$('nav').css('top', (333 * document.documentElement.clientWidth) / 1349);
         		});         
@@ -27,7 +24,6 @@
     			$(window).scroll(function(){
     				var h_hght = (333 * document.documentElement.clientWidth) / 1349;
         			top = $(this).scrollTop();
-
         			if (top < h_hght) {
          				 elem.css('top', (h_hght-top));
        				} else {
@@ -45,6 +41,9 @@
 
 		<nav>
 			<ul>
+				<li id="logo">
+					<a href="index.html"><img src="logo.png"></a>
+				</li>
 				<li>
 					<a href="index.html">Главная</a>
 				</li>
