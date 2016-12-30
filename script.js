@@ -1,4 +1,5 @@
-$(function(){
+$(if(!device.mobile()){
+    function(){
     var hei = (333 * document.documentElement.clientWidth) / 1349;
     var elem = $('nav');
     var top = $(this).scrollTop();
@@ -25,4 +26,5 @@ $(function(){
             elem.css('top', 0);
         }
     });
+    }
 });
