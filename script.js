@@ -1,35 +1,37 @@
 $(
     function(){
-        if(!device.mobile()){
     var hei = (333 * document.documentElement.clientWidth) / 1349;
     var elem = $('nav');
     var top = $(this).scrollTop();
-    if(top > hei){
-        elem.css('top', 0);
-    }    
-        }
+    if(!device.mobile()){
+        if(top > hei){
+            elem.css('top', 0);
+        }    
+    } else {
+          $('nav').('position', 'relative'); 
+    }
 
     $(window).resize(function() {
-        if(!device.mobile()){
         var elem = $('nav');
         var top = $(this).scrollTop();
-        if(top > (333 * document.documentElement.clientWidth) / 1349){
-            elem.css('top', 0);
-        } else {
-            elem.css('top', (333 * document.documentElement.clientWidth) / 1349);
-        }
+        if(!device.mobile()){
+            if(top > (333 * document.documentElement.clientWidth) / 1349){
+                elem.css('top', 0);
+            } else {
+                elem.css('top', (333 * document.documentElement.clientWidth) / 1349);
+            }
         }
     });         
      
     $(window).scroll(function(){
-        if(!device.mobile()){
         var hei = (333 * document.documentElement.clientWidth) / 1349;
         top = $(this).scrollTop();
-        if (top < hei) {
-            elem.css('top', (hei - top));
-        } else {
-            elem.css('top', 0);
-        }
+        if(!device.mobile()){
+            if (top < hei) {
+                elem.css('top', (hei - top));
+            } else {
+                elem.css('top', 0);
+            }
         }
     });
 });
