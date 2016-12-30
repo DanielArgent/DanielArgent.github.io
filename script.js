@@ -307,7 +307,7 @@ $(
     var hei = (333 * document.documentElement.clientWidth) / 1349;
     var elem = $('nav');
     var top = $(this).scrollTop();
-    if(!device.mobile()){
+    if((!device.mobile()) && (!device.tablet())){
         if(top > hei){
             elem.css('top', 0);
         }    
@@ -318,7 +318,7 @@ $(
     $(window).resize(function() {
         var elem = $('nav');
         var top = $(this).scrollTop();
-        if(!device.mobile()){
+        if((!device.mobile()) && (!device.tablet())){
             if(top > (333 * document.documentElement.clientWidth) / 1349){
                 elem.css('top', 0);
             } else {
@@ -330,7 +330,7 @@ $(
     $(window).scroll(function(){
         var hei = (333 * document.documentElement.clientWidth) / 1349;
         top = $(this).scrollTop();
-        if(!device.mobile()){
+        if((!device.mobile()) && (!device.tablet())){
             if (top < hei) {
                 elem.css('top', (hei - top));
             } else {
