@@ -82,7 +82,7 @@ body {
 	background-color: #2D2D30;
 }
 
-@media (max-width: 600px){
+@media (max-width: 300px){
 	#nav{
 		position: absolute;
 		width: 100%;
