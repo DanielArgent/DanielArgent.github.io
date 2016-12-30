@@ -1,13 +1,16 @@
-$(if(!device.mobile()){
+$(
     function(){
+        if(!device.mobile()){
     var hei = (333 * document.documentElement.clientWidth) / 1349;
     var elem = $('nav');
     var top = $(this).scrollTop();
     if(top > hei){
         elem.css('top', 0);
     }    
+        }
 
     $(window).resize(function() {
+        if(!device.mobile()){
         var elem = $('nav');
         var top = $(this).scrollTop();
         if(top > (333 * document.documentElement.clientWidth) / 1349){
@@ -15,9 +18,11 @@ $(if(!device.mobile()){
         } else {
             elem.css('top', (333 * document.documentElement.clientWidth) / 1349);
         }
+        }
     });         
      
     $(window).scroll(function(){
+        if(!device.mobile()){
         var hei = (333 * document.documentElement.clientWidth) / 1349;
         top = $(this).scrollTop();
         if (top < hei) {
@@ -25,6 +30,6 @@ $(if(!device.mobile()){
         } else {
             elem.css('top', 0);
         }
+        }
     });
-    }
 });
