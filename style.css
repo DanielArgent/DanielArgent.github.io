@@ -19,7 +19,7 @@ hr{
 }
 
 body {
-	min-width: 300px;
+	/*min-width: 300px;*/
   background-color: #ECECEC;
   cursor: default;
 }
