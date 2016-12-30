@@ -10,18 +10,18 @@
 }
 
 body {
-	min-width: 300px;
+	min-width: 600px;
   background-color: #ECECEC;
   cursor: default;
 }
 
-header{
-	min-width: 300px;
+#header{
+	min-width: 600px;
 	width: 100%;
 	background-color: #2D2D30;
 }
 
-nav {
+#nav {
 	min-width: 600px;
 	width: 100%;
 	background-color: #2D2D30;
@@ -29,11 +29,11 @@ nav {
 	z-index: 100;
 }
 
-nav ul {
+#nav ul {
 	display: table-row;
 }
 
-nav ul li {
+#nav ul li {
 	display: table-cell;
 	width: auto;
 	height: 50px;
@@ -51,7 +51,7 @@ nav ul li {
 	vertical-align: bottom;
 }
 
-nav ul li a {
+#nav ul li a {
 	color: #ECECEC;
 	height: 50px;
 	display: table-cell;
@@ -60,14 +60,12 @@ nav ul li a {
 	text-decoration: none;
 }
 
-nav ul li a:hover {
+#nav ul li a:hover {
 	color: #EC0000;
 }
 
-article {
-	text-align: center;
+#footer {
 	min-width: 600px;
-  width: 100%;
-  margin-top: 10%;
-  margin-bottom: 10%;
+	width: 100%;
+	background-color: #2D2D30;
 }
