@@ -24,13 +24,11 @@ body {
 }
 
 #header{
-	/*min-width: 300px;*/
 	width: 100%;
 	background-color: #2D2D30;
 }
 
 #nav {
-	min-width: 300px;
 	width: 100%;
 	background-color: #2D2D30;
 	position: fixed;
@@ -77,19 +75,17 @@ body {
 }
 
 #footer {
-	min-width: 300px;
 	width: 100%;
 	background-color: #2D2D30;
 }
 
-@media (max-width: 300px){
+@media (max-width: 600px){
 	#nav{
 		position: absolute;
-		min-width: 100%;
 	}
 	
 	body{
 		max-width:1000px;
-		min-width:300px;
+		min-width:600px;
 	}
 }
