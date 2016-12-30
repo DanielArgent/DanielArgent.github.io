@@ -19,13 +19,12 @@ hr{
 }
 
 body {
-	/*min-width: 300px;*/
   background-color: #ECECEC;
   cursor: default;
 }
 
 #header{
-	min-width: 300px;
+	/*min-width: 300px;*/
 	width: 100%;
 	background-color: #2D2D30;
 }
