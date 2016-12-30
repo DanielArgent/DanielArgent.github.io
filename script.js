@@ -312,7 +312,7 @@ $(
             elem.css('top', 0);
         }    
     } else {
-          $('nav').css('position', 'relative'); 
+          $('nav').css('position', 'absolute'); 
     }
 
     $(window).resize(function() {
