@@ -124,4 +124,11 @@ body {
 		position: absolute;
 		width: 100%;
 	}
+	#logo {
+		display: table-cell;
+		width: 10%;
+		height: 40px;
+		text-align: center;
+		vertical-align: bottom;
+	}
 }
