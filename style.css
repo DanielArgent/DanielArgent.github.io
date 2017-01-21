@@ -110,7 +110,7 @@ body {
 }
 
 .function{
-  	ont-weight: bolder;
+  	font-weight: bolder;
  	color: #B55AC0;
 }
 
@@ -120,17 +120,16 @@ body {
 }
 
 @media (max-width: 700px){
-	*{
-		font-size: 15px;
-	}
-	
 	#nav{
 		position: absolute;
 		width: 100%;
 	}
 	
-	#logo {
-		width: 8%;
-		height: 30px;
+	#nav ul li {
+		height: 40px;
+	}
+	
+	#nav ul li a {
+		height: 40px;
 	}
 }
