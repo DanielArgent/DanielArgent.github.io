@@ -88,3 +88,15 @@ body {
 	text-align: center;
 	font-size: 30px;
 }
+
+#lpost{
+	width: 40%;
+	margin-left: 5%;
+	float: left;
+}
+
+#rpost{
+	width: 40%;
+	margin-left: 5%;
+	float: right;
+}
