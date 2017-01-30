@@ -38,6 +38,7 @@ body {
 
 #nav ul {
 	display: table-row;
+	font-size: 100%;
 }
 
 #nav ul li {
