@@ -156,3 +156,14 @@ body {
     opacity: 1;
     visibility: visible;
 }
+
+#fotf{
+	height: 50px;
+	background-image: url("s.png");
+	background-position: left bottom;
+	background-repeat: repeat-x;
+}
+
+#second{
+	background-color: rgba(215, 0, 96, 0.7);
+}
