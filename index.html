@@ -66,15 +66,15 @@
     	<pre>
         <code>
 <span class = "keyword">def </span>List.Insort(x) <span class = "keyword">do</span>
-i = 1
-  <span class = "keyword">while</span> i &lt; *x <span class = "keyword">do</span>
-    <span class = "keyword">if</span> x[i] &lt; x[i-1] <span class = "keyword">do</span>
-      prom = x[i]
-      x[i] = x[i-1]
-      x[i-1] = prom
-      i = 1
-    <span class = "keyword">end </span><span class = "keyword">else</span> i++
-  <span class = "keyword">end </span>
+    i = 1
+    <span class = "keyword">while</span> i &lt; *x <span class = "keyword">do</span>
+        <span class = "keyword">if</span> x[i] &lt; x[i-1] <span class = "keyword">do</span>
+            prom = x[i]
+            x[i] = x[i-1]
+            x[i-1] = prom
+            i = 1
+        <span class = "keyword">end </span><span class = "keyword">else</span> i++
+    <span class = "keyword">end </span>
 <span class= "keyword">end</span>
         </code>
         </pre>
