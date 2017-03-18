@@ -26,13 +26,18 @@
 		</div>
 
 		<div class="wrap">	
-    	<button class="clicker" onclick="document.location.href = '#win1'">Download</button>
+    	<button class="clicker" onclick="document.location.href = '#win1'">
+    		Download
+    	</button>
     	<div class="circle"></div>
   	</div>
+
     <a href="#x" class="overlay" id="win1"></a>
+
     <div class="popup">
 			Thank you for downloading!
     </div>
+
     <br><br><br><br><br><br><br><br>
 
     <div class="tabs">
@@ -47,28 +52,55 @@
  
     	<input id="tab4" type="radio" name="tabs">
     	<label for="tab4" title="Вкладка 4">Four</label>
+
+    	<input id="tab5" type="radio" name="tabs">
+    	<label for="tab5" title="Вкладка 5">Fife</label>
  
     	<section id="content-tab1">
-        <p>
-					# Program "Hello, world!"<br>
-					puts "Hello, world!"
-        </p>
+        <code>
+					<span class = "comment"># Program "Hello, world!"</span><br>
+					<span class = "keyword">puts</span> "Hello, world!"
+        </code>
     	</section>  
     	<section id="content-tab2">
-        <p>
-          Здесь размещаете любое содержание....
-        </p>
-    	</section> 
+        <code data-language="ruby">
+					<span class = "keyword">def </span>List.Insort(x) <span class = "keyword">do</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;i = 1<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class = "keyword">while</span> i &lt; *x <span class = "keyword">do</span><br> 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class = "keyword">if</span> x[i] &lt; x[i-1] <span class = "keyword">do</span><br> 
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;prom = x[i]<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x[i] = x[i-1]<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x[i-1] = prom<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i = 1<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class = "keyword">end </span><span class = "keyword">else </span> i++<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class = "keyword">end </span><br>
+					<span class = "keyword">end </span>
+        </code>
+    	</section>  
     	<section id="content-tab3">
-        <p>
-          Здесь размещаете любое содержание....
-				</p>
-    	</section> 
+    	    <code data-language="ruby">
+					<span class = "keyword">def</span> f(x) x * x<br>
+					a = 5<br>
+					<span class = "keyword">puts</span> f(a)<br>
+					Console.Clear()
+        </code>
+    	</section>  
     	<section id="content-tab4">
-        <p>
-          Здесь размещаете любое содержание....
-        </p>
-    	</section>    
+    	    <code data-language="ruby">
+					<span class = "keyword">def</span> f(x) x * x<br>
+					a = 5<br>
+					<span class = "keyword">puts</span> f(a)<br>
+					Console.Clear()
+        </code>
+    	</section> 
+    	<section id="content-tab5">
+    	    <code data-language="ruby">
+					<span class = "keyword">def</span> f(x) x * x<br>
+					a = 5<br>
+					<span class = "keyword">puts</span> f(a)<br>
+					Console.Clear()
+        </code>
+    	</section>   
 </div>
 </body>
 </html>
