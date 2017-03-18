@@ -160,19 +160,21 @@ body {
 
 /* Базовый контейнер табов */
 .tabs {
-	min-width: 320px;
-	max-width: 800px;
-	padding: 0px;
+	/*min-width: 320px;*/
+	max-width: 432px;
+	padding: 1px;
 	margin: 0 auto;
 }
+
 /* Стили секций с содержанием */
-.tabs>section {
+.tabs > section {
 	display: none;
 	padding: 15px;
 	background: #fff;
 	border: 1px solid #ddd;
 }
-.tabs>section>p {
+
+.tabs > section>p {
 	margin: 0 0 5px;
 	line-height: 1.5;
 	color: #383838;
@@ -183,9 +185,9 @@ body {
 	animation-fill-mode: both;
 	-webkit-animation-name: fadeIn;
 	animation-name: fadeIn;
-}
+} 
+
 /* Описываем анимацию свойства opacity */
- 
 @-webkit-keyframes fadeIn {
 	from {
 		opacity: 0;
@@ -194,6 +196,7 @@ body {
 		opacity: 1;
 	}
 }
+
 @keyframes fadeIn {
 	from {
 		opacity: 0;
@@ -238,7 +241,7 @@ body {
 }
 
 /* Активация секций с помощью псевдокласса :checked */
-#tab1:checked~#content-tab1, #tab2:checked~#content-tab2, #tab3:checked~#content-tab3, #tab4:checked~#content-tab4 {
+#tab1:checked~#content-tab1, #tab2:checked~#content-tab2, #tab3:checked~#content-tab3, #tab4:checked~#content-tab4, #tab5:checked~#content-tab5 {
 	display: block;
 }
 
@@ -258,4 +261,19 @@ body {
 	.tabs > label {
 		padding: 15px;
 	}
+}
+
+code{
+	font-family: "Consolas";
+}
+
+.keyword {
+	font-family: "Consolas";
+	color: rgb(215, 0, 96);
+}
+
+.comment{
+	font-family: "Consolas";
+	font-style: italic;
+	color: rgb(100, 100, 100);
 }
