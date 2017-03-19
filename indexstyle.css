@@ -241,7 +241,7 @@ body {
 }
 
 /* Активация секций с помощью псевдокласса :checked */
-#tab1:checked~#content-tab1, #tab2:checked~#content-tab2, #tab3:checked~#content-tab3, #tab4:checked~#content-tab4, #tab5:checked~#content-tab5 {
+#tab1:checked~#content-tab1, #tab2:checked~#content-tab2, #tab3:checked~#content-tab3, #tab4:checked~#content-tab4 {
 	display: block;
 }
 
@@ -279,4 +279,24 @@ code{
 	font-family: "Consolas";
 	font-style: italic;
 	color: rgb(100, 100, 100);
+}
+
+.description:before, .description:after {
+	content: "\0020"; display: block; height: 0; visibility: hidden;	
+}
+
+.description:after { clear: both; }
+.description {
+	padding: 1% 6% 2%;
+	zoom: 1;
+}
+
+.description h2 {
+	color: #FFFFFF;
+	padding: 8px 20px;
+	margin: 0 0 20px 0;
+	padding-left: 7%;
+	margin-left: -7%;
+	float: left;
+	background-color: rgba(215, 0, 96, 0.7);
 }
