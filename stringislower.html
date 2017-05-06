@@ -1,0 +1,32 @@
+<html>
+	<head>
+	<link rel="stylesheet" href="docstyle.css">
+	 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	</head>
+	<body>
+		<div id="title">Метод String.IsLower?</div>
+		<!--<details>function</details>-->
+		<p style = "line-height: 18px;font-size: 13px;"> Определяет, находится ли символ в нижнем регистре. Если передаётся строка длины 1, возвращается единственное логическое значение, если длина строки больше 1, возвращается список по одному логическому значению для каждого символа.</p>
+		<div class = "codecontainer">
+			<code>
+				<span class = "keyword">puts</span> <span class="text">"a"</span>.IsLower?();	<span class = "comment">#=> true</span><br>
+				<span class = "keyword">puts</span> <span class="text">"A"</span>.IsLower?();	<span class = "comment">#=> false</span><br>
+				<span class = "keyword">puts</span> <span class="text">"aBc!"</span>.IsLower?();	<span class = "comment">#=> [true, false, true, false]</span>
+			</code>
+			<br>
+			<input type="checkbox" id="hd-1" class="hide"/>
+			<label for="hd-1" >Показать интерактивную сессию</label>
+    	<div>
+				>>> puts "a".IsLower?()<br>
+				True<br>
+				=> True<br>
+				>>> puts "A".IsLower?()<br>
+				False<br>
+				=> False<br>
+				>>> puts "aBc!".IsLower?()<br>
+				[True, False, True, False]<br>
+				=> [True, False, True, False]
+			</div>
+		</div>
+	</body>
+</html>

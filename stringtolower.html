@@ -1,0 +1,48 @@
+<html>
+	<head>
+	<link rel="stylesheet" href="docstyle.css">
+	</head>
+	<body>
+		<div id="title">Метод String.ToLower</div>
+		<!--<details>function</details>-->
+		<p style = "line-height: 18px;font-size: 13px;">Переводит символы строки в нижний регистр, и возвращает получившуюся строку. Этот метод не изменяет значение текущего экземпляра. Вместо этого он возвращает новую строку, в которой все символы текущего экземпляра преобразуются в нижний регистр. Также может принимать именованный параметр culture, типа string, содержащий название культуры, согласно которому и будет выполнен перевод.</p>
+		<div class = "codecontainer">
+			<code>
+				a = <span class="text">"Hello, world!"</span>;<br>
+				<span class="comment"># Переводим строку в нижний регистр и выводим её.</span><br>
+				<span class = "keyword">puts</span> a.ToLower();
+			</code>
+			<br>
+			<input type="checkbox" id="hd-1" class="hide"/>
+			<label for="hd-1" >Показать интерактивную сессию</label>
+    	<div>
+				>>> a = "Hello, world!"<br>
+				=> "Hello, world!"<br>
+				>>> puts a.ToLower()<br>
+				hello, world!<br>
+				=> "hello, world!"
+			</div>
+		</div>
+		<br>
+		<div class = "codecontainer">
+			<code>
+				<span class="comment"># Переводим все строки списка в нижний регистр.</span><br>
+				a = [<span class="text">"first"</span>, <span class="text">"second"</span>, <span class="text">"trith"</span>];<br>
+				a.Each!(x => x.ToLower());<br>
+				<span class = "keyword">puts</span> a <span class="comment"># Выведет ["first", "second", "trith"]</span>
+			</code>
+			<br>
+			<input type="checkbox" id="hd-2" class="hide"/>
+			<label for="hd-2" >Показать интерактивную сессию</label>
+    	<div>
+				>>> a = ["FIRST", "SECOND", "TRITH"]<br>
+				=> ["FIRST", "SECOND", "TRITH"]<br>
+				>>> a.Each!(x => x.ToLower())<br>
+				=> &lt;NULL&gt;<br>
+				>>> puts a<br>
+				[first, second, trith]<br>
+				=> ["first", "second", "trith"]<br>
+			</div>
+		</div>
+	</body>
+</html>

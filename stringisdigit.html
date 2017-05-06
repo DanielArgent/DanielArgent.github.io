@@ -1,0 +1,32 @@
+<html>
+	<head>
+	<link rel="stylesheet" href="docstyle.css">
+	 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	</head>
+	<body>
+		<div id="title">Метод String.IsDigit?</div>
+		<!--<details>function</details>-->
+		<p style = "line-height: 18px;font-size: 13px;"> Показывает, относится ли указанный символ Юникода к категории десятичных цифр. Этот метод определяет, является ли символ строки цифрой десятичной системы счисления. Эта ситуация отличается от применения метода IsNumber?, который определяет является ли символ любым числовым категории Юникода. Номера содержат символы, такие как дроби, индексы, надстрочный, римские цифры, числители валюты, обведенные числа и цифры конкретного скрипта. Допустимые цифры являются членами UnicodeCategory.DecimalDigitNumber категории. Если передаётся строка длины 1, возвращается единственное логическое значение, если длина строки больше 1, возвращается список по одному логическому значению для каждого символа. </p>
+		<div class = "codecontainer">
+			<code>
+				<span class = "keyword">puts</span> <span class="text">"6"</span>.IsDigit?();	<span class = "comment">#=> true</span><br>
+				<span class = "keyword">puts</span> <span class="text">"A"</span>.IsDigit?();	<span class = "comment">#=> false</span><br>
+				<span class = "keyword">puts</span> <span class="text">"6B0!"</span>.IsDigit?();	<span class = "comment">#=> [true, false, true, false]</span>
+			</code>
+			<br>
+			<input type="checkbox" id="hd-1" class="hide"/>
+			<label for="hd-1" >Показать интерактивную сессию</label>
+    	<div>
+				>>> puts "5".IsDigit?()<br>
+				True<br>
+				=> True<br>
+				>>> puts "A".IsDigit?()<br>
+				False<br>
+				=> False<br>
+				>>> puts "4B5!".IsDigit?()<br>
+				[True, False, True, False]<br>
+				=> [True, False, True, False]
+			</div>
+		</div>
+	</body>
+</html>
