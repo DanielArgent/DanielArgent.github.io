@@ -112,7 +112,11 @@ a.pure-button-primary {
 }
 
 .home-menu .pure-menu-selected a {
-    color: white;
+    color: #FFFFFF;
+}
+
+.pure-menu-selected .pure-menu-link, .pure-menu-selected .pure-menu-link:visited {
+    color: #FFFFFF;
 }
 
 .home-menu a {
@@ -159,10 +163,10 @@ a.pure-button-primary {
     font-size: 20px;
     font-weight: bold;
     color: white;
-    border: 3px solid white;
-    padding: 1em 1.6em;
+   /* border: 3px solid white;*/
+  /*  padding: 1em 1.6em;*/
     font-weight: 100;
-    border-radius: 5px;
+    /*border-radius: 5px;*/
     line-height: 1em;
 }
 
