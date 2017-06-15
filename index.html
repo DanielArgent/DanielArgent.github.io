@@ -1,131 +1,114 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.1, maximum-scale=1, user-scalable=no">
-		<title></title>
-		<link rel="stylesheet" href="indexstyle.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
+    
+    <!--[if lte IE 8]><link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css"><![endif]-->
+    <!--[if gt IE 8]><!--><link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css"><!--<![endif]-->
+    
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    
+    <!--[if lte IE 8]><link rel="stylesheet" href="css/layouts/marketing-old-ie.css"><![endif]-->
+    <!--[if gt IE 8]><!--><link rel="stylesheet" href="css/layouts/marketing.css"><!--<![endif]-->
 	</head>
 	<body>
-		<div id = "nav">
-			<ul>
-				<li>
-					<a href="">KLISCHEE</a>
-				</li>
-				<li>
-					<a href="loading.html">Download</a>
-				</li>
-				<li>
-					<a href="coreindex.html">About</a>
-				</li>
-			</ul>
+
+		<div class="header">
+		    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+		        <a class="pure-menu-heading" href="">Your Site</a>
+
+		        <ul class="pure-menu-list">
+		            <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li>
+		            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Tour</a></li>
+		            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Sign Up</a></li>
+		        </ul>
+		    </div>
 		</div>
 
-		<div id = "titler">
-			Klischee
+		<div class="splash-container">
+		    <div class="splash">
+		        <h1 class="splash-head">Big Bold Text</h1>
+		        <p class="splash-subhead">
+		            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+		        </p>
+		        <p>
+		            <a href="http://purecss.io" class="pure-button pure-button-primary">Get Started</a>
+		        </p>
+		    </div>
 		</div>
 
-		<div class="wrap">	
-    	<button class="clicker" onclick="document.location.href = '#win1'">
-    		Download
-    	</button>
-    	<div class="circle">
-    	</div>
-  	</div>
+		<div class="content-wrapper">
+		    <div class="content">
+		        <h2 class="content-head is-center">Excepteur sint occaecat cupidatat.</h2>
 
-    <a href="#x" class="overlay" id="win1"></a>
+		        <div class="pure-g">
+		            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
 
-    <div class="popup">
-			Thank you for downloading!
-    </div>
+		                <h3 class="content-subhead">
+		                    <i class="fa fa-rocket"></i>
+		                    Get Started Quickly
+		                </h3>
+		                <p>
+		                    Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+		                </p>
+		            </div>
+		            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+		                <h3 class="content-subhead">
+		                    <i class="fa fa-mobile"></i>
+		                    Responsive Layouts
+		                </h3>
+		                <p>
+		                    Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+		                </p>
+		            </div>
+		            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+		                <h3 class="content-subhead">
+		                    <i class="fa fa-th-large"></i>
+		                    Modular
+		                </h3>
+		                <p>
+		                    Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+		                </p>
+		            </div>
+		            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+		                <h3 class="content-subhead">
+		                    <i class="fa fa-check-square-o"></i>
+		                    Plays Nice
+		                </h3>
+		                <p>
+		                    Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+		                </p>
+		            </div>
+		        </div>
+		    </div>
 
-    <br><br><br><br><br><br><br><br>
+		    <div class="ribbon l-box-lrg pure-g">
+		        <div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
+		            <img width="300" alt="File Icons" class="pure-img-responsive" src="img/common/file-icons.png">
+		        </div>
+		        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
 
-    <div class="description">
-			<h2>Examples</h2>
+		            <h2 class="content-head content-head-ribbon">Laboris nisi ut aliquip.</h2>
+
+		            <p>
+		                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		                consequat. Duis aute irure dolor.
+		            </p>
+		        </div>
+		    </div>
+
+		    <div class="footer l-box is-center">
+		        View the source of this layout to learn more. Made with love by the YUI Team.
+		    </div>
+
 		</div>
 
-    <div class="tabs">
-    	<input id="tab1" type="radio" name="tabs" checked>
-    	<label for="tab1" title="Вкладка 1">One</label>
- 
-    	<input id="tab2" type="radio" name="tabs">
-    	<label for="tab2" title="Вкладка 2">Two</label>
- 
-    	<input id="tab3" type="radio" name="tabs">
-    	<label for="tab3" title="Вкладка 3">Three</label>
- 
-    	<input id="tab4" type="radio" name="tabs">
-    	<label for="tab4" title="Вкладка 4">Four</label>
 
 
-    	<section id="content-tab1">
-    	<pre>
-        <code>
-<span class = "comment"># Program "Hello, world!"</span>
-<span class = "keyword">puts</span> "Hello, world!"
-        </code>
-       </pre>
-    	</section>  
-    	<section id="content-tab2">
-    	<pre>
-        <code>
-<span class = "comment"># Insertion sort for all list</span>
-<span class = "keyword">def </span>List.Insort(x) <span class = "keyword">do</span>
-    i = 1
-    <span class = "keyword">while</span> i &lt; *x <span class = "keyword">do</span>
-        <span class = "keyword">if</span> x[i] &lt; x[i-1] <span class = "keyword">do</span>
-            prom = x[i]
-            x[i] = x[i-1]
-            x[i-1] = prom
-            i = 1
-        <span class = "keyword">end </span><span class = "keyword">else</span> i++
-    <span class = "keyword">end </span>
-    <span class = "keyword">return</span> x
-<span class= "keyword">end</span>
-<span class = "comment">Test: </span>
-<span class = "keyword">puts</span> [4, 2, 5, 7].Insort() <span class = "comment">#=> [2, 4, 5, 7]</span>
-        </code>
-        </pre>
-    	</section>  
-    	<section id="content-tab3">
-    	<pre>
-    	    <code>
-<span class = "comment"># Ханойские башни</span>
-<span class = "keyword">def </span>Hanoi(n, f, t, w) <span class = "keyword">do</span>
-    <span class = "keyword">if</span> n == 0 
-        <span class = "keyword">return</span> null
-    <span class = "keyword">self</span>(n - 1, f, w, t)
-    <span class = "comment"># From f to t</span>
-    <span class = "keyword">puts</span> f + "->" + t
-    <span class = "keyword">self</span>(n - 1, w, t, f)
-<span class= "keyword">end</span>
-<span class = "keyword">const</span> n = 8 <span class = "comment"># Количество дисков</span>
-Hanoi(n, 1, 2, 3)
-        </code>
-       </pre>
-    	</section>  
-    	<section id="content-tab4">
-    	<pre>
-    	    <code>
-<span class = "comment"># Class Greeter</span>
-<span class = "keyword">class </span>Greeter(name) do
-    <span class = "keyword">def</span> Init(this)
-        this.name = this.name.ToUpp()
 
-    <span class = "keyword">def</span> salute(this)
-        <span class = "keyword">puts</span> $"Hello {this.name}"
-<span class = "keyword">end</span>
-
-<span class = "comment"># Create a new object</span>
-g = Greeter("world")
-
-<span class = "comment"># Result is "Hello WORLD!"</span>
-g.salute()
-        </code>
-        </pre>
-    	</section> 
-    	<br><br><br><br> 
-</div>
-</body>
+	</body>
 </html>
