@@ -3,7 +3,8 @@
 }
 
 html {
-  font-family: sans-serif; /* 1 */
+  font-family:'Segoe UI','Lucida Grande',Verdana,Arial,Helvetica,sans-serif;
+  font-size: 15px;
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -15,6 +16,7 @@ html {
 body {
   margin: 0;
 }
+
 
 /**
  * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
@@ -45,11 +47,6 @@ dfn {
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari, and Chrome.
  */
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
 
 /**
  * Address styling not present in IE 8/9.
@@ -326,6 +323,7 @@ optgroup {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  font-size: 15px;
 }
 
 td,
@@ -842,11 +840,27 @@ striping:
 
 h1 {
     font-size: 320%;
-    font-weight: 100;
+    font-weight: normal;
     margin: 0 auto;
     padding: 0.5em;
     border-bottom: 1px solid #eee;
     letter-spacing: 0.05em;
+}
+
+h3 {
+      font-family: 'Segoe UI Semibold','Segoe UI','Lucida Grande',Verdana,Arial,Helvetica,sans-serif!important;
+    font-size: 110%;
+}
+
+h2 {
+    font-family: 'Segoe UI Semibold','Segoe UI','Lucida Grande',Verdana,Arial,Helvetica,sans-serif!important;
+    font-size: 120%;
+}
+
+h4 {
+      font-family: 'Segoe UI Semibold','Segoe UI','Lucida Grande',Verdana,Arial,Helvetica,sans-serif!important;
+    font-size: 100%;
+    margin: 0 auto;
 }
 
 /* The content div is placed as a wrapper around all the docs */
@@ -979,4 +993,8 @@ code {
 }
 .spoiler > input:checked + label + .spoiler_body {
   display: block;
+}
+.table_font {
+  font-family: monospace; 
+  font-size: 110%;
 }
