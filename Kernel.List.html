@@ -1,0 +1,135 @@
+<html>
+	<head>
+		<link rel="stylesheet" href = "css/docstyle.css">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="widtd=device-widtd, initial-scale=1">
+		<title>Класс List</title>
+	</head>
+	<body>
+		<h1>Класс List</h1>
+		<br>
+		<div class="content">
+			<div id="short"> Представляет список - динамичный, расширяемый массив. </div>
+			<pre class="code code-wrap"><code><span class="keyword">class</span> List: <a href="Kernel.Object">Object</a>, <a href="Kernel.Enumerable">Enumerable</a></code></pre>
+			<p>
+				<h3> Подробное описание </h3>
+				<p>
+					Списки - это динамически расширяемые массивы. В отличие от массивов, их размер непостоянен. 
+				</p>
+			</p>
+			<p>
+			<div class="spoiler">
+				<input type="checkbox" id="spoiler1">
+				<label for="spoiler1"><h4> Реализованные интерфейсы </h4></label>
+				<div class="spoiler_body">
+				<table class="pure-table pure-table-bordered">
+				<tbody>
+					<tr>
+						<td> <a href="#"><img src="images/interface.png"> Enumerable </a> </td>
+						<td> <a href="#"><img src="images/interface.png"> Comparable </a> </td>
+					</tr>
+					<tr>
+						<td><a href=""><img src="images/method.png">to_e</a></td>
+						<td><a href=""><img src="images/method.png"><code style="background-color: white;"><</code></a></td>
+					</tr>
+					<tr>
+						<td><a href=""><img src="images/method.png">each</a></td>
+						<td><a href=""><img src="images/method.png"><code style="background-color: white;">></code></a></td>
+					</tr>
+					<tr>
+						<td><a href=""><img src="images/method.png">select</a></td>
+						<td><a href=""><img src="images/method.png"><code style="background-color: white;">==</code></a></td>
+					</tr>
+					<tr>
+						<td><a href=""><img src="images/method.png">reject</a></td>
+						<td><a href=""><img src="images/method.png"><code style="background-color: white;"><=</code></a></td>
+					</tr>
+					<tr>
+						<td><a href=""><img src="images/method.png">where</a></td>
+						<td><a href=""><img src="images/method.png"><code style="background-color: white;">>=</code></a></td>
+					</tr>
+					<tr>
+						<td><a href=""><img src="images/method.png">count</a></td>
+						<td><a href=""><img src="images/method.png"><code style="background-color: white;">!=</code></a></td>
+					</tr>
+					<tr>
+						<td><a href=""><img src="images/method.png">lazy_each</a></td>
+						<td></td>
+					</tr>
+					<tr>
+					<td><a href=""><img src="images/method.png">lazy_select</a></td><td></td></tr>
+					<tr><td><a href=""><img src="images/method.png">orderby</a></td><td></td></tr>
+					<tr><td><a href=""><img src="images/method.png">action</a></td><td></td></tr>
+					<tr><td><a href=""><img src="images/method.png">first</a></td><td></td></tr>
+					<tr><td><a href=""><img src="images/method.png">last</a></td><td></td></tr>
+					<tr><td><a href=""><img src="images/method.png">find</a></td><td></td></tr>
+					<tr><td><a href=""><img src="images/method.png">find_all</a></td><td></td></tr>
+					<tr><td><a href=""><img src="images/method.png">all?</a></td><td></td></tr>
+					<tr><td><a href=""><img src="images/method.png">any?</a></td><td></td></tr>
+				</tbody>
+				</table>
+				</div>
+				</div>
+				<div class="spoiler">
+				<input type="checkbox" id="spoiler2">
+				<label for="spoiler2"><h4> Методы и свойства базового класса Kernel.Object</h4></label>
+				<div class="spoiler_body">
+				<table class="pure-table pure-table-bordered">
+					<tbody>
+						<tr>
+							<td> <a href="#">  <img src="images/method.png">  <code style="background-color: white;">==</code> </a> </td>
+						</tr>
+						<tr>
+							<td> <a href="#">  <img src="images/method.png">  <code style="background-color: white;">!=</code> </a> </td>
+						</tr>
+						<tr>
+							<td> <a href="">  <img src="images/method.png">  send </a> </td>
+						</tr>
+						<tr>
+							<td> <a href="#">  <img src="images/method.png">  eql? </a> </td>
+						</tr>
+						<tr>
+							<td> <a href="#">  <img src="images/method.png">  clone </a> </td>
+						</tr>
+						<tr>
+							<td> <a href="#">  <img src="images/method.png">  respond? </a> </td>
+						</tr>
+						<tr>
+							<td> <a href="#">  <img src="images/method.png">  to_s </a> </td>
+						</tr>
+						<tr>
+							<td> <a href="#">  <img src="images/property.png">  class </a> </td>
+						</tr>
+						<tr>
+							<td> <a href="#">  <img src="images/property.png">  hash </a> </td>
+						</tr>
+						<tr>
+							<td> <a href="#">  <img src="images/property.png">  null? </a> </td>
+						</tr>
+					</tbody>
+				</table>
+				</div>
+				</div>
+							
+				<h4> Функции </h4>
+				<table class="pure-table pure-table-bordered">
+				<tbody>
+					<tr>
+						<td> <a href="#"><img src="images/method.png"> print </a> </td>
+						<td> Позволяет итерироваться по объекту </td>
+					</tr>
+					<tr>
+						<td> <a href="#"><img src="images/method.png"> alert </a> </td>
+						<td> Делает объект сравниваемым </td>
+					</tr>
+					<tr>
+						<td> <a href="#"><img src="images/method.png"> input </a> </td>
+						<td> Делает объект сравниваемым </td>
+					</tr>
+				</tbody>
+				</table>
+				</p>
+			</p>
+		</div>
+	</body>
+</html>
