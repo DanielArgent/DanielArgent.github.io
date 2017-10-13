@@ -9,127 +9,234 @@
 		<h1>Класс List</h1>
 		<br>
 		<div class="content">
-			<div id="short"> Представляет список - динамичный, расширяемый массив. </div>
-			<pre class="code code-wrap"><code><span class="keyword">class</span> List: <a href="Kernel.Object">Object</a>, <a href="Kernel.Enumerable">Enumerable</a></code></pre>
-			<p>
-				<h3> Подробное описание </h3>
-				<p>
-					Списки - это динамически расширяемые массивы. В отличие от массивов, их размер непостоянен. 
-				</p>
+			<div id="short"> 
+				Представляет список значений любых типов, доступных по индексу.
+			</div>
+			<pre class="code code-wrap"><code><span class="keyword">class</span> List: <a href="Kernel.Object" title="class Object">Object</a>, <a href="Kernel.Enumerable" title="interface Enumerable">Enumerable</a>, <a href="Kernel.Comparable" title="interface Comparable">Comparable</a></code></pre>
+			<h2> Подробное описание </h2>
+			<p> 
+				Значения типа Kernel.List - это массивы, автоматически изменяющие свою длину при изменении. Для добавления новых элементов
+				можно воспользоваться методом <a href="add!.html">add!</a> или оператором <a href="operator_plus_eq.html"> += </a>. Индексы в коллекции 
+				начинаются с нуля. Возможны срезы, а также отрицательные индексы. Тип List является прямым наследником Object. В классе определены методы 
+				поиска, сортировки, перечисления, изменения, а также прочие методы для работы со списками. Тип List имеет статическое свойство Empty.
 			</p>
-			<p>
-			<div class="spoiler">
-				<input type="checkbox" id="spoiler1">
-				<label for="spoiler1"><h4> Реализованные интерфейсы </h4></label>
-				<div class="spoiler_body">
-				<table class="pure-table pure-table-bordered">
+			
+			<h2> Методы экземпляра </h2>
+			<table class="pure-table pure-table-bordered">
+				<thead>
+					<tr>
+						<th>Имя</th>
+						<th>Описание</th>
+					</tr>
+				</thead>
+
 				<tbody>
 					<tr>
-						<td> <a href="#"><img src="images/interface.png"> Enumerable </a> </td>
-						<td> <a href="#"><img src="images/interface.png"> Comparable </a> </td>
+						<td> <a href="Kernel/List/to_e"> <img src="images/method.png"> to_e </a> </td>
+						<td> Преобразует список к типу Kernel.Enumerator. </td>
 					</tr>
 					<tr>
-						<td><a href=""><img src="images/method.png">to_e</a></td>
-						<td><a href=""><img src="images/method.png"><code style="background-color: white;"><</code></a></td>
+						<td> <a href="Kernel/List/to_s"><img src="images/method.png"> to_s </a> </td>
+						<td> Преобразует список к типу Kernel.String. </td>
 					</tr>
 					<tr>
-						<td><a href=""><img src="images/method.png">each</a></td>
-						<td><a href=""><img src="images/method.png"><code style="background-color: white;">></code></a></td>
+						<td> <a href="Kernel/List/sort"><img src="images/method.png"> sort </a> </td>
+						<td> Возвращает отсортированную версию списка. </td>
 					</tr>
 					<tr>
-						<td><a href=""><img src="images/method.png">select</a></td>
-						<td><a href=""><img src="images/method.png"><code style="background-color: white;">==</code></a></td>
+						<td> <a href="Kernel/List/sort!"><img src="images/method.png"> sort! </a> </td>
+						<td> Сортирует список. </td>
 					</tr>
 					<tr>
-						<td><a href=""><img src="images/method.png">reject</a></td>
-						<td><a href=""><img src="images/method.png"><code style="background-color: white;"><=</code></a></td>
+						<td> <a href="Kernel/List/compact!"><img src="images/method.png"> compact! </a> </td>
+						<td> Очищает список от элементов, имеющих значение null. </td>
 					</tr>
 					<tr>
-						<td><a href=""><img src="images/method.png">where</a></td>
-						<td><a href=""><img src="images/method.png"><code style="background-color: white;">>=</code></a></td>
+						<td> <a href="#"><img src="images/method.png"> pop! </a> </td>
+						<td> Возвращает и удаляет последний элемент списка. </td>
 					</tr>
 					<tr>
-						<td><a href=""><img src="images/method.png">count</a></td>
-						<td><a href=""><img src="images/method.png"><code style="background-color: white;">!=</code></a></td>
+						<td> <a href="#"><img src="images/method.png"> peek! </a> </td>
+						<td> Возвращает последний элемент списка, но не удаляет его. </td>
 					</tr>
 					<tr>
-						<td><a href=""><img src="images/method.png">lazy_each</a></td>
-						<td></td>
+						<td> <a href="#"><img src="images/method.png"> shift! </a> </td>
+						<td> Добавляет переданные элементы в начало списка. </td>
 					</tr>
 					<tr>
-					<td><a href=""><img src="images/method.png">lazy_select</a></td><td></td></tr>
-					<tr><td><a href=""><img src="images/method.png">orderby</a></td><td></td></tr>
-					<tr><td><a href=""><img src="images/method.png">action</a></td><td></td></tr>
-					<tr><td><a href=""><img src="images/method.png">first</a></td><td></td></tr>
-					<tr><td><a href=""><img src="images/method.png">last</a></td><td></td></tr>
-					<tr><td><a href=""><img src="images/method.png">find</a></td><td></td></tr>
-					<tr><td><a href=""><img src="images/method.png">find_all</a></td><td></td></tr>
-					<tr><td><a href=""><img src="images/method.png">all?</a></td><td></td></tr>
-					<tr><td><a href=""><img src="images/method.png">any?</a></td><td></td></tr>
+						<td> <a href="#"><img src="images/method.png"> unshift! </a> </td>
+						<td> Возвращает первый элемент списка и удаляет его. </td>
+					</tr>
+					<tr>
+						<td> <a href="#"><img src="images/method.png"> each! </a> </td>
+						<td> Модификация метода <a href="kernel/enumerable/each">each</a>. Изменяет список при помощи указанной функции. </td>
+					</tr>
+					<tr>
+						<td> <a href="list/add!.html"><img src="images/method.png"> add! </a> </td>
+						<td> Добавляет переданные элементы в конец списка. </td>
+					</tr>
+					<tr>
+						<td> <a href="#"><img src="images/method.png"> index </a> </td>
+						<td> Возвращает позицию первого вхождения переданного элемента. </td>
+					</tr>
+					<tr>
+						<td> <a href="#"><img src="images/method.png"> last_index </a> </td>
+						<td> Возвращает позицию последнего вхождения переданного элемента. </td>
+					</tr>
+					<tr>
+						<td> <a href="#"><img src="images/method.png"> clear! </a> </td>
+						<td> Очищает список от всех значений. </td>
+					</tr>
+					<tr>
+						<td> <a href="#"><img src="images/method.png"> exists? </a> </td>
+						<td> Определяет, существует ли элемент, удволетворяющий переданному предикату. </td>
+					</tr>
+					<tr>
+						<td> <a href="#"><img src="images/method.png"> find_index </a> </td>
+						<td> Возвращает индекс первого элемента, удовлетворяющего переданному предикату. </td>
+					</tr>
+					<tr>
+						<td> <a href="#"><img src="images/method.png"> find_last_index </a> </td>
+						<td> Возвращает индекс последнего элемента, удовлетворяющего переданному предикату. </td>
+					</tr>
+					<tr>
+						<td> <a href="#"><img src="images/method.png"> find_last </a> </td>
+						<td> Возвращает первый элемент списка, удовлетворяющий переданному предикату. </td>
+					</tr>
+					<tr>
+						<td> <a href="#"><img src="images/method.png"> insert! </a> </td>
+						<td> Вставляет переданный элемент в указанную позицию списка. </td>
+					</tr>
+					<tr>
+						<td> <a href="#"><img src="images/method.png"> delete! </a> </td>
+						<td> Удаляет элементы списка, равные переданным. </td>
+					</tr>
+					<tr>
+						<td> <a href="#"><img src="images/method.png"> reject! </a> </td>
+						<td> Удаляет элементы списка, удовлетворяющие указанному предикату. </td>
+					</tr>
+					<tr>
+						<td> <a href="#"><img src="images/method.png"> remove_at! </a> </td>
+						<td> Удаляет элемент списка, имеющий переданный индекс. </td>
+					</tr>
+					<tr>
+						<td> <a href="#"><img src="images/method.png"> reverse </a> </td>
+						<td> Возвращает новый список, в котором все элементы списка идут в обратном порядке. </td>
+					</tr>
+					<tr>
+						<td> <a href="#"><img src="images/method.png"> reverse! </a> </td>
+						<td> Реверсирует все элементы списка. </td>
+					</tr>
+					<tr>
+						<td> <a href="#"><img src="images/method.png"> reduce </a> </td>
+						<td> Выполняет редукцию списка переданной функцией. </td>
+					</tr>
+					<tr>
+						<td> <a href="#"><img src="images/method.png"> flatten </a> </td>
+						<td> Разворачивает все вложенные списки. </td>
+					</tr>
+					<tr>
+						<td> <a href="#"><img src="images/method.png"> partition </a> </td>
+						<td> Делит список на два по указанному предикату. </td>
+					</tr>
+					<tr>
+						<td> <a href="#"><img src="images/method.png"> contains? </a> </td>
+						<td> Определяет, содержится ли указанный элемент. </td>
+					</tr>
 				</tbody>
-				</table>
-				</div>
-				</div>
-				<div class="spoiler">
-				<input type="checkbox" id="spoiler2">
-				<label for="spoiler2"><h4> Методы и свойства базового класса Kernel.Object</h4></label>
-				<div class="spoiler_body">
-				<table class="pure-table pure-table-bordered">
-					<tbody>
-						<tr>
-							<td> <a href="#">  <img src="images/method.png">  <code style="background-color: white;">==</code> </a> </td>
-						</tr>
-						<tr>
-							<td> <a href="#">  <img src="images/method.png">  <code style="background-color: white;">!=</code> </a> </td>
-						</tr>
-						<tr>
-							<td> <a href="">  <img src="images/method.png">  send </a> </td>
-						</tr>
-						<tr>
-							<td> <a href="#">  <img src="images/method.png">  eql? </a> </td>
-						</tr>
-						<tr>
-							<td> <a href="#">  <img src="images/method.png">  clone </a> </td>
-						</tr>
-						<tr>
-							<td> <a href="#">  <img src="images/method.png">  respond? </a> </td>
-						</tr>
-						<tr>
-							<td> <a href="#">  <img src="images/method.png">  to_s </a> </td>
-						</tr>
-						<tr>
-							<td> <a href="#">  <img src="images/property.png">  class </a> </td>
-						</tr>
-						<tr>
-							<td> <a href="#">  <img src="images/property.png">  hash </a> </td>
-						</tr>
-						<tr>
-							<td> <a href="#">  <img src="images/property.png">  null? </a> </td>
-						</tr>
-					</tbody>
-				</table>
-				</div>
-				</div>
-							
-				<h4> Функции </h4>
-				<table class="pure-table pure-table-bordered">
+			</table>
+
+			<h2> Свойства экземпляра </h2>
+			<table class="pure-table pure-table-bordered">
+				<thead>
+					<tr>
+						<th>Имя</th>
+						<th>Описание</th>
+					</tr>
+				</thead>
+				
 				<tbody>
 					<tr>
-						<td> <a href="#"><img src="images/method.png"> print </a> </td>
-						<td> Позволяет итерироваться по объекту </td>
+						<td> <a href="object/class.html"><img src="images/property.png"> class </a> </td>
+						<td> Унаследован от базового класса <a href="object/object.html">Object</a>. Возвращает класс объекта. </td>
 					</tr>
 					<tr>
-						<td> <a href="#"><img src="images/method.png"> alert </a> </td>
-						<td> Делает объект сравниваемым </td>
+						<td> <a href="object/hash.html"><img src="images/property.png"> hash </a> </td>
+						<td> Унаследован от базового класса <a href="object/object.html">Object</a>. Возвращает хеш-код объекта. </td>
 					</tr>
 					<tr>
-						<td> <a href="#"><img src="images/method.png"> input </a> </td>
-						<td> Делает объект сравниваемым </td>
+						<td> <a href="object/null.html"><img src="images/property.png"> null? </a> </td>
+						<td> Унаследован от базового класса <a href="object/object.html">Object</a>. Определяет, равен ли объект null. </td>
+					</tr>
+					<tr>
+						<td> <a href="object/null.html"><img src="images/property.png"> size </a> </td>
+						<td> Возвращает количество элементов в списке. </td>
+					</tr>
+					<tr>
+						<td> <a href="object/null.html"><img src="images/property.png"> nitems </a> </td>
+						<td> Возвращает количество элементов в списке, не равных null. </td>
 					</tr>
 				</tbody>
-				</table>
-				</p>
-			</p>
+			</table>
+
+			<h2> Операторы </h2>
+			<table class="pure-table pure-table-bordered">
+				<thead>
+					<tr>
+						<th>Оператор</th>
+						<th>Вид</th>
+						<th>Описание</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td> <a href="#"><img src="images/operator.png"> += </a> </td>
+						<td> Инфиксный </td>
+						<td> Синоним метода <a href="#">add!</a> </td>
+					</tr>
+					<tr>
+						<td> <a href="#"><img src="images/operator.png"> + </a> </td>
+						<td> Инфиксный </td>
+						<td> Очищает список от значений null </td>
+					</tr>
+					<tr>
+						<td> <a href="#"><img src="images/operator.png"> * </a> </td>
+						<td> Инфиксный </td>
+						<td> Очищает список от значений null </td>
+					</tr>
+					<tr>
+						<td> <a href="#"><img src="images/operator.png"> / </a> </td>
+						<td> Инфиксный </td>
+						<td> Синоним методов <a href="#">reduce</a> и <a href="#">split</a>  </td>
+					</tr>
+					<tr>
+						<td> <a href="#"><img src="images/operator.png"> - </a> </td>
+						<td> Инфиксный </td>
+						<td> Очищает список от значений null </td>
+					</tr>
+					<tr>
+						<td> <a href="#"><img src="images/operator.png"> [] </a> </td>
+						<td> Постфиксный </td>
+						<td> Очищает список от значений null </td>
+					</tr>
+					<tr>
+						<td> <a href="#"><img src="images/operator.png"> []= </a> </td>
+						<td> Постфиксный </td>
+						<td> Очищает список от значений null </td>
+					</tr>
+					<tr>
+						<td> <a href="#"><img src="images/operator.png"> || </a> </td>
+						<td> Инфиксный </td>
+						<td> Очищает список от значений null </td>
+					</tr>
+					<tr>
+						<td> <a href="#"><img src="images/operator.png"> * </a> </td>
+						<td> Префиксный </td>
+						<td> Очищает список от значений null </td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 	</body>
 </html>
