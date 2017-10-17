@@ -9,6 +9,11 @@ html {
   -webkit-text-size-adjust: 100%; /* 2 */
 }
 
+image {
+  height: 16px;
+  width: 14px;
+}
+
 /**
  * Remove default margin.
  */
