@@ -1,4 +1,4 @@
 <package>
     <module name="tuples.ks"/>
-    <module name="set.ks"/>
+    <module name="sets.ks"/>
 </package>
