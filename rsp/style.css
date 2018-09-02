@@ -1,0 +1,43 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.7em;
+    background-color: rgb(102, 16, 102);
+}
+
+h3 {
+    font-weight: lighter;
+}
+
+div {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    color: white;
+    font-weight: lighter;
+}
+
+.d1 {
+    background-color: rgb(204, 58, 204);
+}
+
+.d2 {
+    background-color: rgb(150, 38, 150);
+}
+
+.d3 {
+    background-color: rgb(102, 16, 102);
+}
+
+.is-center {
+    text-align: center;
+}
+
+@media (min-width: 48em) {
+    body {
+      font-size: 16px;
+    }
+}
