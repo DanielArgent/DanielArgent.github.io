@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>По верху или по низу?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    
+    <!--[if lte IE 8]>
+      <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+      <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+    <!--<![endif]-->
+
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        const days = ["воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"]
+        const months =  [ "января","февраля", "марта", "апреля","мая", "июня", "июля", "августа", "сентября",  "октября", "ноября","декабря" ]
+
+        function write(text) {
+            document.write(text);
+        }
+
+        function getDayOfWeekName(dayOfWeek) {
+            return days[dayOfWeek];
+        }
+
+        function getMonthName(monthNumber) {
+            return months[monthNumber];
+        }
+
+        function makeTodayBlock() {
+            var nowDate = new Date();
+            return "Сегодня " + nowDate.getDate() +
+                " " + getMonthName(nowDate.getMonth()) +
+                ",  " + getDayOfWeekName(nowDate.getDay());
+        }
+
+        function getDayWithOffset(offset) {
+            var result = new Date();
+            result.setDate(result.getDate() + offset);
+            return result;
+        }
+
+        function getNextDay() {
+            return getDayWithOffset(1)
+        }
+
+        function getCurrentWeek() {
+            var day = getDayWithOffset(0);
+            var dayOfWeek = day.getDay();
+
+            day.setDate(day.getDate() - dayOfWeek + 1);
+
+            if(day.getDate() % 2 == 0){
+                return "Эта неделя по верху";
+            }
+            return "Эта неделя по низу";
+        }
+
+        function getNextWeek() {
+            var day = getDayWithOffset(0);
+            var dayOfWeek = day.getDay();
+
+            if(dayOfWeek != 0) {
+                day.setDate(day.getDate() + (8 - dayOfWeek));
+            }  
+            else {
+                day.setDate(day.getDate() + 1);
+            }
+
+            if(day.getDate() % 2 == 0){
+                return "Следующая неделя по верху";
+            }
+            return "Следующая неделя по низу";
+        }
+    </script>
+</head>
+<body>
+    <div class="is-center d1"><h3><script>write(makeTodayBlock())</script></h3></div>
+
+    <div class="is-center d2"><h3><script>write(getCurrentWeek())</script></h3></div>
+
+    <div class="is-center d3"><h3><script>write(getNextWeek())</script></h3></div>
+</body>
+</html>
