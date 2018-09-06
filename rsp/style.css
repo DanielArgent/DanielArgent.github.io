@@ -20,16 +20,24 @@ div {
     font-weight: lighter;
 }
 
+table {
+    margin: auto;
+}
+
 .d1 {
     background-color: rgb(204, 58, 204);
 }
 
+.d15 {
+    background-color: rgb(170, 43, 170);
+}
+
 .d2 {
-    background-color: rgb(150, 38, 150);
+    background-color: rgb(128, 32, 128);
 }
 
 .d3 {
-    background-color: rgb(102, 16, 102);
+    background-color: rgb(80, 11, 80);
 }
 
 .is-center {
