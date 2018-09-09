@@ -117,7 +117,7 @@ function getCurrentWeek() {
 }
 
 function getNextWeek() {
-    var day = getDayWithOffset(0);
+    var day = getDayWithOffset(1);
     var dayOfWeek = day.getDay();
 
     if(dayOfWeek != 0) {
