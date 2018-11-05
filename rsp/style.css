@@ -6,7 +6,7 @@
 
 body {
     line-height: 1.7em;
-    background-color: rgb(80, 11, 80);
+    background-color: rgb(11, 12, 80);
 }
 
 h3 {
@@ -25,19 +25,19 @@ table {
 }
 
 .d1 {
-    background-color: rgb(204, 58, 204);
+    background-color: rgb(58, 116, 204);
 }
 
 .d15 {
-    background-color: rgb(170, 43, 170);
+    background-color: rgb(43, 83, 170);
 }
 
 .d2 {
-    background-color: rgb(128, 32, 128);
+    background-color: rgb(32, 54, 128);
 }
 
 .d3 {
-    background-color: rgb(80, 11, 80);
+    background-color: rgb(11, 12, 80);
 }
 
 .is-center {
