@@ -1,0 +1,110 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0px;
+	font-size: 9pt;
+	font-family: Segoe UI,Verdana,Arial;
+}
+
+table {
+	font-size: 9pt;
+}
+
+h1 {
+	font-size:15pt;
+	font-weight:bold;
+	margin-top:22px;
+	margin-bottom:5px;
+	color:gray;
+}
+
+h2 {
+	font-weight:bold;
+	color:Gray;
+	font-size:12pt;
+	margin:0px;
+	margin-top:15px;
+	margin-bottom:5px;
+	padding:0px;
+}
+
+h3 {
+	font-weight:bold;
+	margin:0px;
+	padding:0px;
+}
+
+div.acont {
+	padding:2px;
+}
+
+a,a:hover,a:active {
+	color:blue;
+	text-decoration:none;
+}
+
+a:hover {
+	text-decoration:underline;
+}
+
+div.pageHeader {
+	font-size:16pt;
+	font-weight:bold;
+	margin-bottom:15px;
+	background-color:#F3F3F3;
+	padding-left:10px;
+	padding-bottom:15px;
+	padding-top: 10px;
+	color: black;
+	font-family: Segoe UI,Verdana,Arial;
+	border-bottom: solid 1px #C0C0C0;
+}
+
+.example {
+	font-family:Consolas,Courier New;
+	line-height: 1.4em;
+	margin-left:0px;
+	margin-top:2px;
+	margin-bottom:5px;
+	margin-right:50px;
+	padding:5px 5px 5px 5px;
+	background-color:#F3F3F3;
+	margin-left:20px;
+	border:solid 1px #C0C0C0;
+}
+
+code {
+	font-family:Consolas,Courier New;
+	font-size:8pt;
+	background-color:#F3F3F3;
+}
+
+.lexer_Keyword {
+	color:blue;
+}
+
+.lexer_Variant {
+	color:navy;
+	/*font-weight:bold;*/
+}
+
+.lexer_Literal {
+	color:teal;
+	font-weight:bold;
+}
+
+.lexer_MultilineComment,.lexer_Comment {
+	color:green;
+}
+
+.lexer_String,.lexer_Char {
+	color:brown;
+}
+
+.lexer_Number {
+	color:red;
+}
