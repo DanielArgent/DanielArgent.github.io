@@ -1,188 +1,174 @@
 <!DOCTYPE html>
-
 <html>
 	<head>
-	  	<title>std.vec</title>
-		<link rel="stylesheet" href="css/style.css">
-  	</head>
+	<title></title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    
+    <!--[if lte IE 8]>
+      <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+      <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+    <!--<![endif]-->
+    
+	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
+ 
+	<link rel="stylesheet" href="style-min.css">	
+	</head>
 	<body>
-		<div>
-			<h1><div class="pure-button" style="font-size: 12px;">Back</div> std.vec</h1>
+		<div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+			<a href="#" class="logo-link pure-menu-heading pure-menu-link">Lumen</a>
+	    	<ul class="pure-menu-list">
+	    		<li class="pure-menu-item pure-menu-checked"><a href="#" class="pure-menu-link">Домашняя</a></li>
+	      		<li class="pure-menu-item"><a href="#" class="pure-menu-link">Скачать</a></li>
+				<li class="pure-menu-item"><a href="documentation/index.html" class="pure-menu-link">Документация</a></li>
+				<li class="pure-menu-item"><a href="en-index.html" class="pure-menu-link"><i class="fa fa-language"></i></a></li>
+	    	</ul>
 		</div>
-    	<div class="content">
-			<h2>Определение</h2>
 
-			<div class="example code-wrap">
-				[<span class="lexer_Keyword">comparable</span>]<br>
-				[<span class="lexer_Keyword">constructor</span>]<br>
-				<span class="lexer_Keyword">let</span> <span class="lexer_Variant">vec</span>(...args) := ...
+		<div class="splash-container">
+			<div class="splash">
+				<h1 class="splash-head"> Программировать? Легко! </h1>
+				<p class="splash-subhead"> язык программирования высокого уровня </p>
+				<p><a href="" class="pure-button splash-button"> Начни сейчас! </a></p>
+			</div>
+		</div>
+
+		<div class="content-wrapper">
+			<div class="content">
+				<h2 class="content-head is-center">Почему Lumen?</h2>
+
+				<div class="pure-g">
+					<div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+						<h3 class="content-subhead"><i class="fa fa-book"></i> Простота </h3>
+						<p>Lumen очень прост в изучении</p>
+					</div>
+					
+					<div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+						<h3 class="content-subhead"><i class="fa fa-microchip" aria-hidden="true"></i> Высокоуровневость </h3>
+						<p>Для того, чтобы писать на Lumen не нужно знать тонкости устройства компьютера - он использует абстракции!</p>
+					</div>
+
+					<div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+						<h3 class="content-subhead"><i class="fa fa-th-large"></i> Мультипарадигменность </h3>
+						<p>Lumen поддерживает сразу несколько парадигм: процедурное, объектно-ориентированное, обобщённое, функциональное</p>
+					</div>
+
+					<div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+						<h3 class="content-subhead"><i class="fa fa-gears"></i> Интеграция с .NET </h3>
+						<p>Lumen можно легко использовать в своих .NET-приложениях. Он может интегрироваться с любым .NET языком: C#, F#, C++/CLI, PascalABC.NET</p>
+					</div>
+				</div>
+
+				<div class="pure-g">
+					<div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+						<h3 class="content-subhead"><i class="fa fa-diamond"></i> Современность </h3>
+						<p>В Lumen реализованы самые современные средства программирования: лямбда-выражения, перегрузка операций, сборка мусора, и многое другое!</p>
+					</div>
+					
+					<div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+						<h3 class="content-subhead"><i class="fa fa-sitemap"></i> Кроссплатформенность </h3>
+						<p>Lumen можно использовать на любой платформе с установленным .NET Framework 4 и выше</p>
+					</div>
+
+					<div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+						<h3 class="content-subhead"><i class="fa fa-terminal"></i> Динамика </h3>
+						<p> Lumen позволяет вам писать очень динамичные программы</p>
+					</div>
+
+					<div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+						<h3 class="content-subhead"><i class="fa fa-database"></i> Большая библиотека </h3>
+						<p>Для Lumen имеется большое количество модулей, написанных на .NET языках, например, gui - модуль для работы с графикой или web - для работы с сетью.</p>
+					</div>
+				</div>
+
+				<div class="is-center">
+					<a href="https://github.com/DanielArgent/Lumen" class="pure-button pure-button-secondary"><i class="fa fa-github"></i> GitHub</a>
+					<a href="http://purecss.io" class="pure-button pure-button-secondary"><i class="fa fa-question"></i> FAQ </a>
+				</div>
 			</div>
 
-		  	<p>
-				Функция создаёт объект вектора. Вектор представляет собой проиндексированную последовательность 
-				значений переменной длины. Индексация элементов начинается с нуля, вектора поддерживают 
-				вставку, добавление и удаление элементов. Пример использования:
-			</p>
-
-			<div class="example code-wrap">
-				<span class="lexer_Keyword">let</span> my_vec := <span class="lexer_Variant">vec</span>(5, 2, 6)<br>
-				print(my_vec) <span class="lexer_Comment">#=> [5, 2, 6]</span><br>
-				my_vec += <span class="lexer_Keyword">true</span><br>
-				print(my_vec[3]) <span class="lexer_Comment">#=> true</span><br>
+			<div class="ribbon l-box-lrg pure-g">
+				<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
+					<h2 class="content-head content-head-ribbon">Всё имеет значение</h2>
+					<p>Любая конструкция языка может вернуть какое-либо значение</p>
+				</div>
+				<div class="code codeex l-box-lrg pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">	  	
+					<code>
+						<span class="keyword"> let </span> a := -9<br><span class="keyword"> let </span> b := <span class="keyword"> if </span> a >= 0: a <span class="keyword">else</span>: -a<br>print(b) <span class="comment"> #=&gt; 9</span>
+					</code>
+				</div>  
 			</div>
-			
-			<p>
-				В примере выше мы сначала определили вектор с 3 числами, а затем добавили значение логического типа.
-			</p>
+				
+			<div class="ribbon l-box-lrg pure-g">
+					<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
+					<h2 class="content-head content-head-ribbon">Пользовательские типы данных</h2>
 
-			<h2>Операторы</h2>
-			<p>
-				<h3>* (unary)</h3>
-				<div class="example code-wrap">
-					<span class="lexer_Keyword">let</span> <span class="lexer_Variant">vec</span>.*(): <span class="lexer_Variant">num</span> := ...
+					<p>Вы запросто можете создать собственный тип данных</p>
 				</div>
-				<p>Возвращает количество элементов в векторе.</p>
-				<div class="example code-wrap">
-					<span class="lexer_Keyword">let</span> v := <span class="lexer_Variant">vec</span>(<span class="lexer_Number">1</span>, 
-															<span class="lexer_Number">2</span>, <span class="lexer_Number">3</span>)<br>
-					print(*v) <span class="lexer_Comment">#=> 3</span>
-				</div>
-			</p>
-			<p>
-				<h3>+</h3>
-				<div class="example code-wrap">
-					<span class="lexer_Keyword">let</span> <span class="lexer_Variant">vec</span>.+(other): <span class="lexer_Variant">vec</span> := ...
-				</div>
-				<p>Копирует вектор, добавляет <code>other</code> в его конец и возвращает результат.</p>
-				<div class="example code-wrap">
-					<span class="lexer_Keyword">let</span> v := 
-						<span class="lexer_Variant">vec</span>(<span class="lexer_Number">1</span>, 
-															<span class="lexer_Number">2</span>, <span class="lexer_Number">3</span>)<br>
-					print(v + <span class="lexer_Number">6</span>) <span class="lexer_Comment">#=> [1, 2, 3, 6]</span><br>
-					print(v) <span class="lexer_Comment">#=> [1, 2, 3]</span>
-				</div>
-				<div class="warn-quote">
-					В функции происходит копирование исходного вектора что может привести к излишнему потребелению ресурсов.
-					Для добавления элементов в конец вектора воспользуйтесь функциями <code>vec.+=</code> и <code>vec.add</code>
-				</div>
-			</p>
-			<p>
-				<h3>-</h3>
-				<div class="example code-wrap">
-					<span class="lexer_Keyword">let</span> <span class="lexer_Variant">vec</span>.-(other: <span class="lexer_Variant">vec</span> | <span class="lexer_Variant">seq</span>): <span class="lexer_Variant">vec</span> := ...
-				</div>
-				<p>Находит разность двух последовательностей.</p>
-				<div class="example code-wrap">
-					<span class="lexer_Keyword">let</span> v1 := 
-						<span class="lexer_Variant">vec</span>(<span class="lexer_Number">1</span>, 
-															<span class="lexer_Number">2</span>, 
-															<span class="lexer_Number">3</span>,
-															<span class="lexer_Number">4</span>)<br>
-					<span class="lexer_Keyword">let</span> v2 := 
-						<span class="lexer_Variant">vec</span>(<span class="lexer_Number">2</span>, 
-															<span class="lexer_Number">4</span>)<br>									   
-					print(v1 - v2) <span class="lexer_Comment">#=> [1, 3]</span>
-				</div>
-				<div class="warn-quote">
-					Результатом является вектор, для ленивого вычисления воспользуйтесь функцией <code>std.seq.-</code>
-				</div>
-			</p>
-			<p>
-				<h3>/</h3>
-				<div class="example code-wrap">
-					<span class="lexer_Keyword">let</span> <span class="lexer_Variant">vec</span>./(func: <span class="lexer_Variant">fun</span>) := ...
-				</div>
-				<p>Редуцирует значения вектора при помощи функции <code>func</code></p>
-				<div class="example code-wrap">
-					<span class="lexer_Keyword">let</span> v := 
-						<span class="lexer_Variant">vec</span>(<span class="lexer_Number">2</span>, 
-															<span class="lexer_Number">2</span>, <span class="lexer_Number">3</span>)<br>
-					print(v / (x, y) := x + y) <span class="lexer_Comment">#=> 7</span><br>
-					print(v / (x, y) := x * y) <span class="lexer_Comment">#=> 12</span><br>
-				</div>
-				<div class="error-quote">
-					Функция может выбросить <code>std.convert_error</code> в случае если аргумент <code>other</code> нельзя привести к функции
-				</div><br>
-				<div class="warn-quote">
-					Результатом является вектор, для ленивого вычисления воспользуйтесь функцией <code>std.seq.-</code>
-				</div>
-			</p>
-			<p>
-				<h3>*</h3>
-				<div class="example code-wrap">
-					<span class="lexer_Keyword">let</span> <span class="lexer_Variant">vec</span>.*(other: <span class="lexer_Variant">num</span> | <span class="lexer_Variant">str</span> | <span class="lexer_Variant">fun</span>): <span class="lexer_Variant">vec</span> := ...
-				</div>
-				<p>
-					Если <code>other</code> имеет тип <code><span class="lexer_Variant">num</span></code> - вектор повторяется <code>other</code> раз.
-					Если <code>other</code> имеет тип <code><span class="lexer_Variant">str</span></code> - поведение аналогично методу <code>join</code>.
-					Если <code>other</code> имеет тип <code><span class="lexer_Variant">fun</span></code> - поведение аналогично методу <code>each</code>.
+				<div class="codeex l-box-lrg pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
+					<code>		
+						<span class="keyword">record </span> <span class="keyword">person</span>(name, age)<br>
+						<span class="keyword">let</span> alex := <span class="keyword">person</span>(<span class="text">"Alex"</span>, 18)<br>
+						print(alex.name) <span class="comment">#=&gt; Alex</span>
+					</code>
+				</div>  
+			</div>
+
+			<div class="ribbon l-box-lrg pure-g">
+				<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
+				<h2 class="content-head content-head-ribbon">Подсказки типов</h2>
+
+				<p>Даже в динамических языках часто приходится беспокоиться о типе данных. Lumen позволяет вам
+					создать подсказки типов, которые будут проверяться во время выполнения.
 				</p>
-				<div class="example code-wrap">
-					<span class="lexer_Keyword">let</span> v := 
-						<span class="lexer_Variant">vec</span>(<span class="lexer_Number">1</span>, 
-															<span class="lexer_Number">2</span>, <span class="lexer_Number">3</span>)<br>
-					print(v * <span class="lexer_Number">3</span>) <span class="lexer_Comment">#=> [1, 2, 3, 1, 2, 3, 1, 2, 3]</span><br>
-					print(v * <span class="lexer_String">", "</span>) <span class="lexer_Comment">#=> 1, 2, 3</span><br>
-					print(v * (x) := x * x) <span class="lexer_Comment">#=> [1, 4, 9]</span>
-				</div>
-			</p>
-			<p>
-				<h3>=</h3>
-				<div class="example code-wrap">
-					<span class="lexer_Keyword">let</span> <span class="lexer_Variant">vec</span>.=(other): <span class="lexer_Variant">bool</span> := ...
-				</div>
-				<p>Проверяет вектор и <code>other</code> на равенство.</p>
-				<div class="example code-wrap">
-					<span class="lexer_Keyword">let</span> v := 
-						<span class="lexer_Variant">vec</span>(<span class="lexer_Number">1</span>, 
-															<span class="lexer_Number">2</span>, <span class="lexer_Number">3</span>)<br>
-					print(v = 7) <span class="lexer_Comment">#=> false</span><br>
-					print(v = <span class="lexer_Variant">vec</span>(<span class="lexer_Number">1</span>, 
-					<span class="lexer_Number">2</span>, <span class="lexer_Number">3</span>)) <span class="lexer_Comment">#=> true</span><br>
-				</div>
-			</p>
-			<p>
-				<h3>&lt;&gt;</h3>
-				<div class="example code-wrap">
-					<span class="lexer_Keyword">let</span> <span class="lexer_Variant">vec</span>.&lt;&gt;(other): <span class="lexer_Variant">bool</span> := ...
-				</div>
-				<p>Проверяет вектор и <code>other</code> на не равенство.</p>
-				<div class="example code-wrap">
-					<span class="lexer_Keyword">let</span> v := 
-						<span class="lexer_Variant">vec</span>(<span class="lexer_Number">1</span>, 
-															<span class="lexer_Number">2</span>, <span class="lexer_Number">3</span>)<br>
-					print(v &lt;&gt; 7) <span class="lexer_Comment">#=> true</span><br>
-					print(v &lt;&gt; <span class="lexer_Variant">vec</span>(<span class="lexer_Number">1</span>, 
-					<span class="lexer_Number">2</span>, <span class="lexer_Number">3</span>)) <span class="lexer_Comment">#=> false</span><br>
-				</div>
-			</p>
-
-			<h2>Функции</h2>
-			<h3>add</h3>
-			<div class="example code-wrap">
-				<span class="lexer_Keyword">let</span> <span class="lexer_Variant">vec</span>.add(...elements): <span class="lexer_Variant">num</span> := ...
 			</div>
-			<p>Копирует вектор, добавляет <code>other</code> в его конец и возвращает результат.</p>
-			<div class="example code-wrap">
-				<span class="lexer_Keyword">let</span> v := 
-					<span class="lexer_Variant">vec</span>(<span class="lexer_Number">1</span>, 
-														   <span class="lexer_Number">2</span>, <span class="lexer_Number">3</span>)<br>
-				print(v + <span class="lexer_Number">6</span>) <span class="lexer_Comment">#=> [1, 2, 3, 6]</span>
-				print(v) <span class="lexer_Comment">#=> [1, 2, 3]</span>
+			<div class="codeex l-box-lrg pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
+				<code>		
+					<span class="keyword">let </span> <span class="keyword">sum</span>(x: <span class="keyword">num</span>, y: <span class="keyword">num</span>): <span class="keyword">num</span> := x + y<br>
+					<span class="keyword">let</span> res: <span class="keyword">num</span> := sum(4, 5) <span class="comment"># ok</span><br>
+					print(sum(5, "h")) <span class="comment">#=&gt; TypeError</span>
+				</code>
+			</div>  
+			</div>
+	
+			<div class="content">
+				<h2 class="content-head is-center">С Lumen Pad разработка проще!</h2>
+				<div class="is-center">Простой и мощный текстовый редактор, созданный специально для Lumen</div>
+				<div class="icocont is-center">
+					<img src="icons/icoone.png" />
+				</div>
+				<div class="icocont is-center">
+					<div class="pure-button is-center">Узнать больше</div>
+				</div>
+					<h2 class="content-head is-center">Скачайте расширение для своего редактора!</h2>
+	
+					<div class="pure-g">
+						<div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+							<p class="is-center"> VS Code </p>
+							<div class="icocont is-center"><img src="icons/vscode.png" /></div>
+						</div>
+						
+						<div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+								<p class="is-center"> Sublime Text 3 </p>
+							<div class="icocont is-center"><img src="icons/sublime.png" /></div>
+						</div>
+
+						<div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+							<p class="is-center"> Geany </p>
+							<div class="icocont is-center"><img src="icons/geany.png" /></div>
+						</div>
+
+						<div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+							<p class="is-center"> Notepad++ </p>
+							<div class="icocont is-center"><img src="icons/notepad.png" /></div>
+						</div>
+					</div>
 			</div>
 
-			<h3>pop</h3>
-			<div class="example code-wrap">
-				<span class="lexer_Keyword">let</span> <span class="lexer_Variant">vec</span>.pop() := ...
-			</div>
-			<p>Копирует вектор, добавляет <code>other</code> в его конец и возвращает результат.</p>
-			<div class="example code-wrap">
-				<span class="lexer_Keyword">let</span> v := 
-					<span class="lexer_Variant">vec</span>(<span class="lexer_Number">1</span>, 
-														   <span class="lexer_Number">2</span>, <span class="lexer_Number">3</span>)<br>
-				print(v + <span class="lexer_Number">6</span>) <span class="lexer_Comment">#=> [1, 2, 3, 6]</span>
-				print(v) <span class="lexer_Comment">#=> [1, 2, 3]</span>
-			</div>
+			<div class="footer l-box is-center"> Lumen <script> document.write(new Date().getFullYear()) </script> </div>
 		</div>
-  </body>
+	</body>
 </html>
