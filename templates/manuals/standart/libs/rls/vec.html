@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 
 <html>
@@ -14,9 +16,10 @@
 			<h2>Определение</h2>
 
 			<div class="example code-wrap">
-				[<span class="lexer_Keyword">comparable</span>]<br>
-				[<span class="lexer_Keyword">constructor</span>]<br>
-				<span class="lexer_Keyword">let</span> <span class="lexer_Variant">vec</span>(...args) := ...
+				
+[<span class="lexer_Keyword">comparable</span>]<br>
+[<span class="lexer_Keyword">constructor</span>]<br>
+<span class="lexer_Keyword">let</span> <span class="lexer_Variant">vec</span>(...args) := ...
 			</div>
 
 		  	<p>
@@ -26,10 +29,11 @@
 			</p>
 
 			<div class="example code-wrap">
-				<span class="lexer_Keyword">let</span> my_vec := <span class="lexer_Variant">vec</span>(5, 2, 6)<br>
-				print(my_vec) <span class="lexer_Comment">#=> [5, 2, 6]</span><br>
-				my_vec += <span class="lexer_Keyword">true</span><br>
-				print(my_vec[3]) <span class="lexer_Comment">#=> true</span><br>
+				
+<span class="lexer_Keyword">let</span> my_vec := <span class="lexer_Variant">vec</span>(5, 2, 6)<br>
+print(my_vec) <span class="lexer_Comment">#=> [5, 2, 6]</span><br>
+my_vec += <span class="lexer_Keyword">true</span><br>
+print(my_vec[3]) <span class="lexer_Comment">#=> true</span><br>
 			</div>
 			
 			<p>
@@ -38,16 +42,18 @@
 
 			<h2>Операторы</h2>
 			<p>
-				<h3>* (unary)</h3>
-				<div class="example code-wrap">
-					<span class="lexer_Keyword">let</span> <span class="lexer_Variant">vec</span>.*(): <span class="lexer_Variant">num</span> := ...
-				</div>
-				<p>Возвращает количество элементов в векторе.</p>
-				<div class="example code-wrap">
-					<span class="lexer_Keyword">let</span> v := <span class="lexer_Variant">vec</span>(<span class="lexer_Number">1</span>, 
-															<span class="lexer_Number">2</span>, <span class="lexer_Number">3</span>)<br>
-					print(*v) <span class="lexer_Comment">#=> 3</span>
-				</div>
+				
+<div class="example code-wrap">
+	<span class="lexer_Keyword">let</span> <span class="lexer_Variant">vec</span>.*(): 
+	<span class="lexer_Variant">num</span> := ...
+</div><p>Возвращает количество элементов в векторе.</p>
+<div class="example code-wrap">
+	<span class="lexer_Keyword">let</span> v := <span class="lexer_Variant">vec</span>(
+		<span class="lexer_Number">1</span>, 
+		<span class="lexer_Number">2</span>, 
+		<span class="lexer_Number">3</span>)<br>
+print(*v) <span class="lexer_Comment">#=> 3</span>
+</div>
 			</p>
 			<p>
 				<h3>+</h3>
