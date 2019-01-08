@@ -55,33 +55,82 @@ h1,h2,h3,h4,h5,h6{
 	font-weight:300;
 	font-family:Open Sans,sans-serif
 }
-h1{
-	font-size:3.2rem
+
+h1 {
+	font-size:3.2rem;
 }
-h2{font-size:2.8rem}
-h3{font-size:2.4rem}
-h4{font-size:2.0rem}
-h5{font-size:1.8rem}
-h6{font-size:1.6rem}
-p{font-size:1.6rem}
-a{color:#337ab7;text-decoration:none}
-a:hover{color:#175081}
-ul li{list-style:disc}
-ol li{list-style:decimal}
-li{font-size:1.6rem}
-dt{margin-top:16px;font-size:1.6rem}
-dd{margin:8px 0 0 20px;font-size:1.6rem}
-pre{display:block;padding:12px;border-radius:3px;background-color:#f8f8f8;font-size:1.2rem;word-wrap:break-word;overflow:auto}
-code{line-height:1.8;font-size:1.4rem}
-table{border-collapse:collapse;border-spacing:0;font-size:1.6rem}
-th,td{padding:8px;border:1px solid #eee}
-th{background-color:#fafafa;font-weight:400}
-del{color:#999}
-blockquote{margin:0;padding:8px 12px;border-left:3px solid #ccc}
-blockquote *{margin:0}
-img{max-width:100%;height:auto}
-@font-face{font-family:OpenSans;font-weight:300;src:local('OpenSans'),url(/static/fonts/OpenSans-Regular.ttf) format('truetype')}@font-face{font-family:OpenSans;src:local('OpenSans'),url(/static/fonts/OpenSans-Regular.ttf) format('truetype')}
-@font-face{font-family:OpenSans;font-weight:600;src:local('OpenSans'),url(/static/fonts/OpenSans-Regular.ttf) format('truetype')}
+
+h2 {
+	font-size:2.8rem;
+}
+h3 {
+	font-size:2.4rem;
+}
+h4 {
+	font-size:2.0rem;
+}
+h5 {
+	font-size:1.8rem;
+}
+h6 {
+	font-size:1.6rem;
+}
+p {
+	font-size:1.6rem;
+}
+
+a{
+	color:#337ab7
+	;text-decoration:none
+}
+a:hover{
+	color:#175081
+}
+ul li{
+	list-style:none
+}
+ol li{
+	list-style:decimal}
+li{
+	font-size:1.6rem}
+dt{
+	margin-top:16px;font-size:1.6rem}
+dd{
+	margin:8px 0 0 20px;font-size:1.6rem}
+pre{
+	display:block;
+	padding:12px;
+	border-radius:3px;
+	background-color:#f8f8f8;
+	font-size:1.2rem;
+	word-wrap:break-word;
+	overflow:auto
+}
+
+code{
+	line-height:1.8;font-size:1.4rem
+}
+
+img{
+	max-width:100%;
+	height:auto
+}
+@font-face{
+	font-family:OpenSans;
+	font-weight:300;
+	src: local('OpenSans'), url(/static/fonts/OpenSans-Regular.ttf) format('truetype')
+}
+
+@font-face{
+	font-family:OpenSans;
+	src:local('OpenSans'), url(/static/fonts/OpenSans-Regular.ttf) format('truetype')
+}
+
+@font-face{
+	font-family:OpenSans;
+	font-weight:600;
+	src:local('OpenSans'), url(/static/fonts/OpenSans-Regular.ttf) format('truetype')
+}
 
 .l-header{display:block;padding:20px 0;text-align:center}
 .l-nav{width:96%;max-width:720px;margin:0 auto}
@@ -135,7 +184,7 @@ img{max-width:100%;height:auto}
 	bottom:1px;
 	top:auto;
 }
-@media screen and (min-width:600px){
+@media screen and (min-width:800px){
 	#forkongithub{
 		position:fixed;
 		display:block;
@@ -159,4 +208,25 @@ img{max-width:100%;height:auto}
 		-o-transform:rotate(45deg);
 		box-shadow:4px 4px 10px rgba(0,0,0,0.8);
 	}
+}
+
+.label {
+	border-radius:.3rem;
+	line-height:1.2;
+	padding:.1rem .2rem;
+	color:#FFFFFF;
+	display:inline-block
+}
+
+.label.label-rounded{
+	border-radius:5rem;
+	padding-left:.4rem;
+	padding-right:.4rem
+}
+
+.tag-support{
+	background:#32b643;
+}
+.tag-not-support{
+	background:#e85600;
 }
