@@ -1,29 +1,37 @@
-let DEFINITION := "
-[<span class=\"lexer_Keyword\">comparable</span>]<br>
-[<span class=\"lexer_Keyword\">constructor</span>]<br>
-<span class=\"lexer_Keyword\">let</span> <span class=\"lexer_Variant\">vec</span>(...args) := ..."
+open helpers.lang
 
-let DEFINITION_EXAMPLE := "
-<span class=\"lexer_Keyword\">let</span> my_vec := <span class=\"lexer_Variant\">vec</span>(5, 2, 6)<br>
-print(my_vec) <span class=\"lexer_Comment\">\#=> [5, 2, 6]</span><br>
-my_vec += <span class=\"lexer_Keyword\">true</span><br>
-print(my_vec[3]) <span class=\"lexer_Comment\">\#=> true</span><br>"
+let warning(text) := 
+	"<div class=\"warn-quote\">#text</div>"
+
+let DEFINITION := code("
+
+[comparable]
+[constructor]
+let vec(...args) := ...
+
+")
+
+let DEFINITION_EXAMPLE := code("
+
+let my_vec := vec(5, 2, 6)
+print(my_vec) \#=> [5, 2, 6]
+my_vec += true
+print(my_vec[3]) \#=> true
+
+")
 
 let ustar_def := "
+
 <div class=\"example code-wrap\">
-	<span class=\"lexer_Keyword\">let</span> <span class=\"lexer_Variant\">vec</span>.*(): 
-	<span class=\"lexer_Variant\">num</span> := ...
+	#{code("let vec.*(): num := ...")}
 </div>"
 
 let ustar_des := "<p>Возвращает количество элементов в векторе.</p>"
 
 let ustar_ex := "
 <div class=\"example code-wrap\">
-	<span class=\"lexer_Keyword\">let</span> v := <span class=\"lexer_Variant\">vec</span>(
-		<span class=\"lexer_Number\">1</span>, 
-		<span class=\"lexer_Number\">2</span>, 
-		<span class=\"lexer_Number\">3</span>)<br>
-print(*v) <span class=\"lexer_Comment\">\#=> 3</span>
+	#{code("let v := vec(1, 2, 3)
+print(*v) \#=> 3")}
 </div>"
 
 let UNARY_STAR := ustar_def + ustar_des + ustar_ex

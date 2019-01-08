@@ -16,10 +16,7 @@
 			<h2>Определение</h2>
 
 			<div class="example code-wrap">
-				
-[<span class="lexer_Keyword">comparable</span>]<br>
-[<span class="lexer_Keyword">constructor</span>]<br>
-<span class="lexer_Keyword">let</span> <span class="lexer_Variant">vec</span>(...args) := ...
+				[<span class='lexer_Variant'>comparable</span>]<br>[<span class='lexer_Variant'>constructor</span>]<br><span class='lexer_Keyword'>let</span> <span class='lexer_Variant'>vec</span>(...args) := ...
 			</div>
 
 		  	<p>
@@ -29,11 +26,7 @@
 			</p>
 
 			<div class="example code-wrap">
-				
-<span class="lexer_Keyword">let</span> my_vec := <span class="lexer_Variant">vec</span>(5, 2, 6)<br>
-print(my_vec) <span class="lexer_Comment">#=> [5, 2, 6]</span><br>
-my_vec += <span class="lexer_Keyword">true</span><br>
-print(my_vec[3]) <span class="lexer_Comment">#=> true</span><br>
+				<span class='lexer_Keyword'>let</span> my_vec := <span class='lexer_Variant'>vec</span>(5, 2, 6)<br>print(my_vec) <span class='lexer_Comment'>#=> [5, 2, 6]</span><br>my_vec += <span class='lexer_Keyword'>true</span><br>print(my_vec[3]) <span class='lexer_Comment'>#=> <span class='lexer_Keyword'>true</span></span>
 			</div>
 			
 			<p>
@@ -41,20 +34,15 @@ print(my_vec[3]) <span class="lexer_Comment">#=> true</span><br>
 			</p>
 
 			<h2>Операторы</h2>
-			<p>
-				
+
+			<p><h3>*</h3>
+
 <div class="example code-wrap">
-	<span class="lexer_Keyword">let</span> <span class="lexer_Variant">vec</span>.*(): 
-	<span class="lexer_Variant">num</span> := ...
+	<span class='lexer_Keyword'>let</span> <span class='lexer_Variant'>vec</span>.*(): <span class='lexer_Variant'>num</span> := ...
 </div><p>Возвращает количество элементов в векторе.</p>
 <div class="example code-wrap">
-	<span class="lexer_Keyword">let</span> v := <span class="lexer_Variant">vec</span>(
-		<span class="lexer_Number">1</span>, 
-		<span class="lexer_Number">2</span>, 
-		<span class="lexer_Number">3</span>)<br>
-print(*v) <span class="lexer_Comment">#=> 3</span>
-</div>
-			</p>
+	<span class='lexer_Keyword'>let</span> v := <span class='lexer_Variant'>vec</span>(1, 2, 3)<br>print(*v) <span class='lexer_Comment'>#=> 3</span>
+</div></p>
 			<p>
 				<h3>+</h3>
 				<div class="example code-wrap">
@@ -68,10 +56,8 @@ print(*v) <span class="lexer_Comment">#=> 3</span>
 					print(v + <span class="lexer_Number">6</span>) <span class="lexer_Comment">#=> [1, 2, 3, 6]</span><br>
 					print(v) <span class="lexer_Comment">#=> [1, 2, 3]</span>
 				</div>
-				<div class="warn-quote">
-					В функции происходит копирование исходного вектора что может привести к излишнему потребелению ресурсов.
-					Для добавления элементов в конец вектора воспользуйтесь функциями <code>vec.+=</code> и <code>vec.add</code>
-				</div>
+				<div class="warn-quote">В функции происходит копирование исходного вектора что может привести к излишнему потребелению ресурсов.
+					Для добавления элементов в конец вектора воспользуйтесь функциями <code>vec.+=</code> и <code>vec.add</code></div>
 			</p>
 			<p>
 				<h3>-</h3>
@@ -148,12 +134,7 @@ print(*v) <span class="lexer_Comment">#=> 3</span>
 				</div>
 				<p>Проверяет вектор и <code>other</code> на равенство.</p>
 				<div class="example code-wrap">
-					<span class="lexer_Keyword">let</span> v := 
-						<span class="lexer_Variant">vec</span>(<span class="lexer_Number">1</span>, 
-															<span class="lexer_Number">2</span>, <span class="lexer_Number">3</span>)<br>
-					print(v = 7) <span class="lexer_Comment">#=> false</span><br>
-					print(v = <span class="lexer_Variant">vec</span>(<span class="lexer_Number">1</span>, 
-					<span class="lexer_Number">2</span>, <span class="lexer_Number">3</span>)) <span class="lexer_Comment">#=> true</span><br>
+					<span class='lexer_Keyword'>let</span> v := <span class='lexer_Variant'>vec</span>(1, 2, 3)<br>					print(v = 7) <span class='lexer_Comment'>#=> <span class='lexer_Keyword'>false</span></span><br>					print(v = <span class='lexer_Variant'>vec</span>(1, 2, 3)) <span class='lexer_Comment'>#=> <span class='lexer_Keyword'>true</span></span>
 				</div>
 			</p>
 			<p>
