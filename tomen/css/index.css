@@ -164,7 +164,7 @@ img{
 }
 
 #forkongithub a:hover{
-	background:#c11;
+	background:#e85600;
 	color:#fff;
 }
 
@@ -227,6 +227,11 @@ img{
 .tag-support{
 	background:#32b643;
 }
+
 .tag-not-support{
 	background:#e85600;
+}
+
+.int {
+	color:#32b643;
 }
