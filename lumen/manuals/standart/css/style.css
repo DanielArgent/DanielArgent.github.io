@@ -1,8 +1,40 @@
+a.tip {
+	text-decoration: none
+}
+
+a.tip:hover {
+    position: relative
+}
+
+a.tip .title {
+    display: none
+}
+
+
+a.tip:hover .title {
+    border: #c0c0c0 1px dotted;
+    padding: 5px 20px 5px 5px;
+    display: inline-block;
+    z-index: 100;
+    background:#f0f0f0;
+    left: 0px;
+	margin-top: 10px;
+   	width: max-content;
+	position: absolute;
+    text-decoration: none
+}
+
+a.tip:hover .title hr {
+	height: 1px;
+	background-color: #c0c0c0;
+	border: none;
+}
+
 * {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	color: rgb(75, 75, 75);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: rgb(75, 75, 75);
 }
 
 html {
@@ -406,9 +438,9 @@ th {
 
 /* IE10 display: -ms-flexbox (and display: flex in IE 11) does not work inside a table; fall back to block and rely on font hack */
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-	table .pure-g {
-		display: block;
-	}
+    table .pure-g {
+        display: block;
+    }
 }
 
 /* Opera as of 12 on Windows needs word-spacing.
@@ -450,7 +482,7 @@ this the same font stack that Normalize.css sets for the `body`.
     -webkit-user-drag: none;
     -webkit-user-select: none;
     -moz-user-select: none;
-	-ms-user-select: none;
+    -ms-user-select: none;
     user-select: none;
     box-sizing: border-box;
 }
@@ -879,46 +911,46 @@ striping:
 }
 
 .example {
-	font-family:Consolas,Courier New;
-	margin-top:2px;
-	margin-bottom:5px;
-	margin-right:50px;
-	padding:5px 5px 5px 5px;
-	background-color:#F3F3F3;
-	margin-left:20px;
-	border:solid 1px #C0C0C0;
+    font-family:Consolas,Courier New;
+    margin-top:2px;
+    margin-bottom:5px;
+    margin-right:50px;
+    padding:5px 5px 5px 5px;
+    background-color:#F3F3F3;
+    margin-left:20px;
+    border:solid 1px #C0C0C0;
 }
 
 .lexer_Keyword {
-	color:blue;
+    color:blue;
 }
 
 .lexer_Variant {
-	color:rgb(240, 35, 161);
-	/*font-weight:bold;*/
+    color:rgb(240, 35, 161);
+    /*font-weight:bold;*/
 }
 
 .lexer_Literal {
-	color:teal;
-	font-weight:bold;
+    color:teal;
+    font-weight:bold;
 }
 
 .lexer_MultilineComment,.lexer_Comment {
-	color:rgb(253, 51, 51);
+    color:rgb(253, 51, 51);
 }
 
 .lexer_String,.lexer_Char {
-	color:rgb(52, 160, 42);
+    color:rgb(52, 160, 42);
 }
 
 .lexer_Number {
-	color:rgb(0, 0, 0);
+    color:rgb(0, 0, 0);
 }
 
 
 /* higthliting */
 .keyword {
-	color: #0000FF;
+    color: #0000FF;
 }
 
 .class {
@@ -926,12 +958,12 @@ striping:
 }
 
 .comment{
-	font-style: italic;
-	color: green;
+    font-style: italic;
+    color: green;
 }
 
 .text {
-	color: #B21515;
+    color: #B21515;
 }
 /* end */
 
@@ -986,31 +1018,31 @@ h4 {
 }
 
 .content .error-quote {
-	padding: 6px 5px 6px 1.5em;
+    padding: 6px 5px 6px 1.5em;
     color: #666;
-	border-left: 5px solid #FF2D2D;
+    border-left: 5px solid #FF2D2D;
 }
 
 .content .warn-quote {
     color: #666;
     padding: 6px 5px 6px 1.5em;
-	border-left: 5px solid #FFD92D;
+    border-left: 5px solid #FFD92D;
 }
 
 .content .message-quote {
     color: #666;
     padding-left: 1.5em;
-	border-left: 5px solid #1FD155;
+    border-left: 5px solid #1FD155;
 }
 
 .content .info-quote {
     color: #666;
     padding: 6px 5px 6px 1.5em;
-	border-left: 5px solid #1F97E1;
+    border-left: 5px solid #1F97E1;
 }
 
 code {
-	font-family: Consolas, Courier, monospace;
+    font-family: Consolas, Courier, monospace;
     color: #333;
     background: rgb(250, 250, 250);
     padding: 0.2em 0.4em;
@@ -1022,19 +1054,19 @@ code {
 }
 
 .example {
-	font-family: Consolas, Courier, monospace;
+    font-family: Consolas, Courier, monospace;
     color: #333;
     background: rgb(250, 250, 250);
     padding: 1em;
     border: 1px solid #eee;
     border-left-width: 1;
     border-right-width: 1;
-    overflow-x: auto;
-	-webkit-overflow-scrolling: touch;
-	margin-top:2px;
-	margin-bottom:5px;
-	margin-right:20px;
-	margin-left:20px;
+   /* overflow-x: auto;*/
+    -webkit-overflow-scrolling: touch;
+    margin-top:2px;
+    margin-bottom:5px;
+    margin-right:20px;
+    margin-left:20px;
 }
 
 .spoiler > input { 

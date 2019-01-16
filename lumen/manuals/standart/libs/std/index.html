@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+	  	<title>std</title>
+		<link rel="stylesheet" href="C:/Users/%D0%BF%D0%BA/Desktop/danielargent/manuals/standart/css/style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	</head>
+	<body>
+		<div>
+			<h1><div class="pure-button" style="font-size: 12px;"><a href="https://danielargent.github.io/manuals/standart/index.html">Back</a></div> std.vec</h1>
+		</div>
+    	<div class="content">
+			<h2>Определение</h2>
+
+			<div class="example code-wrap">
+				<span class="lexer_Keyword">let</span> std() := ...
+			</div>
+
+			<h2>Функции</h2>
+			<h3>print</h3>
+			<div class="example code-wrap">
+				<span class="lexer_Keyword">let</span> std.print(...args, sep:=<span class="lexer_String">", "</span>, onend:=<span class="lexer_String">"\e"</span>): <span class="lexer_Variant">void</span> := ...
+			</div>
+			<p>Выводит аргумент на консоль.</p>
+			<div class="example code-wrap">
+				print(...v, sep=<span class="lexer_String">"|"</span>) <span class="lexer_Comment">#=> 1|2|3|6</span>
+				print(v) <span class="lexer_Comment">#=> [1, 2, 3]</span>
+			</div>
+
+			<h3>input</h3>
+			<div class="example code-wrap">
+				<span class="lexer_Keyword">let</span> std.input(message:=<span class="lexer_Variant">void</span>): <span class="lexer_Variant">str</span> := ...
+			</div>
+			
+			<div class="example code-wrap">
+				<span class="lexer_Keyword">let</span> v := 
+					<span class="lexer_Variant">vec</span>(<span class="lexer_Number">1</span>, 
+														   <span class="lexer_Number">2</span>, <span class="lexer_Number">3</span>)<br>
+				print(v + <span class="lexer_Number">6</span>) <span class="lexer_Comment">#=> [1, 2, 3, 6]</span>
+				print(v) <span class="lexer_Comment">#=> [1, 2, 3]</span>
+			</div>
+		</div>
+  </body>
+</html>
