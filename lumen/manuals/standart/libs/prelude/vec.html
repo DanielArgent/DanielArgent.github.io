@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-
 <html>
 	<head>
-	  	<title>std.vec</title>
-		<link rel="stylesheet" href="C:/Users/%D0%BF%D0%BA/Desktop/danielargent/manuals/standart/css/style.css">
+		<title>prelude.List</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="C:/Users/пк/Desktop/danielargent/lumen/manuals/standart/css/style.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
   	</head>
 	<body>
@@ -14,9 +14,7 @@
 			<h2>Определение</h2>
 
 			<div class="example code-wrap">
-				[<a href="#" class="tip"><span class="lexer_Keyword">comparable</span><span class="title"><span class="lexer_Keyword">let</span> std.<span class="lexer_Keyword">comparable</span>(f: <span class="lexer_Keyword">fun</span>): <span class="lexer_Keyword">fun</span></span></a>]<br>
-				[<a href="#" class="tip"><span class="lexer_Keyword">constructor</span><span class="title"><span class="lexer_Keyword">let</span> std.<span class="lexer_Keyword">constructor</span>(f: <span class="lexer_Keyword">fun</span>): <span class="lexer_Keyword">fun</span></span></a>]<br>
-				<span class="lexer_Keyword">let</span> <span class="lexer_Variant">vec</span>(...args) := ...
+				<span class="lexer_Keyword">type</span> _ = <span class="lexer_Variant">List</span> head tail
 			</div>
 
 		  	<p>
@@ -26,19 +24,12 @@
 			</p>
 
 			<div class="example code-wrap">
-				<span class="lexer_Keyword">let</span> my_vec :=
-				<a href="#" class="tip">
-					<span class="sid"><span class="lexer_Variant">vec</span></span><span class="title">
-							[<span class="lexer_Keyword">comparable</span>]<br>
-							[<span class="lexer_Keyword">constructor</span>]<br>
-							<span class="lexer_Keyword">let</span> <span class="lexer_Variant">vec</span>(...args) := ...<br>
-							<hr>Функция создаёт объект вектора.</span></a>(5, 2, 6)<br>
-				<a href="#" class="tip"><span class="sid">print</span><span class="title">
-					<span class="lexer_Keyword">let</span> std.<span class="lexer_Keyword">print</span>(...args, onend=<span class="lexer_String">"\e"</span>, sep=<span class="lexer_String">", "</span>): <span class="lexer_Keyword">void</span><br>
-						<hr>Выводит переданные аргументы на консоль.
-					</span></a>(my_vec) <span class="lexer_Comment">#=> [5, 2, 6]</span><br>
-				my_vec <a href="#" class="tip">+=<span class="title"><span class="lexer_Keyword">let</span> std.<span class="lexer_Keyword">vec</span>.+=(element): <span class="lexer_Keyword">void</span></span></a> <span class="lexer_Keyword">true</span><br>
-				<a href="#" class="tip">print<span class="title"><span class="lexer_Keyword">let</span> std.<span class="lexer_Keyword">print</span>(...args, onend=<span class="lexer_String">"\e"</span>, sep=<span class="lexer_String">", "</span>): <span class="lexer_Keyword">void</span><hr>Выводит переданные аргументы на консоль.</span></a>(my_vec[3]) <span class="lexer_Comment">#=> true</span><br>
+				<span class="lexer_Keyword">let</span> tail<br>
+				| x::xs = xs<br>
+				| _ = <span class="lexer_Variant">None</span><br><br>
+
+				<span class="lexer_Keyword">let</span> list = [5; 6; 7]<br>
+				print (tail list) <span class="lexer_Comment">//-> [6; 7]</span>
 			</div>
 			
 			<p>
@@ -118,44 +109,13 @@
 				</div>
 			</p>
 			<p>
-				<h3>-</h3>
+				<h3>::</h3>
 				<div class="example code-wrap">
-					<span class="lexer_Keyword">let</span> <a href="#" class="tip">
-							<span class="sid"><span class="lexer_Variant">vec</span></span><span class="title">
-									[<span class="lexer_Keyword">comparable</span>]<br>
-									[<span class="lexer_Keyword">constructor</span>]<br>
-									<span class="lexer_Keyword">let</span> <span class="lexer_Variant">vec</span>(...args) := ...<br>
-									<hr>Функция создаёт объект вектора.</span></a>.-(other): <a href="#" class="tip">
-											<span class="sid"><span class="lexer_Variant">vec</span></span><span class="title">
-													[<span class="lexer_Keyword">comparable</span>]<br>
-													[<span class="lexer_Keyword">constructor</span>]<br>
-													<span class="lexer_Keyword">let</span> <span class="lexer_Variant">vec</span>(...args) := ...<br>
-													<hr>Функция создаёт объект вектора.</span></a> := ...
+					<span class="lexer_Keyword">let</span> :: this other = ...
 				</div>
 				<p>Находит разность двух последовательностей.</p>
 				<div class="example code-wrap">
-					<span class="lexer_Keyword">let</span> v1 := 
-					<a href="#" class="tip">
-							<span class="sid"><span class="lexer_Variant">vec</span></span><span class="title">
-									[<span class="lexer_Keyword">comparable</span>]<br>
-									[<span class="lexer_Keyword">constructor</span>]<br>
-									<span class="lexer_Keyword">let</span> <span class="lexer_Variant">vec</span>(...args) := ...<br>
-									<hr>Функция создаёт объект вектора.</span></a>(<span class="lexer_Number">1</span>, 
-															<span class="lexer_Number">2</span>, 
-															<span class="lexer_Number">3</span>,
-															<span class="lexer_Number">4</span>)<br>
-					<span class="lexer_Keyword">let</span> v2 := 
-					<a href="#" class="tip">
-							<span class="sid"><span class="lexer_Variant">vec</span></span><span class="title">
-									[<span class="lexer_Keyword">comparable</span>]<br>
-									[<span class="lexer_Keyword">constructor</span>]<br>
-									<span class="lexer_Keyword">let</span> <span class="lexer_Variant">vec</span>(...args) := ...<br>
-									<hr>Функция создаёт объект вектора.</span></a>(<span class="lexer_Number">2</span>, 
-															<span class="lexer_Number">4</span>)<br>									   
-															<a href="#" class="tip"><span class="sid">print</span><span class="title">
-																	<span class="lexer_Keyword">let</span> std.<span class="lexer_Keyword">print</span>(...args, onend=<span class="lexer_String">"\e"</span>, sep=<span class="lexer_String">", "</span>): <span class="lexer_Keyword">void</span><br>
-																		<hr>Выводит переданные аргументы на консоль.
-																	</span></a>(v1 - v2) <span class="lexer_Comment">#=> [1, 3]</span>
+					print (4 :: 7 :: 8 :: []) <span class="lexer_Comment">//-> [4; 7; 8]</span>
 				</div>
 				<div class="error-quote">
 					Функция может выбросить <code>std.convert_error</code> в случае если аргумент <code>other</code> нельзя привести к типу 
