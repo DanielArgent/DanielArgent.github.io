@@ -235,3 +235,24 @@ img{
 .int {
 	color:#32b643;
 }
+
+.keyword {
+	color:#e85600;
+}
+
+.string {
+	color:#32b643;
+}
+
+code {
+  line-height: 20px;
+}
+
+.code-example {
+	background-color: white;
+	border: 1px solid lightgray;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 10px 15px;
+	border-radius: 5px;
+}

@@ -18,94 +18,147 @@
   	</div>
 
   	<div id="main" class="l-main">
-		<h2 class="c-title c-article__title">Введение</h2>
+			<h2 class="c-title c-article__title">Введение</h2>
 
-		<div class="c-article__summary">
-			Эта библиотека позволяет вам работать с языком TOML в ваших .NET приложениях.
-			Вы с лёгкостью можете записывать данные в этот формат, а также читать данные в специальные объекты.
-			Кроме того, реализована полноценная поддержка конвертации между форматами TOML и XML.
-		</div>
+			<div class="c-article__summary">
+				Эта библиотека позволяет вам работать с языком TOML в ваших .NET приложениях.
+				Вы с лёгкостью можете записывать данные в этот формат, а также читать данные в специальные объекты.
+				Кроме того, реализована полноценная поддержка конвертации между форматами TOML и XML.
+			</div>
 
-		<h2 class="c-title c-article__title">Основные классы</h2>
+			<h2 class="c-title c-article__title">Основные типы</h2>
 
-		<div class="c-article__summary">
-			<code class="int">Tomen</code> - главный класс библиотеки, обеспечивающий чтение и запись объектов.<br>
-			<code class="int">ITomlValue</code> - представляет любое значение языка Toml.<br>
-			<code class="int">TomlTable</code> - представляет таблицу языка Toml.<br>
-			<code class="int">TomlString</code> - представляет строку языка Toml.<br>
-			<code class="int">TomlInt</code> - представляет целое число языка Toml.<br>
-			<code class="int">TomlDouble</code> - представляет число языка Toml.<br>
-			<code class="int">TomlBool</code> - представляет логическое значение языка Toml.<br>
-			<code class="int">TomlDate</code> - представляет дату языка Toml.<br>
-			<code class="int">TomlArray</code> - представляет число языка Toml.<br>
-		</div>
+			<div class="c-article__summary">
+				<code class="int">Tomen</code> - обеспечивает чтение и запись объектов, а также конвертацию между форматами TOML и XML<br>
+				<code class="int">ITomlValue</code> - представляет любое значение языка Toml.<br>
+				<code class="int">TomlTable</code> - представляет таблицу языка Toml.<br>
+				<code class="int">TomlString</code> - представляет строку языка Toml.<br>
+				<code class="int">TomlInt</code> - представляет целое число языка Toml.<br>
+				<code class="int">TomlDouble</code> - представляет число языка Toml.<br>
+				<code class="int">TomlBool</code> - представляет логическое значение языка Toml.<br>
+				<code class="int">TomlDate</code> - представляет дату языка Toml.<br>
+				<code class="int">TomlArray</code> - представляет число языка Toml.<br>
+			</div>
 
-		<h2 class="c-title c-article__title">Поддерживаемые возможности</h2>
+			<h2 class="c-title c-article__title">Поддерживаемые возможности</h2>
 
-		<div class="c-article__summary">
-			<ul>
-				<li>
-					<span class="label label-rounded text-light text-capitalize tag-support">&nbsp;&nbsp;&nbsp;</span>
-					Комментарии
-				</li>
-				<li>
-					<span class="label label-rounded text-light text-capitalize tag-support">&nbsp;&nbsp;&nbsp;</span>
-					Ключи в кавычках
-				</li>
-				<li>
-					<span class="label label-rounded text-light text-capitalize tag-support">&nbsp;&nbsp;&nbsp;</span>
-					Ключи с точкой
-				</li>
-				<li>
-					<span class="label label-rounded text-light text-capitalize tag-support">&nbsp;&nbsp;&nbsp;</span>
-					Встроенные таблицы
-				</li>
-				<li>
-					<span class="label label-rounded text-light text-capitalize tag-support">&nbsp;&nbsp;&nbsp;</span>
-					Строки в двойных кавычках
-				</li>
-				<li>
-					<span class="label label-rounded text-light text-capitalize tag-support">&nbsp;&nbsp;&nbsp;</span>
-					Многострочные строки
-				</li>
-				<li>
-					<span class="label label-rounded text-light text-capitalize tag-support">&nbsp;&nbsp;&nbsp;</span>
-					Сырые строки
-				</li>
-				<li>
-					<span class="label label-rounded text-light text-capitalize tag-support">&nbsp;&nbsp;&nbsp;</span>
-					Многострочные сырые строки
-				</li>
-				<li>
-					<span class="label label-rounded text-light text-capitalize tag-support">&nbsp;&nbsp;&nbsp;</span>
-					Целые числа
-				</li>
-				<li>
-					<span class="label label-rounded text-light text-capitalize tag-support">&nbsp;&nbsp;&nbsp;</span>
-					Числа с плавающей точкой
-				</li>
-				<li>
-					<span class="label label-rounded text-light text-capitalize tag-support">&nbsp;&nbsp;&nbsp;</span>
-					Логические значения
-				</li>
-				<li>
-					<span class="label label-rounded text-light text-capitalize tag-support">&nbsp;&nbsp;&nbsp;</span>
-					Таблицы
-				</li>
-				<li>
-					<span class="label label-rounded text-light text-capitalize tag-not-support">&nbsp;&nbsp;&nbsp;</span>
-					Даты и время
-				</li>
-				<li>
-					<span class="label label-rounded text-light text-capitalize tag-support">&nbsp;&nbsp;&nbsp;</span>
-					Массивы
-				</li>
-				<li>
-					<span class="label label-rounded text-light text-capitalize tag-not-support">&nbsp;&nbsp;&nbsp;</span>
-					Массивы таблиц
-				</li>
-			</ul>
-		</div>
+			<div class="c-article__summary">
+				<ul>
+					<li>
+						<span class="label label-rounded text-light text-capitalize tag-support">&nbsp;&nbsp;&nbsp;</span>
+						Комментарии
+					</li>
+					<li>
+						<span class="label label-rounded text-light text-capitalize tag-support">&nbsp;&nbsp;&nbsp;</span>
+						Ключи в кавычках
+					</li>
+					<li>
+						<span class="label label-rounded text-light text-capitalize tag-support">&nbsp;&nbsp;&nbsp;</span>
+						Ключи с точкой
+					</li>
+					<li>
+						<span class="label label-rounded text-light text-capitalize tag-support">&nbsp;&nbsp;&nbsp;</span>
+						Встроенные таблицы
+					</li>
+					<li>
+						<span class="label label-rounded text-light text-capitalize tag-support">&nbsp;&nbsp;&nbsp;</span>
+						Строки в двойных кавычках
+					</li>
+					<li>
+						<span class="label label-rounded text-light text-capitalize tag-support">&nbsp;&nbsp;&nbsp;</span>
+						Многострочные строки
+					</li>
+					<li>
+						<span class="label label-rounded text-light text-capitalize tag-support">&nbsp;&nbsp;&nbsp;</span>
+						Сырые строки
+					</li>
+					<li>
+						<span class="label label-rounded text-light text-capitalize tag-support">&nbsp;&nbsp;&nbsp;</span>
+						Многострочные сырые строки
+					</li>
+					<li>
+						<span class="label label-rounded text-light text-capitalize tag-support">&nbsp;&nbsp;&nbsp;</span>
+						Целые числа
+					</li>
+					<li>
+						<span class="label label-rounded text-light text-capitalize tag-support">&nbsp;&nbsp;&nbsp;</span>
+						Числа с плавающей точкой
+					</li>
+					<li>
+						<span class="label label-rounded text-light text-capitalize tag-support">&nbsp;&nbsp;&nbsp;</span>
+						Логические значения
+					</li>
+					<li>
+						<span class="label label-rounded text-light text-capitalize tag-support">&nbsp;&nbsp;&nbsp;</span>
+						Таблицы
+					</li>
+					<li>
+						<span class="label label-rounded text-light text-capitalize tag-not-support">&nbsp;&nbsp;&nbsp;</span>
+						Встроенные таблицы
+					</li>
+					<li>
+						<span class="label label-rounded text-light text-capitalize tag-not-support">&nbsp;&nbsp;&nbsp;</span>
+						Даты и время
+					</li>
+					<li>
+						<span class="label label-rounded text-light text-capitalize tag-support">&nbsp;&nbsp;&nbsp;</span>
+						Массивы
+					</li>
+					<li>
+						<span class="label label-rounded text-light text-capitalize tag-not-support">&nbsp;&nbsp;&nbsp;</span>
+						Массивы таблиц
+					</li>
+				</ul>
+			</div>
+
+			<h2 class="c-title c-article__title">Начало работы</h2>
+
+			<div class="c-article__summary">
+				В файле <code>data.toml</code> содержится следующая разметка:
+				<div class="code-example">
+					<code> 
+						numbers = [1.5, 2.3]<br><br>
+
+						[<span class="keyword">person</span>]<br>
+						name = <span class="string">"Alex"</span><br>
+						has_hand = <span class="keyword">true</span>
+					</code>
+				</div>  
+				Мы можем прочитать из него данные при помощи метода <code>ReadFile</code> следующим образом:
+				<div class="code-example">
+						<code> 
+							<span class="keyword">TomlTable</span> table = Lumen.Tomen.<span class="keyword">Tomen</span>.ReadFile(<span class="string">"data.toml"</span>);<br><br>
+							
+							<span class="keyword">var</span> numbers = table[<span class="string">"numbers"</span>] <span class="keyword">as TomlArray</span><br>
+
+							
+							<span class="keyword">foreach</span>(<span class="keyword">var</span> i <span class="keyword">in</span> numbers) <br>
+							&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">Console</span>.WriteLine((i <span class="keyword">as TomlTable</span>).Value);<br><br>
+							
+							<span class="keyword">var</span> person = table[<span class="string">"person"</span>] <span class="keyword">as TomlTable</span><br>
+							<span class="keyword">Console</span>.WriteLine((table[<span class="string">"name"</span>] <span class="keyword">as TomlString</span>).Value);<br>
+							<span class="keyword">Console</span>.WriteLine((table[<span class="string">"has_hand"</span>] <span class="keyword">as TomlBool</span>).Value);
+						</code>
+				</div>  
+				Запись данных в файл обеспечивает метод <code>WriteFile</code>:
+				<div class="code-example">
+						<code> 
+							<span class="keyword">TomlTable</span> table = <span class="keyword">new TomlTable</span> {<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;[<span class="string">"x"</span>] = <span class="keyword">new TomlInt</span>(5),<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;[<span class="string">"y"</span>] = <span class="keyword">new TomlInt</span>(6)<br>
+							}<br><br>
+
+							Lumen.Tomen.<span class="keyword">Tomen</span>.WriteFile("output.toml", table);
+						</code>
+				</div>  
+				После выполнения этот код создаст файл <code>output.toml</code> со следующим содержимым:
+				<div class="code-example">
+						<code> 
+							x = 5<br>
+							y = 6
+						</code>
+					</div>  
+			</div>
 	</div>
 
 	<div class="l-footer">
