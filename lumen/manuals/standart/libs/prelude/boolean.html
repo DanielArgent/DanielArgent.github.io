@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>prelude.Boolean</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://danielargent.github.io/lumen/manuals/standart/css/style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	</head>
+	<body>
+		<div>
+			<h1><div class="pure-button" style="font-size: 12px;"><a href="https://danielargent.github.io/manuals/standart/index.html">Back</a></div> prelude.Boolean</h1>
+		</div>
+    	<div class="content">
+			<h2>Определение</h2>
+
+			<div class="example code-wrap">
+				<span class="lexer_Keyword">type</span> <span class="lexer_Variant">Boolean</span> = <span class="lexer_Keyword">true</span> | <span class="lexer_Keyword">false</span> <span class="lexer_Keyword">with</span><br>
+				&nbsp;&nbsp;&nbsp;&nbsp<span class="lexer_Keyword">open</span> comparable<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;...
+			</div>
+
+		  	<p>
+				Модуль, содержащий функции сравнения на основе оператора <code>&lt;=></code>
+			</p>
+
+			<h2>Операторы</h2>
+			<p>
+				<h3><code>&lt;=&gt;</code></h3>
+				<div class="example code-wrap">
+					<span class="lexer_Keyword">let</span> &lt;=&gt; this other =<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;...
+				</div>
+				<p>Реализация модуля <code><a href="comparable.html">comparable</a></code>.Производит сравнение двух значений.</p>
+				<div class="example code-wrap">
+					print (<span class="lexer_Keyword">true</span> &lt;=&gt; <span class="lexer_Keyword">false</span>) <span class="lexer_Comment">//-> -1</span>
+				</div>
+			</p>
+			<p>
+				<h3><code>not</code></h3>
+				<div class="example code-wrap">
+					<span class="lexer_Keyword">let</span> <span class="lexer_Keyword">not</span> this =<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="lexer_Keyword">match</span> this<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;| <span class="lexer_Keyword">true</span> = <span class="lexer_Keyword">false</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;| <span class="lexer_Keyword">false</span> = <span class="lexer_Keyword">true</span>
+				</div>
+				<p>Логическое НЕ.</p>
+				<div class="example code-wrap">
+					print <span class="lexer_Keyword">not true</span> &nbsp;<span class="lexer_Comment">//-> false</span><br>
+					print <span class="lexer_Keyword">not false</span> <span class="lexer_Comment">//-> true</span>
+				</div>
+			</p>
+			<p>
+				<h3><code>and</code></h3>
+				<div class="example code-wrap">
+					<span class="lexer_Keyword">let</span> <span class="lexer_Keyword">and</span> this other =<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="lexer_Keyword">match</span> this<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;| <span class="lexer_Keyword">true</span> &nbsp;= <span class="lexer_Keyword">match</span> other<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="lexer_Keyword">true</span> = <span class="lexer_Keyword">true</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="lexer_Keyword">false</span> = <span class="lexer_Keyword">false</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;| <span class="lexer_Keyword">false</span> = <span class="lexer_Keyword">false</span>
+				</div>
+				<p>Логическое И.</p>
+				<div class="example code-wrap">
+					print <span class="lexer_Keyword">true and true</span> &nbsp;&nbsp;<span class="lexer_Comment">//-> true</span><br>
+					print <span class="lexer_Keyword">true and false</span> &nbsp;<span class="lexer_Comment">//-> false</span><br>
+					print <span class="lexer_Keyword">false and true</span> &nbsp;<span class="lexer_Comment">//-> false</span><br>
+					print <span class="lexer_Keyword">false and false</span> <span class="lexer_Comment">//-> false</span>
+				</div>
+			</p>
+			<p>
+				<h3><code>or</code></h3>
+				<div class="example code-wrap">
+					<span class="lexer_Keyword">let</span> <span class="lexer_Keyword">or</span> this other =<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="lexer_Keyword">match</span> this<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;| <span class="lexer_Keyword">true</span> &nbsp;= <span class="lexer_Keyword">true</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;| <span class="lexer_Keyword">false</span> = <span class="lexer_Keyword">match</span> other<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="lexer_Keyword">true</span> = <span class="lexer_Keyword">true</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="lexer_Keyword">false</span> = <span class="lexer_Keyword">false</span><br>
+				</div>
+				<p>Логическое ИЛИ.</p>
+				<div class="example code-wrap">
+					print <span class="lexer_Keyword">true or true</span> &nbsp;&nbsp;<span class="lexer_Comment">//-> true</span><br>
+					print <span class="lexer_Keyword">true or false</span> &nbsp;<span class="lexer_Comment">//-> true</span><br>
+					print <span class="lexer_Keyword">false or true</span> &nbsp;<span class="lexer_Comment">//-> true</span><br>
+					print <span class="lexer_Keyword">false or false</span> <span class="lexer_Comment">//-> false</span>
+				</div>
+			</p>
+			<p>
+				<h3><code>xor</code></h3>
+				<div class="example code-wrap">
+					<span class="lexer_Keyword">let</span> <span class="lexer_Keyword">xor</span> this other =<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="lexer_Keyword">match</span> this<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;| <span class="lexer_Keyword">true</span>&nbsp; = <span class="lexer_Keyword">match</span> other<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="lexer_Keyword">true</span> = <span class="lexer_Keyword">false</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="lexer_Keyword">false</span> = <span class="lexer_Keyword">true</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;| <span class="lexer_Keyword">false</span> = <span class="lexer_Keyword">match</span> other<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="lexer_Keyword">true</span> = <span class="lexer_Keyword">true</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="lexer_Keyword">false</span> = <span class="lexer_Keyword">false</span><br>
+				</div>
+				<p>Логическое ИЛИ.</p>
+				<div class="example code-wrap">
+					print <span class="lexer_Keyword">true xor true</span> &nbsp;&nbsp;<span class="lexer_Comment">//-> false</span><br>
+					print <span class="lexer_Keyword">true xor false</span> &nbsp;<span class="lexer_Comment">//-> true</span><br>
+					print <span class="lexer_Keyword">false xor true</span> &nbsp;<span class="lexer_Comment">//-> true</span><br>
+					print <span class="lexer_Keyword">false xor false</span> <span class="lexer_Comment">//-> false</span>
+				</div>
+			</p>
+
+			<h2>Функции</h2>
+			<p>
+				<h3><code>String</code></h3>
+				<div class="example code-wrap">
+					<span class="lexer_Keyword">let</span> <span class="lexer_Variant">String</span> (this: <span class="lexer_Variant">Boolean</span>): <span class="lexer_Variant">String</span> = <br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="lexer_Keyword">match</span> this<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;| <span class="lexer_Keyword">true</span> = <span class="lexer_String">"true"</span><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;| <span class="lexer_Keyword">false</span> = <span class="lexer_String">"false"</span>
+				</div>
+				<p>Производит сравнение двух значений.</p>
+				<div class="example code-wrap">
+					print (5.compare 6) <span class="lexer_Comment">//-> -1</span>
+				</div>
+			</p>
+
+			<p>
+				<h3><code>Number</code></h3>
+				<div class="example code-wrap">
+					<span class="lexer_Keyword">let</span> <span class="lexer_Variant">Number</span> (this: <span class="lexer_Variant">Boolean</span>): <span class="lexer_Variant">Number</span> =<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="lexer_Keyword">match</span> this<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;| <span class="lexer_Keyword">true</span> = 1<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;| <span class="lexer_Keyword">false</span> = 0
+				</div>
+				<p>Возвращает минимальное из двух значений.</p>
+				<div class="example code-wrap">
+					print (5.min 6) <span class="lexer_Comment">//-> 5</span>
+				</div>
+			</p>
+		</div>
+  </body>
+</html>
