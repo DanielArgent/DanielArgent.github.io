@@ -3828,7 +3828,7 @@ var Utils = {
 
         els.forEach(function(el){
             var txt = el.textContent
-                .replace(/^[\r\n]+/, "")	// strip leading newline
+                .replace(/^[\r\n]+/, "")    // strip leading newline
                 .replace(/\s+$/g, "");
 
             if (/^\S/gm.test(txt)) {

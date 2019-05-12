@@ -1,0 +1,52 @@
+.bg-color {
+	background-color: rgb(168, 8, 8);
+	color: #ffffff;
+}
+
+.h-menu > li > a {
+	padding: 1rem 1.5rem;
+}
+
+#logo {
+	color: rgb(205, 125, 236);
+	
+}
+
+.xs {
+	background-color: rgb(241, 241, 241);
+	padding: 14em 15em;
+}
+
+code,
+kbd {
+  display: inline-block;
+  font-size: 90%;
+  color: #ffffff;
+  background-color: rgb(60, 58, 61);
+  border-radius: 0px;
+  line-height: 20px;
+	vertical-align: middle;
+}
+
+.lexer-keyword {
+	color: rgb(205, 125, 236)
+}
+
+.lep-content {
+	padding: 10px;
+}
+
+h2 {
+	padding-top: 10px;
+}
+
+h3 {
+	font-weight: 400;
+	font-size: 1.5em;
+	padding-top: 20px;
+}
+
+p { 
+	padding-left: 15px;
+	padding-right: 10px;
+}

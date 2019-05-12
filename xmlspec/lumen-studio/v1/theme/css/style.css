@@ -1,0 +1,12 @@
+.h-menu > li > a {
+	padding: 1rem 1.5rem;
+}
+
+code,
+kbd {
+  display: inline-block;
+  font-size: 90%;
+  border-radius: 0px;
+  line-height: 20px;
+	vertical-align: middle;
+}

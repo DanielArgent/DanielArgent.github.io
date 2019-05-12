@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Specification 'theme'</title>
+        <link rel="stylesheet" href="css/metro.css"/>
+        <link rel="stylesheet" href="css/rm.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+    </head>
+    <body>
+        <h1>theme</h1>
+        <h3>Корневой элемент</h3>
+        <p>
+            Имеет название <code>Theme</code>. Содержит слеюдующие аттрибуты:
+            <ul>
+                    <li><code>name</code> - имя темы</li>
+                    <li><code>xmlns</code> - пространство имён (должно иметь значение <code><a href="http://danielargent.github.io/xmlspec/lumen-studio/v1/theme">http://danielargent.github.io/xmlspec/lumen-studio/v1/theme</a></code>)</li>
+                </ul>
+        </p>
+        <h3>Константы</h3>
+        <p>
+            В файлах тем доступны константы, которые объвляются в секции <code>Constants</code>. Константы
+            нужны в случаях, когда одно и то же значение указывается в файле темы несколько раз.
+            Переменная объявляется как тег <code>Constant</code> со следующими аттрибутами:
+            <ul>
+                <li><code>name</code> - имя константы</li>
+                <li><code>type</code> - тип константы</li>
+                <li><code>value</code> - значение константы</li>
+            </ul>
+            В данной версии доступен лишь тип <code>color</code>. Используются константы путём указания их имени
+            с префиксом <code>#</code> в месте, где подразумевается наличие значения:<br>
+            <code>
+                &lt;Constants><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;Constant name="back"  type="color" value="2; 44; 55"/><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;Constant name="fore"  type="color" value="108, 149, 79"/><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;Constant name="lines" type="color" value="7; 54; 66"/><br>
+                &lt;/Constants><br><br>
+                &lt;Background color="#back"/><br>
+                &lt;Foreground color="#fore"/><br>
+                &lt;Grid color="#lines"/>
+            </code>
+        </p>
+        <h3></h3>
+    </body>
+</html>

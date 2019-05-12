@@ -1,0 +1,67 @@
+.bg-color {
+	background-color: rgb(168, 8, 96);
+	color: #ffffff;
+}
+
+.h-menu > li > a {
+	padding: 1rem 1.5rem;
+}
+
+#logo {
+	color: rgb(205, 125, 236);
+	
+}
+
+.xs {
+	background-color: rgb(241, 241, 241);
+	padding: 14em 15em;
+}
+
+code,
+kbd {
+  font-size: 90%;
+	border-radius: 0px;
+	padding: 0px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.lexer-keyword {
+	color: rgb(205, 125, 236)
+}
+
+.lep-content {
+	padding: 10px;
+}
+
+h2 {
+	padding-top: 10px;
+}
+
+h3 {
+	font-weight: 400;
+	font-size: 1.5em;
+	padding-top: 20px;
+}
+
+h4 {
+	font-weight: 400;
+	font-size: 1.2em;
+	padding-top: 20px;
+	padding-left: 15px;
+}
+
+p { 
+	padding-left: 15px;
+	padding-right: 10px;
+}
+
+ul {
+	list-style-type: square;
+	padding-top: 5px;
+}
+
+li > ul {
+	list-style-type: square;
+	padding-bottom: 5px;
+}

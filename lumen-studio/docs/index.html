@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lumen Studio Documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="../../css/metro.css">
+    <link rel="stylesheet" href="css/style.css">    
+  </head>
+  <body>
+    <ul class="h-menu bg-color">
+      <li><a href="index.html">Lumen Studio Documentation</a></li>
+		</ul>
+		<div class="container-fluid lep-content">
+			<h2>Структура IDE</h2>
+			<h3>MainForm</h3>
+			<p>
+				Основное окно IDE, содержащее элементы управления и основные методы для работы их визуализции. 
+				Для доступа к главной форме следует использовать статическое свойство <code>Instance</code> этого класса. 
+				<code>Instance</code> создаётся автоматически при запуске приложения, создание допольнительных экземпляров не допускается.
+				Наследование от данной формы не допускается. Основное окно IDE разделено на 4 части: 
+				<code>TopMenu</code>,	<code>EditorArea</code>, <code>RightPanel</code> и <code>BottomPanel</code>.
+
+				<h4>TopMenu</h4>
+				<p>
+					Это основное меню IDE, которое содержит элементы управления самой IDE, проектной и файловой системами.<br><br>
+					
+					Самый левый элемент этого меню представлен значком среды разработки. Вы не имеете доступа к нему.<br><br>
+					
+					Следующий элемент - это пункт меню <code>TopMenuFile</code>, содержащий основные элементы для управления
+					файловой системой. Содержит следующие подпункты:
+						<ul>
+							<li>
+								<code>TopMenuOpen</code> содержит 2 следующих подпункта:
+								<ul>
+									<li>
+										<code>TopMenuOpenFile</code>, предназначенный для открытия файла. Этот элемент недоступен вам.
+										Нажатие на этот элемент вызывает открытие диалогового окна выбора файла. В случае, если 
+										диалоговое окно возвращает <code>DialogResult.OK</code> - вызывается метод <code>OpenFile</code> статического класса <code>ProjectManager</code>.
+									</li>
+									<li>
+										<code>TopMenuOpenProject</code>, предназначенный для открытия проектов. Этот элемент недоступен вам.
+										Нажатие на этот элемент вызывает открытие диалогового окна выбора проекта. В случае, если 
+										диалоговое окно возвращает <code>DialogResult.OK</code> - вызывается метод <code>OpenProject</code> статического класса <code>ProjectManager</code>.
+									</li>
+								</ul>
+							</li>
+							<li>
+								<code>TopMenuCreate</code> содержит 2 следующих подпункта:
+								<ul>
+									<li>
+										<code>TopMenuCreateFile</code>, предназначенный для создания файла. Этот элемент недоступен вам.
+										Нажатие на этот элемент вызывает открытие диалогового окна <code>CreateFileDialog</code> выбора файла. 
+										В случае, если диалоговое окно возвращает <code>DialogResult.OK</code> - вызывается метод <code>CreateFile</code> статического класса <code>ProjectManager</code>.
+									</li>
+									<li>
+										<code>TopMenuCreateProject</code>, предназначенный для создания проекта. Этот элемент недоступен вам.
+										Нажатие на этот элемент вызывает открытие диалогового окна <code>CreateProjectDialog</code> выбора файла. 
+										В случае, если диалоговое окно возвращает <code>DialogResult.OK</code> - вызывается метод <code>CreateProject</code> статического класса <code>ProjectManager</code>.
+									</li>
+								</ul>
+							</li>
+							<li> 
+								<code>TopMenuSave</code>, предназначенный для сохранения текущего открытого файла
+								Нажатие на этот элемент вызывает метод <code>SaveFile</code> статического класса <code>ProjectManager</code>. Этот элемент недоступен вам.
+							</li>
+							<li>
+								<code>TopMenuSaveAs</code>, предназначенный для сохранения текущего открытого файла в какой либо другой. Этот элемент недоступен вам.
+								Нажатие на этот элемент вызывает метод <code>SaveFileAs</code> статического класса <code>ProjectManager</code>.
+							</li>
+						</ul>
+					Следующий элемент это <code>TopMenuEdit</code>, содержит элементы управления исправлений кода и прочих элементов, содержит следующие
+					базовые элементы: <br>
+					<ul>
+					<li>
+						<code>TopMenuEditSeparator</code>. Разделитель между <code></code>TopMenuUndo и <code></code>TopMenuRedo, видим только если 
+						виден <code></code>TopMenuUndo или <code></code>TopMenuRedo. Этот элемент недоступен вам.
+					</li>
+					<li>
+						<code>TopMenuUndo</code>. Отображается только в случае, если <code>ActiveWorkingAreaControl</code> реализует <code>IUndoable</code>.
+						Этот элемент недоступен вам.
+						Нажатие на этот элемент вызывает вызов метода <code>Undo</code> элемента <code>ActiveWorkingAreaControl</code>
+					</li>
+					<li>	<code>TopMenuRedo</code>. Отображается только в случае, если <code>ActiveWorkingAreaControl</code> реализует <code>IRedoable</code>.
+						Этот элемент недоступен вам.
+						Нажатие на этот элемент вызывает вызов метода <code>Redo</code> элемента <code>ActiveWorkingAreaControl</code>
+					</li>
+					<li>
+						<code>TopMenuCopy</code>. Отображается только в случае, если <code>ActiveWorkingAreaControl</code> реализует <code>ICopyable</code>.
+						Этот элемент недоступен вам.
+						Нажатие на этот элемент вызывает вызов метода <code>Copy</code> элемента <code>ActiveWorkingAreaControl</code>
+					</li>
+					<li>
+						<code>TopMenuCut</code>. Отображается только в случае, если <code>ActiveWorkingAreaControl</code> реализует <code>Cutable</code>.
+						Этот элемент недоступен вам.
+						Нажатие на этот элемент вызывает вызов метода <code>Cut</code> элемента <code>ActiveWorkingAreaControl</code>
+					</li>
+					<li>
+						<code>TopMenuPaste</code>. Отображается только в случае, если <code>ActiveWorkingAreaControl</code> реализует <code>IPasteable</code>.
+						Этот элемент недоступен вам.
+						Нажатие на этот элемент вызывает вызов метода <code>Paste</code> элемента <code>ActiveWorkingAreaControl</code>
+					</li>
+					<li>
+						<code>TopMenuDelete</code>. Отображается только в случае, если <code>ActiveWorkingAreaControl</code> реализует <code>IDeleteable</code>.
+						Этот элемент недоступен вам.
+						Нажатие на этот элемент вызывает вызов метода <code>Delete</code> элемента <code>ActiveWorkingAreaControl</code>
+					</li>
+					</ul>
+				</p>
+
+			</p>
+		</div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+  </body>
+</html>

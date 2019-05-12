@@ -1,30 +1,30 @@
 * {
-	margin: 0;
+    margin: 0;
 }
 
 body {
-	background-color: rgb(236, 236, 236);
-	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(236, 236, 236);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .header {
-	background-color: crimson;
-	color: #FFFFFF;
-	height: 70px;
-	width: 100%;
-	font-size: 16pt;
-	font-weight: 100;
+    background-color: crimson;
+    color: #FFFFFF;
+    height: 70px;
+    width: 100%;
+    font-size: 16pt;
+    font-weight: 100;
 }
 
 .menu {
-	float: right;
-	height: 70px;
+    float: right;
+    height: 70px;
 }
 
 li {
-	vertical-align: middle;
-	display: inline-block;
-	height: inherit;
-	padding-right: 20px;
+    vertical-align: middle;
+    display: inline-block;
+    height: inherit;
+    padding-right: 20px;
     PADDING-TOP: 20px;
 }
