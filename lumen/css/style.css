@@ -31,3 +31,9 @@ kbd {
 .lexer-keyword {
 	color: rgb(205, 125, 236)
 }
+
+.my-menu {
+	width: 100%;
+	overflow-y: hidden;
+	overflow-x: auto;
+}
