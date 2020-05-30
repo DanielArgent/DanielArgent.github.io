@@ -1,0 +1,28 @@
+#avatar {
+	width: 20rem;
+  height: auto;
+  /*border-radius: 50%*/
+}
+
+#avatar-cell {
+	grid-area: "avatar";
+}
+
+
+
+#text-cell {
+	grid-area: "text";
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-template-rows: auto;
+	grid-template-areas: "avatar text";
+}
+
+.skills-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	align-items: center;
+}

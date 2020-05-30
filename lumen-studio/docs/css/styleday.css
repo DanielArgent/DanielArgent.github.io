@@ -1,6 +1,6 @@
-body {
-	background-color: rgb(30, 30, 30);
-	color: rgb(200, 200, 200);
+.bg-color {
+	background-color: rgb(168, 8, 96);
+	color: #ffffff;
 }
 
 .h-menu > li > a {
@@ -13,13 +13,12 @@ body {
 }
 
 .xs {
-	background-color: rgb(30, 30, 30);
+	background-color: rgb(241, 241, 241);
 	padding: 14em 15em;
 }
 
 code,
 kbd {
-	background-color: rgb(30, 30, 30);
   font-size: 90%;
 	border-radius: 0px;
 	padding: 0px;

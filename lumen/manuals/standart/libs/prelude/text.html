@@ -1,73 +1,39 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>prelude.List</title>
+		<title>prelude.Text</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="../../css/style.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
   	</head>
 	<body>
 		<div>
-			<h1><div class="pure-button" style="font-size: 12px;"><a href="index.html">Back</a></div> List</h1>
+			<h1><div class="pure-button" style="font-size: 12px;"><a href="index.html">Back</a></div> prelude.Text</h1>
 		</div>
     	<div class="content">
 			<h2>Определение</h2>
 
 			<div class="example code-wrap">
-				<span class="lexer_Keyword">type</span> <span class="lexer_Variant">List</span> = ...<br>
+				<span class="lexer_Keyword">type</span> <span class="lexer_Variant">Text</span> = ...<br>
 				&nbsp;&nbsp;<span class="lexer_Keyword">implements</span> Ord<br>
+				&nbsp;&nbsp;<span class="lexer_Keyword">implements</span> Format<br>
 				&nbsp;&nbsp;<span class="lexer_Keyword">implements</span> Collection<br>
 			</div>
 
-		  	<p>
-				Функция создаёт объект вектора. Вектор представляет собой проиндексированную последовательность 
-				значений переменной длины. Индексация элементов начинается с нуля, вектора поддерживают 
-				вставку, добавление и удаление элементов. Пример использования:
-			</p>
-
-			<div class="example code-wrap">
-				<span class="lexer_Keyword">let</span> tail [] = <span class="lexer_Variant">None</span><br>
-				<span class="lexer_Keyword">let</span> tail x :: xs = <span class="lexer_Variant">Some</span> xs<br><br>
-
-				<span class="lexer_Keyword">let</span> list = [5, 6, 7]<br>
-				print (tail list) <span class="lexer_Comment">//-&gt; Some [6, 7]</span>
-			</div>
-			
-			<p>
-				В примере выше мы сначала определили вектор с 3 числами, а затем добавили значение логического типа.
+		  <p>
+				Представляет строковое значение
 			</p>
 
 			<h2>Операторы</h2>
 			<p>
 				<h3>* (unary)</h3>
 				<div class="example code-wrap">
-					<span class="lexer_Keyword">let</span> <a href="#" class="tip">
-							<span class="sid"><span class="lexer_Variant">vec</span></span><span class="title">
-									[<span class="lexer_Keyword">comparable</span>]<br>
-									[<span class="lexer_Keyword">constructor</span>]<br>
-									<span class="lexer_Keyword">let</span> <span class="lexer_Variant">vec</span>(...args) := ...<br>
-									<hr>Функция создаёт объект вектора.</span></a>.*(): 
-					
-					<a href="#" class="tip">
-							<span class="sid"><span class="lexer_Variant">num</span></span><span class="title">
-									[<span class="lexer_Keyword">comparable</span>]<br>
-									<span class="lexer_Keyword">let</span> <span class="lexer_Variant">num</span>() := ...<br>
-									<hr>Функция создаёт число.</span></a> := ...
+					<span class="lexer_Keyword">let</span> * self =	...
 				</div>
-				<p>Возвращает количество элементов в векторе.</p>
+				<p>Возвращает количество символов в строке.</p>
 				<div class="example code-wrap">
-					<span class="lexer_Keyword">let</span> v := <a href="#" class="tip">
-					<span class="sid"><span class="lexer_Variant">vec</span></span><span class="title">
-					[<span class="lexer_Keyword">comparable</span>]<br>
-					[<span class="lexer_Keyword">constructor</span>]<br>
-					<span class="lexer_Keyword">let</span> <span class="lexer_Variant">vec</span>(...args) := ...<br>
-					<hr>Функция создаёт объект вектора.</span></a>(<span class="lexer_Number">1</span>, 
-															<span class="lexer_Number">2</span>, <span class="lexer_Number">3</span>)<br>
-															<a href="#" class="tip"><span class="sid">print</span><span class="title">
-																	<span class="lexer_Keyword">let</span> std.<span class="lexer_Keyword">print</span>(...args, onend=<span class="lexer_String">"\e"</span>, sep=<span class="lexer_String">", "</span>): <span class="lexer_Keyword">void</span><br>
-																		<hr>Выводит переданные аргументы на консоль.
-																	</span></a>(<a href="#" class="tip"><span class="sid">*</span><span class="title">
-																					<span class="lexer_Keyword">let</span> <span class="lexer_Variant">vec</span>.*(): <span class="lexer_Variant">num</span></span></a>v) <span class="lexer_Comment">#=> 3</span>
+					<span class="lexer_Keyword">let</span> t = <span class="lexer_String">"Hello!"</span><br>
+				  print (*t)<span class="lexer_Comment"> //-&gt; 3</span>
 				</div>
 			</p>
 			<p>

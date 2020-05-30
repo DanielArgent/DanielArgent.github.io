@@ -1,41 +1,57 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    <title></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <link rel="stylesheet" href="../css/metro.css">
+<head>
+	<title>Lumen</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <link rel="stylesheet" href="css/style.css">    
-    </head>
-    <body>
-      <ul class="my-menu h-menu bg-color">
-            <li><a href="#">Lumen</a></li>
-            <li><a href="#">Скачать</a></li>
-            <li><a href="manuals/standart/index.html" >Документация</a></li>
-            <li>
-                <a href="#" class="dropdown-toggle">Другие проекты</a>
-                    <ul class="d-menu" data-role="dropdown" style="width:100%">
-                        <li>
-                            <a href="#" class="dropdown-toggle">IDE's</a>
-                            <ul class="d-menu" data-role="dropdown" style="margin-top: 8px; margin-left: 1px; border-left: none;">
-                                <li><a href="#">Lumen Studio</a></li>
-                                <li><a href="#">Noity</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Photon</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Bones</a></li>
-                        <li><a href="#">Anatomy</a></li>
-                    </ul>
-                </li>
-      </ul>
-            <div class="xs text-center">
-                <h1 class="">Lumen</h1>
-								функционально-императивный язык программирования
-						</div>
-            <hr>
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
-  </body>
+	<link rel="stylesheet" href="../css/metro.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<ul class="my-menu h-menu bg-color">
+		<li><a href="#">Lumen</a></li>
+		<li><a href="#">Скачать</a></li>
+		<li><a href="manuals/standart/index.html">Документация</a></li>
+		<li>
+			<a href="#" class="dropdown-toggle">Другие проекты</a>
+			<ul class="d-menu" data-role="dropdown" style="width:100%">
+				<li>
+					<a href="#" class="dropdown-toggle">IDE's</a>
+					<ul class="d-menu" data-role="dropdown" style="margin-top: 8px; margin-left: 1px; border-left: none;">
+						<li><a href="../lumen-studio/">Lumen Studio</a></li>
+					</ul>
+				</li>
+				<li class="divider"></li>
+				<li><a href="../tomen/index.html">Tomen</a></li>
+			</ul>
+		</li>
+	</ul>
+
+	<div id="main-screen">
+		<div id="v-centred">
+			<h1>Lumen</h1>
+			функционально-императивный язык программирования
+		</div>
+	</div>
+	<hr>
+	<div class="grid" id="examples">
+		<div class="example">
+			<h3>Генераторы</h3>
+			<div class="example-description">
+				Начиная с Lumen 1.2 имеются генераторы!
+			</div>
+			<code class="example-code">
+				<span class="lexer-keyword">let</span> numbersFrom n =<br>
+				&nbsp;&nbsp;<span class="lexer-keyword">yield</span> n <br>
+				&nbsp;&nbsp;<span class="lexer-keyword">yield from tailrec (n+1)</span> 
+			</code>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+</body>
+
 </html>

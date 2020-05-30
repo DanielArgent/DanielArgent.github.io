@@ -1,0 +1,162 @@
+* {
+	margin: 0;
+}
+
+body {
+	font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Roboto", "Ubuntu", "Helvetica Neue", sans-serif;
+}
+
+h1 {
+	font-weight: 100;
+  font-size: 3rem;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-weight: 100;
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+
+nav {
+  list-style: none inside;
+  display: block;
+  margin: 0;
+  padding: 0;
+	background-color: rgb(0, 0, 0);
+	color: #ffffff;
+}
+
+nav::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+nav::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+nav > li,
+nav > li > a {
+  display: block;
+  position: relative;
+}
+
+nav > li {
+  background-color: inherit;
+  color: inherit;
+  float: left;
+}
+
+nav > li:hover {
+  background-color: rgba(29, 29, 29, 0.1);
+}
+
+nav > li:hover > a,
+nav > li:hover .icon {
+  color: inherit;
+}
+
+nav > li > a {
+  font-weight: normal;
+  color: inherit;
+  font-size: 1rem;
+  outline: none;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: inherit;
+  white-space: nowrap;
+}
+nav > li > a.dropdown-toggle {
+  padding-right: 2rem!important;
+}
+nav > li > a.dropdown-toggle::before {
+  margin-left: -1.25rem;
+}
+nav.no-hover > li > a {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  color: #6a6a6a;
+}
+nav.no-hover > li:hover,
+nav.no-hover > li > a:hover {
+  background-color: transparent;
+  color: #1d1d1d;
+}
+nav.large > li > a {
+  padding: 1.125rem 1.625rem;
+  font-size: 2rem;
+}
+nav.large > li > a.dropdown-toggle {
+  padding-right: 2.5rem !important;
+}
+nav.large > li > a.dropdown-toggle::before {
+  height: 0.625rem;
+  width: 0.625rem;
+  margin-left: -1.75rem;
+}
+nav > .divider {
+  display: none;
+}
+nav.mega {
+  position: relative;
+}
+nav.mega > li {
+  position: static;
+}
+nav.mega > li.active-container {
+  background-color: inherit;
+}
+nav.mega > li.active-container a {
+  background-color: inherit;
+}
+nav.mega .mega-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 0;
+  background-color: inherit;
+  display: none;
+  color: inherit;
+  z-index: 1000;
+  box-shadow: 2px 2px 2px 0 rgba(29, 29, 29, 0.4);
+}
+nav.mega .mega-container * {
+  color: inherit;
+}
+
+nav > li > a {
+	padding: 1rem 1.5rem;
+}
+
+.start-screen {
+	text-align: center;
+	padding-top: 15rem;
+	padding-bottom: 15rem;
+	height: 100%;
+	background-color: rgb(255, 255, 255);
+	color: #000000;
+}
