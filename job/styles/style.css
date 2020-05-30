@@ -27,9 +27,30 @@
 	align-items: center;
 }
 
+.goto-project-button {
+	bottom: 0;
+	right: 0;
+	position: absolute;
+}
+
+.project-desc {
+	position: relative;
+	padding-bottom: 3rem;
+}
+
+.project-content {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 1rem;
+}
+
 @media screen and (max-width: 730px) {
 	.skills-grid {
 		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.project-content {
+		grid-template-columns: 1fr;
 	}
 }
 
