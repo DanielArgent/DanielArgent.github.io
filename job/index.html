@@ -172,7 +172,8 @@
         <h4>Plant Protection</h4>
 
         <div class="project-content">
-          <img
+					<img
+						data-enlargable
             src="res/proj1.png"
             style="margin-bottom: 2rem; width: 100%; border: solid 1px silver;"
           />
@@ -204,7 +205,8 @@
         <h4>Unit Converter</h4>
 
         <div class="project-content">
-          <img
+					<img
+						data-enlargable
             src="res/proj2.png"
             style="margin-bottom: 2rem; width: 100%; border: solid 1px silver;"
 					/>
@@ -229,5 +231,29 @@
         </div>
       </div>
     </div>
-  </body>
+	</body>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script>
+		$('img[data-enlargable]').addClass('img-enlargable').click(function(){
+    var src = $(this).attr('src');
+    var modal;
+    function removeModal(){ modal.remove(); $('body').off('keyup.modal-close'); }
+    modal = $('<div>').css({
+        background: 'RGBA(0,0,0,.5) url('+src+') no-repeat center',
+        backgroundSize: 'contain',
+        width:'100%', height:'100%',
+        position:'fixed',
+        zIndex:'10000',
+        top:'0', left:'0',
+        cursor: 'zoom-out'
+    }).click(function(){
+        removeModal();
+    }).appendTo('body');
+    //handling ESC
+    $('body').on('keyup.modal-close', function(e){
+      if(e.key==='Escape'){ removeModal(); } 
+    });
+});
+	</script>
 </html>
