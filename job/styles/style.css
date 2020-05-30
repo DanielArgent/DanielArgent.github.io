@@ -1,3 +1,8 @@
+.container {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
 #avatar {
 	width: 100%;
   height: auto;
@@ -22,6 +27,18 @@
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	align-items: center;
+}
+
+@media screen and (max-width: 730px) {
+	.skills-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (max-width: 490px) {
+	.skills-grid {
+		grid-template-columns: 1fr;
+	}
 }
 
 .skill-icon {
