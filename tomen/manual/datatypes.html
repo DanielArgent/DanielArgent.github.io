@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+
+    <title>Tomen</title>
+    <meta name="description" content="Tomen - парсер TOML для .NET" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/index.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-dark navbar-expand-lg">
+      <span class="navbar-brand mb-0 h1">Tomen</span>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="../index.html">Home</a>
+          <a class="nav-item nav-link active" href="">Documentation</a>
+          <a class="nav-item nav-link" href="#">Download</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid fill" style="margin-top: 1rem;">
+      <div class="row">
+        <div class="col-lg-3 col-md-3">
+          <div class="list-group">
+            <a href="index.html" class="list-group-item list-group-item-action">
+              Введение
+            </a>
+            <a href="" class="list-group-item list-group-item-action active"
+              >Типы данных</a
+            >
+            <a href="#" class="list-group-item list-group-item-action"
+              >Чтение и запись</a
+            >
+            <a href="#" class="list-group-item list-group-item-action"
+              >Конвертация в/из XML</a
+            >
+          </div>
+        </div>
+        <div class="col-lg-9 col-md-9">
+          <h2 class="c-title c-article__title">Основные типы</h2>
+
+          <div class="c-article__summary">
+            <code class="int">Tomen</code> - обеспечивает чтение и запись
+            объектов, а также конвертацию между форматами TOML и XML<br />
+            <code class="int">ITomlValue</code> - представляет любое значение
+            языка Toml.<br />
+            <code class="int">TomlTable</code> - представляет таблицу языка
+            Toml.<br />
+            <code class="int">TomlString</code> - представляет строку языка
+            Toml.<br />
+            <code class="int">TomlInt</code> - представляет целое число языка
+            Toml.<br />
+            <code class="int">TomlDouble</code> - представляет число языка
+            Toml.<br />
+            <code class="int">TomlBool</code> - представляет логическое значение
+            языка Toml.<br />
+            <code class="int">TomlDate</code> - представляет дату языка Toml.<br />
+            <code class="int">TomlArray</code> - представляет число языка
+            Toml.<br />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
