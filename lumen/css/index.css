@@ -55,6 +55,11 @@ body {
 	color: #ffffff;
 }
 
+.btn-default:hover {
+	color: #ffffff;
+	background-color: #000000;
+}
+
 footer {
 	background-color: #252525;
 }
@@ -63,12 +68,14 @@ code {
 	color: #000000;
 }
 
-.examples {
-	height: 200vh;
+#wrapper {
 	top: 100vh;
 	position: relative;
 	background-color: #000000; /*#efefef;*/
 	color: #ffffff;
+}
+
+.examples {
 	padding: 2em 2em;
 }
 
@@ -76,7 +83,14 @@ code {
 	display: block;
 	color: #ebebeb;
 	padding: 1rem;
-	border-radius: 5px;
+}
+
+#more-features-btn {
+	display: block;
+	margin: 1em 2em 1em auto;
+	width: fit-content;
+	font-size: 1.2em;
+	border-bottom: 2px solid white;
 }
 
 .lumen-keyword {
