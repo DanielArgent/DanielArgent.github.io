@@ -1,0 +1,96 @@
+.navbar {
+	position: fixed;
+	width: 100%;
+	background-color: #000000;
+	color: #ffffff;
+	z-index: 2;
+}
+
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-toggler {
+	color: #ffffff;
+}
+
+.navbar-dark .navbar-brand {
+	color: #ffffff;
+}
+
+.list-group-item.active {
+	background-color: #000000;
+	border-color: #000000;
+}
+
+body {
+	background-color: #ffffff;
+	font-family: 'Cairo', sans-serif;
+}
+
+.fill { 
+	min-height: 100vh;
+	height: 100vh;
+
+	background-image: url(https://img.8wallpapers.com/uploads/2019/04/0d44c8eac1cf447580210d81.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	position: fixed;
+}
+
+
+.content {
+	color: #ffffff;
+	text-align: center;
+	width: fit-content;
+	background-color: #00000088;
+	padding: 1em 2em;
+}
+
+.btn-default {
+	color: #ffffff;
+}
+
+footer {
+	background-color: #252525;
+}
+
+code {
+	color: #000000;
+}
+
+.examples {
+	height: 200vh;
+	top: 100vh;
+	position: relative;
+	background-color: #000000; /*#efefef;*/
+	color: #ffffff;
+	padding: 2em 2em;
+}
+
+.example-code {
+	display: block;
+	color: #ebebeb;
+	padding: 1rem;
+	border-radius: 5px;
+}
+
+.lumen-keyword {
+	color: rgb(200, 80, 224)
+}
+
+.lumen-constant {
+	color: rgb(255, 73, 73);
+}
+
+.lumen-comment {
+	color: rgb(66, 221, 66);
+}
+
+.lumen-text {
+	color: rgb(115, 100, 211);
+}
