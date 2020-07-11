@@ -1,102 +1,84 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Lumen Programming Language</title>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
 
-		<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="css/index.css" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-  </head>
+<head>
+	<title>Lumen Programming Language</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-  <body>
-    <nav class="navbar navbar-dark navbar-expand-lg">
-      <span class="navbar-brand mb-0 h1">Lumen</span>
+	<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+	<link rel="stylesheet" href="css/index.css" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
 
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+<body>
+	<nav class="navbar navbar-dark navbar-expand-lg">
+		<span class="navbar-brand mb-0 h1">Lumen</span>
 
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="#">Home</a>
-          <a class="nav-item nav-link" href="manual/index.html"
-            >Documentation</a
-          >
-          <a class="nav-item nav-link" href="#">Download</a>
-        </div>
-      </div>
-    </nav>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+			aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
 
-    <div class="container-fluid fill">
-      <div class="content">
-        <h1>Lumen</h1>
-        <p>functional programming language for .NET</p>
-				<div class="conent-buttons">
-					<a href="https://github.com/DanielArgent/Tomen" class="btn btn-default"
-						><span class="fa fa-github"></span> Look at GitHub</a
-					>
-					<div class="btn btn-default"><span class="fa fa-download"></span></div>
-				</div>
-      </div>
-    </div>
-
-		<div id="wrapper">
-		<div class="examples">
-			<h2>News</h2>
-      <div class="pt-4">
-				<span>15.07.2020 </span>
-			 <h4>Lumen 0.8 is out!</h4>
-			 <p>
-			 	We are glad to introduce you first stable version of Lumen Programming Language.
-				</p>
-      </div>
+		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+			<div class="navbar-nav">
+				<a class="nav-item nav-link bg-hover-violet" href="#">Home</a>
+				<a class="nav-item nav-link bg-hover-blue" href="manual/index.html">Documentation</a>
+				<a class="nav-item nav-link bg-hover-green" href="#">Download</a>
+			</div>
 		</div>
-		
-		<div class="examples">
-			<h2>About</h2>
-      <div class="pt-4">
-				Lumen is functional programming language with dynamic typization for .NET Framework platform.
-				It can be easily used as script language in yours .NET projects - Lumen can be embedded into 
-				any project on any language from .NET family.  
-      </div>
-    </div>
+	</nav>
 
-    <div class="examples">
+	<div class="container-fluid main-screen">
+		<div class="content">
+			<h1>Lumen</h1>
+			<p>functional programming language for .NET</p>
+			<div class="conent-buttons">
+				<a href="https://github.com/DanielArgent/Tomen" class="btn btn-default"><span class="fa fa-github"></span> Look
+					at GitHub</a>
+				<div class="btn btn-default"><span class="fa fa-download"></span></div>
+			</div>
+		</div>
+	</div>
+
+	<div id="wrapper">
+		<section>
+			<h2>News</h2>
+			<div class="pt-4">
+				<span>15.07.2020 </span>
+				<h4>Lumen 0.8 is out!</h4>
+				<p>
+					We are glad to introduce you first stable version of Lumen Programming Language.
+				</p>
+			</div>
+		</section>
+
+		<section>
+			<h2>About</h2>
+			<div class="pt-4">
+				Lumen is functional programming language with dynamic typization for .NET Framework platform.
+				It can be easily used as script language in yours .NET projects - Lumen can be embedded into
+				any project on any language from .NET family.
+			</div>
+		</section>
+
+		<section>
 			<h2>Features</h2>
-      <div class="row pt-4">
+			<div class="row pt-4">
 				<div class="col-lg-6 col-md-6 mt-3 mt-md-0">
-          <h3>Everything is an expression!</h3>
-          <code class="example-code">
+					<h3>Everything is an expression!</h3>
+					<code class="example-code">
 						<span class="lumen-keyword">let</span> x = 7<br>
 						println (<span class="lumen-keyword">if</span> x &gt; 9: <span class="lumen-text">"x &gt; 9"</span> 
 						<span class="lumen-keyword">else</span>: <span class="lumen-text">"x &lt;= 9"</span>) <span class="lumen-comment">//=&gt; "x &lt;= 9"</span>
           </code>
-        </div>
+				</div>
 
 				<div class="col-lg-6 col-md-6 mt-3 mt-md-0">
-          <h3>Pattern matching</h3>
-          <code class="example-code">
+					<h3>Pattern matching</h3>
+					<code class="example-code">
             <span class="lumen-keyword">let</span> persons = [[<span
               class="lumen-text"
               >"Alex"</span
@@ -108,10 +90,10 @@
             <span class="lumen-text">"Name: \(name) Age: \(age)"</span>
           </code>
 				</div>
-				
-        <div class="col-lg-6 col-md-6 mt-3">
-          <h3>Generators</h3>
-          <code class="example-code">
+
+				<div class="col-lg-6 col-md-6 mt-3">
+					<h3>Generators</h3>
+					<code class="example-code">
             <span class="lumen-keyword">let</span> factorials () =<br />
             &nbsp;&nbsp;<span class="lumen-keyword">let</span> factorial 0 =
             1<br />
@@ -132,11 +114,11 @@
             <span class="lumen-keyword">in</span> factorials ():<br />
             &nbsp;&nbsp;println i <br />
           </code>
-        </div>
+				</div>
 
-        <div class="col-lg-6 col-md-6 mt-3">
-          <h3>Tail recursion</h3>
-          <code class="example-code">
+				<div class="col-lg-6 col-md-6 mt-3">
+					<h3>Tail recursion</h3>
+					<code class="example-code">
 
 						<span class="lumen-comment">// Factorial with tail recursion and helper function</span><br>
 						<span class="lumen-keyword">let</span> fact n =<br>
@@ -146,27 +128,23 @@
 						<br>
 						println (fact 5) <span class="lumen-comment">//=&gt; 120</span>
           </code>
-        </div>
+				</div>
 			</div>
 
 			<a id="more-features-btn">More features</a>
-		</div>
-		
+		</section>
+
 	</div>
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+		crossorigin="anonymous"></script>
+</body>
+
 </html>

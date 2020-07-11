@@ -1,19 +1,33 @@
+:root {
+	--bg-color: #000000;
+	--fg-color: #ffffff;
+
+	--violet: rgb(207, 143, 255);
+	--blue: rgb(40, 168, 234);
+	--green: rgb(105, 229, 110);
+}
+
 .navbar {
 	position: fixed;
 	width: 100%;
-	background-color: #000000;
-	color: #ffffff;
 	z-index: 2;
+
+	padding-top: 0px;
+	padding-bottom: 0px;
+
+	background-color: var(--bg-color);
+	color: var(--fg-color);
 }
 
 .navbar-dark .navbar-nav .nav-link,
-.navbar-dark .navbar-nav .nav-link.active,
-.navbar-dark .navbar-toggler {
-	color: #ffffff;
+.navbar-dark .navbar-nav .nav-link .active {
+	color: var(--fg-color);
+	padding: 1em;
 }
 
 .navbar-dark .navbar-brand {
-	color: #ffffff;
+	color: var(--fg-color);
+	font-weight: 600;
 }
 
 .list-group-item.active {
@@ -23,11 +37,10 @@
 
 body {
 	background-color: #ffffff;
-	font-family: 'Cairo', sans-serif;
+	font-family: 'Segoe UI', sans-serif;
 }
 
-.fill { 
-	min-height: 100vh;
+.main-screen { 
 	height: 100vh;
 
 	background-image: url(https://img.8wallpapers.com/uploads/2019/04/0d44c8eac1cf447580210d81.jpg);
@@ -47,8 +60,15 @@ body {
 	color: #ffffff;
 	text-align: center;
 	width: fit-content;
-	background-color: #00000088;
+	background-color: rgba(0, 0, 0, 0.3);
 	padding: 1em 2em;
+}
+
+@supports (backdrop-filter: blur(2px) saturate(125%)) or (-webkit-backdrop-filter: blur(2px) saturate(125%)) {
+	.content {
+	-webkit-backdrop-filter: blur(10px) saturate(125%);
+	backdrop-filter: blur(10px) saturate(125%);
+	}
 }
 
 .btn-default {
@@ -75,8 +95,12 @@ code {
 	color: #ffffff;
 }
 
-.examples {
+#wrapper>section {
 	padding: 2em 2em;
+}
+
+#wrapper>section>h2::before {
+	content: ':'
 }
 
 .example-code {
@@ -107,4 +131,37 @@ code {
 
 .lumen-text {
 	color: rgb(115, 100, 211);
+}
+
+.navbar-dark .navbar-nav .bg-hover-violet:hover {
+	background-color: var(--violet);
+	color: var(--bg-color);
+
+	transition: .3s;
+}
+
+.navbar-dark .navbar-nav .bg-hover-green:hover {
+	background-color: var(--green);
+	color: var(--bg-color);
+
+	transition: .3s;
+}
+
+.navbar-dark .navbar-nav .bg-hover-blue:hover {
+	background-color: var(--blue);
+	color: var(--bg-color);
+
+	transition: .3s;
+}
+
+.fg-violet {
+	color: var(--violet);
+}
+
+.fg-blue {
+	color: var(--blue);
+}
+
+.fg-green {
+	color: var(--green);
 }
