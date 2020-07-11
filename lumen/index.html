@@ -44,44 +44,56 @@
 	</div>
 
 	<div id="wrapper">
-		<section>
-			<h2 class="fg-violet">News</h2>
-			<div class="cube"></div>
-			<div class="pt-4">
-				<span>15.07.2020 </span>
-				<h4>Lumen 0.8 is out!</h4>
-				<p>
-					We are glad to introduce you first stable version of Lumen Programming Language.
-				</p>
+		<section class="row">
+			<div class="col-md-8">
+				<h2 class="fg-violet">News</h2>
+				<div class="pt-4">
+					<span>15.07.2020 </span>
+					<h4>Lumen 0.8 is out!</h4>
+					<p>
+						We are glad to introduce you first stable version of Lumen Programming Language.
+					</p>
+				</div>
+			</div>
+			<div class="col-md-4 d-flex justify-content-center">
+				<div class="cube"></div>
 			</div>
 		</section>
 
 		<section>
-			<h2 class="fg-green">About</h2>
-			<div class="pyramid"></div>
-			<div class="pt-4">
-				Lumen is functional programming language with dynamic typization for .NET Framework platform.
-				It can be easily used as script language in yours .NET projects - Lumen can be embedded into
-				any project on any language from .NET family.
-			</div>
-		</section>
+			<section class="row">
+				<div class="col-md-8">
+					<h2 class="fg-green">About</h2>
 
-		<section>
-			<h2 class="fg-blue">Features</h2>
-			
-			<div class="row pt-4">
-				<div class="col-lg-6 col-md-6 mt-3 mt-md-0">
-					<h3>Everything is an expression!</h3>
-					<code class="example-code">
+					<div class="pt-4">
+						Lumen is functional programming language with dynamic typization for .NET Framework platform.
+						It can be easily used as script language in yours .NET projects - Lumen can be embedded into
+						any project on any language from .NET family.
+					</div>
+				</div>
+				<div class="col-md-4 d-flex justify-content-center">
+					<div class="pyramid"></div>
+				</div>
+			</section>
+
+			<section>
+				<section class="row">
+					<div class="col-md-8">
+				<h2 class="fg-blue">Features</h2>
+
+				<div class="row pt-4">
+					<div class="col-lg-6 col-md-6 mt-3 mt-md-0">
+						<h3>Everything is an expression!</h3>
+						<code class="example-code">
 						<span class="lumen-keyword">let</span> x = 7<br>
 						println (<span class="lumen-keyword">if</span> x &gt; 9: <span class="lumen-text">"x &gt; 9"</span> 
 						<span class="lumen-keyword">else</span>: <span class="lumen-text">"x &lt;= 9"</span>) <span class="lumen-comment">//=&gt; "x &lt;= 9"</span>
           </code>
-				</div>
+					</div>
 
-				<div class="col-lg-6 col-md-6 mt-3 mt-md-0">
-					<h3>Pattern matching</h3>
-					<code class="example-code">
+					<div class="col-lg-6 col-md-6 mt-3 mt-md-0">
+						<h3>Pattern matching</h3>
+						<code class="example-code">
             <span class="lumen-keyword">let</span> persons = [[<span
               class="lumen-text"
               >"Alex"</span
@@ -92,11 +104,11 @@
             &nbsp;&nbsp;print
             <span class="lumen-text">"Name: \(name) Age: \(age)"</span>
           </code>
-				</div>
+					</div>
 
-				<div class="col-lg-6 col-md-6 mt-3">
-					<h3>Generators</h3>
-					<code class="example-code">
+					<div class="col-lg-6 col-md-6 mt-3">
+						<h3>Generators</h3>
+						<code class="example-code">
             <span class="lumen-keyword">let</span> factorials () =<br />
             &nbsp;&nbsp;<span class="lumen-keyword">let</span> factorial 0 =
             1<br />
@@ -117,11 +129,11 @@
             <span class="lumen-keyword">in</span> factorials ():<br />
             &nbsp;&nbsp;println i <br />
           </code>
-				</div>
+					</div>
 
-				<div class="col-lg-6 col-md-6 mt-3">
-					<h3>Tail recursion</h3>
-					<code class="example-code">
+					<div class="col-lg-6 col-md-6 mt-3">
+						<h3>Tail recursion</h3>
+						<code class="example-code">
 
 						<span class="lumen-comment">// Factorial with tail recursion and helper function</span><br>
 						<span class="lumen-keyword">let</span> fact n =<br>
@@ -131,11 +143,14 @@
 						<br>
 						println (fact 5) <span class="lumen-comment">//=&gt; 120</span>
           </code>
+					</div>
 				</div>
-			</div>
-
-			<a id="more-features-btn">More features</a>
-		</section>
+				<a id="more-features-btn">More features</a>
+				</div>
+				<div class="col-md-4 d-flex justify-content-center">
+					<div class="circle"></div>
+				</div>
+			</section>
 
 	</div>
 

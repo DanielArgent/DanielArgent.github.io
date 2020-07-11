@@ -200,14 +200,19 @@ section>div {
   z-index: 1;
 }
 
+.row {
+	margin-left: 0;
+	margin-right: 0;
+}
+
 .cube {
   float: right;
   background: var(--violet);
   /*#dc2e2e;*/
   width: 100px;
   height: 100px;
-  position: relative;
-  margin: 50px;
+	position: relative;
+	margin-top: 4em;
 }
 
 .cube::before {
@@ -267,12 +272,11 @@ section>div {
 }
 
 .circle {
+	margin-top: 4em;
 	display: block;
 	position: relative;
   border-radius: 50%;
-	width: 100px;
-	height: 100px;
-  margin: 50px;
-	margin-top: 0;
-  background: radial-gradient(circle at 100px 100px, #5cabff, #000);
+	width: 150px;
+	height: 150px;
+  background: radial-gradient(circle at 100px 100px, var(--blue), #000);
 }
