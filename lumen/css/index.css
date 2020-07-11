@@ -123,8 +123,18 @@ code {
   padding: 2em 2em;
 }
 
+#wrapper>section>h2 {
+	width: fit-content;
+	border-bottom: 3px solid transparent;
+}
+
 #wrapper>section>h2::before {
   content: ':'
+}
+
+#wrapper>section>h2:hover {
+	border-bottom: 3px solid ;
+	cursor: pointer;
 }
 
 .example-code {
@@ -196,7 +206,6 @@ code {
   display: block;
   position: absolute;
 	left: 20px;
-	height: 406px;
 }
 
 @media (min-width: 576px) {
