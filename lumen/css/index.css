@@ -192,8 +192,16 @@ code {
 
 
 #ide-img {
-	border-bottom: solid 1px rgb(60, 60, 60);
+  border-bottom: solid 1px rgb(60, 60, 60);
   display: block;
-	position: absolute;
-	right: -300px;
+  position: absolute;
+  left: 20px;
+}
+
+@media (min-width: 576px) {
+  #ide-img {
+		left: auto;
+    right: -250px;
+  }
+
 }
