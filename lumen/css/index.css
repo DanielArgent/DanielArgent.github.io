@@ -5,11 +5,6 @@
 	--violet: rgb(207, 143, 255);
 	--blue: rgb(40, 168, 234);
 	--green: rgb(105, 229, 110);
-
-	--keyword: #B146C2;
-	--constant: #E74856;
-	--comment: #00CC6A;
-	--text: #6B69D6;
 }
 
 .navbar {
@@ -31,6 +26,16 @@
 
 .navbar-dark .navbar-toggler {
 	margin: 0.5em 1em 0.5em auto;
+	border: none;
+}
+
+.navbar-dark .navbar-toggler.collapsed .navbar-toggler-icon {
+	background-image: url(../img/toggler.svg);
+}
+
+.navbar-dark .navbar-toggler .navbar-toggler-icon {
+	background-image: url(../img/toggler-close.svg);
+	transition: 0.2s;
 }
 
 button:focus {
@@ -74,7 +79,7 @@ body {
 	color: #ffffff;
 	text-align: center;
 	width: fit-content;
-	background-color: rgba(0, 0, 0, 0.3);
+	background-color: rgba(0, 0, 0, 0.5);
 	padding: 1em 2em;
 }
 
