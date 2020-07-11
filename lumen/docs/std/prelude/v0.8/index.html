@@ -35,7 +35,7 @@
 
 	<div id="wrapper">
 		<section>
-			<div class="ldoc-module">
+			<div class="ldoc-module" id="m-prelude">
 				<h1 class="ldoc-name">Prelude</h1>
 
 				<div class="ldoc-description">
@@ -46,7 +46,7 @@
 					This module opens in any others by default.
 				</div>
 
-				<div class="ldoc-class">
+				<div class="ldoc-class" id="c-exception">
 					<h2 class="ldoc-name">Exception</h2>
 
 					<div class="ldoc-description">
@@ -97,7 +97,7 @@
 					</div>
 				</div>
 
-				<div class="ldoc-class">
+				<div class="ldoc-class" id="c-cloneable">
 					<h2 class="ldoc-name">Cloneable</h2>
 
 					<div class="ldoc-description">
@@ -149,11 +149,11 @@
 					</div>
 				</div>
 
-				<div class="ldoc-class">
+				<div class="ldoc-class" id="c-functor">
 					<h2 class="ldoc-name">Functor</h2>
 
 					<div class="ldoc-description">
-						Functor class. 
+						Functor class.
 					</div>
 
 					<div class="ldoc-definition">
@@ -164,13 +164,13 @@
 					</div>
 
 					<div class="ldoc-requirements">
-						<div class="ldoc-function">
+						<div class="ldoc-function" id="f-functor-fmap">
 							<h3 class="ldoc-name">fmap</h3>
 
 							<div class="ldoc-description">
-								Required function to implement <span class="fg-red">Functor</span> class.
-								Apply given function to each element of given container and returns 
-								new container value with saved structure. 
+								Required function to implement <a class="fg-red" href="#c-functor">Functor</a> class.
+								Apply given function to each element of given container and returns
+								new container value with saved structure.
 							</div>
 
 							<div class="ldoc-parameters">
@@ -211,7 +211,8 @@
 						<h3 class="ldoc-name">&gt;&gt;-</h3>
 
 						<div class="ldoc-description">
-							Alias for <span class="fg-red">Functor</span>.fmap, but with flip argument position
+							Alias for <a class="fg-red" href="#c-functor">Functor</a>.<a href="#f-functor-fmap">fmap</a>, but with
+							flip argument position
 						</div>
 
 						<div class="ldoc-parameters">
@@ -240,10 +241,148 @@
 							<code>
 								<span class="lumen-keyword">let</span> &gt;&gt; (fc: <span class="lumen-keyword">'T</span>)
 								(fn: <span class="lumen-keyword">Function</span>) = <br>
-								&nbsp;&nbsp;&nbsp;&nbsp; <span class="lumen-keyword">Functor</span>.fmap fn fc
+								&nbsp;&nbsp;&nbsp;&nbsp; <span class="lumen-keyword">'T</span>.<a href="#f-functor-fmap"></a>fmap fn fc
 							</code>
 						</div>
 
+					</div>
+				</div>
+
+				<div class="ldoc-class" id="c-Format">
+					<h2 class="ldoc-name">Format</h2>
+
+					<div class="ldoc-description">
+						Format class uses to represent an object string interpolation
+					</div>
+
+					<div class="ldoc-definition">
+						<code>
+							<span class="lumen-keyword">type</span> Format = <span class="lumen-keyword">class</span><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;...
+						</code>
+					</div>
+
+					<div class="ldoc-requirements">
+						<div class="ldoc-function" id="f-Format-format">
+							<h3 class="ldoc-name">format</h3>
+
+							<div class="ldoc-description">
+								Required function to implement <a class="fg-red" href="#c-Format">Format</a> class.
+								Takes an object to represent and string, that describes required format.
+							</div>
+
+							<div class="ldoc-parameters">
+								<div class="ldoc-parameter">
+									<span class="ldoc-parameter-name">self</span>
+									<span class="ldoc-parameter-type">'T</span>
+									<span class="ldoc-parameter-description">an object to represent</span>
+								</div>
+								<div class="ldoc-parameter">
+									<span class="ldoc-parameter-name">fstr</span>
+									<a class="ldoc-parameter-type" href="#v-Text">Text</a>
+									<span class="ldoc-parameter-description">describes required format</span>
+								</div>
+							</div>
+
+							<div class="ldoc-returns">
+								<a class="ldoc-returns-type" href="#v-Text">
+									Text
+								</a>
+								<span class="ldoc-returns-description">
+									formatted string.
+								</span>
+							</div>
+
+							<div class="ldoc-definition">
+								<code>
+									<span class="lumen-keyword">let</span> format (self: <span class="lumen-keyword">'T'</span>) 
+									(fstr: <a class="lumen-keyword" href="#v-Text">Text</a>) = <br>
+									&nbsp;&nbsp;&nbsp;&nbsp;<a class="lumen-keyword" href="#functionIsNotImplementedForType">functionIsNotImplementedForType</a> 
+									<span class="lumen-text">"Functor.fmap"</span> <span class="lumen-keyword">'T</span>
+								</code>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="ldoc-class" id="c-Ord">
+					<h2 class="ldoc-name">Ord</h2>
+
+					<div class="ldoc-description">
+						This class contains functions for comparsion.
+					</div>
+
+					<div class="ldoc-definition">
+						<code>
+							<span class="lumen-keyword">type</span> Ord = <span class="lumen-keyword">class</span><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;...
+						</code>
+					</div>
+
+					<div class="ldoc-example">
+						<code>
+							<span class="lumen-keyword">type</span> NumWrap = NumWrap a<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;<span class="lumen-keyword">implements</span> Ord<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;<span class="lumen-comment">// Implementation of Ord mixin</span><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;<span class="lumen-keyword">let</span> compare y x =<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="lumen-keyword">if</span> x.a &lt; y.a:<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="lumen-keyword">return</span> -1<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="lumen-keyword">if</span> x.a &gt; y.a:<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="lumen-keyword">return</span> 1<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="lumen-keyword">return</span> 0<br>
+							<br>
+							<span class="lumen-keyword">let</span> w1 = NumWrap 0<br>
+							<span class="lumen-keyword">let</span> w2 = NumWrap 7<br>
+							<br>
+							println (w1 &lt; w2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="lumen-comment">//-&gt; true</span><br>
+							println (w1 &gt; w2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="lumen-comment">//-&gt; false</span><br>
+							println (w1 &gt;= w2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="lumen-comment">//-&gt; false</span><br>
+							println (w1.min w2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="lumen-comment">//-&gt; 0</span><br>
+							println (w1.max w2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="lumen-comment">//-&gt; 7</span><br>
+							println (w1.compare w2) <span class="lumen-comment">//-&gt; -1</span>
+						</code>
+					</div>
+
+					<div class="ldoc-requirements">
+						<div class="ldoc-function" id="f-Ord-compare">
+							<h3 class="ldoc-name">compare</h3>
+
+							<div class="ldoc-description">
+								Required function to implement <a class="fg-red" href="#c-Ord">Ord</a> class.
+								Takes two objects, return -1, 0 or 1.
+							</div>
+
+							<div class="ldoc-parameters">
+								<div class="ldoc-parameter">
+									<span class="ldoc-parameter-name">x</span>
+									<span class="ldoc-parameter-type">'T</span>
+									<span class="ldoc-parameter-description">first object</span>
+								</div>
+								<div class="ldoc-parameter">
+									<span class="ldoc-parameter-name">y</span>
+									<span class="ldoc-parameter-type">'Y</span>
+									<span class="ldoc-parameter-description">second object</span>
+								</div>
+							</div>
+
+							<div class="ldoc-returns">
+								<a class="ldoc-returns-type" href="#v-Text">
+									Number
+								</a>
+								<span class="ldoc-returns-description">
+									returns zero if objects are equal, -1 if first object less than second, and 1 otherwise
+								</span>
+							</div>
+
+							<div class="ldoc-definition">
+								<code>
+									<span class="lumen-keyword">let</span> compare (x: <span class="lumen-keyword">'T</span>) 
+									(y: <a class="lumen-keyword" href="#v-Text">'Y</a>) = <br>
+									&nbsp;&nbsp;&nbsp;&nbsp;<a class="lumen-keyword" href="#functionIsNotImplementedForType">functionIsNotImplementedForType</a> 
+									<span class="lumen-text">"Ord.compare"</span> <span class="lumen-keyword">'T</span>
+								</code>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

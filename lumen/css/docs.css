@@ -31,7 +31,8 @@
 	border-color: var(--blue);
 }
 
-.ldoc-definition {
+.ldoc-definition,
+.ldoc-example {
 	margin-top: 1em;
 	margin-bottom: 1em;
 }
@@ -41,7 +42,12 @@
 	color: #4e4e4e;
 }
 
-.ldoc-definition>code {
+.ldoc-example::before {
+	content: 'Example:';
+	color: #4e4e4e;
+}
+
+.ldoc-definition>code, .ldoc-example>code {
 	white-space: nowrap;
 	overflow-x: auto;
 	border: 1px solid #4e4e4e;
@@ -138,4 +144,13 @@
 
 .ldoc-returns-description::before {
 	content: '-';
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+a:hover {
+	color: white;
 }
