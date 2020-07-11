@@ -5,6 +5,11 @@
 	--violet: rgb(207, 143, 255);
 	--blue: rgb(40, 168, 234);
 	--green: rgb(105, 229, 110);
+
+	--keyword: #B146C2;
+	--constant: #E74856;
+	--comment: #00CC6A;
+	--text: #6B69D6;
 }
 
 .navbar {
@@ -29,6 +34,7 @@
 }
 
 button:focus {
+	/* Remove default Bootstrap outline */
 	outline: none;
 }
 
@@ -126,7 +132,7 @@ code {
 }
 
 .lumen-keyword {
-	color: rgb(200, 80, 224)
+	color: var(--violet)
 }
 
 .lumen-constant {
@@ -134,11 +140,11 @@ code {
 }
 
 .lumen-comment {
-	color: rgb(66, 221, 66);
+	color: var(--green);
 }
 
 .lumen-text {
-	color: rgb(115, 100, 211);
+	color: var(--blue);
 }
 
 .navbar-dark .navbar-nav .bg-hover-violet:hover {
