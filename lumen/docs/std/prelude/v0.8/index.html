@@ -211,19 +211,19 @@
 						<h3 class="ldoc-name">&gt;&gt;-</h3>
 
 						<div class="ldoc-description">
-							Alias for  <span class="fg-red">Functor</span>, but with different area
+							Alias for <span class="fg-red">Functor</span>.fmap, but with flip argument position
 						</div>
 
 						<div class="ldoc-parameters">
 							<div class="ldoc-parameter">
-								<span class="ldoc-parameter-name">fn</span>
-								<span class="ldoc-parameter-type">Function</span>
-								<span class="ldoc-parameter-description">function to apply</span>
-							</div>
-							<div class="ldoc-parameter">
 								<span class="ldoc-parameter-name">fc</span>
 								<span class="ldoc-parameter-type">'T</span>
 								<span class="ldoc-parameter-description">container value</span>
+							</div>
+							<div class="ldoc-parameter">
+								<span class="ldoc-parameter-name">fn</span>
+								<span class="ldoc-parameter-type">Function</span>
+								<span class="ldoc-parameter-description">function to apply</span>
 							</div>
 						</div>
 
@@ -238,10 +238,9 @@
 
 						<div class="ldoc-definition">
 							<code>
-								<span class="lumen-keyword">let</span> fmap (fn: <span class="lumen-keyword">Function</span>) 
-								(fc: <span class="lumen-keyword">'T</span>) = <br>
-								&nbsp;&nbsp;&nbsp;&nbsp;functionIsNotImplementedForType 
-								<span class="lumen-text">"Functor.fmap"</span> <span class="lumen-keyword">'T</span>
+								<span class="lumen-keyword">let</span> &gt;&gt; (fc: <span class="lumen-keyword">'T</span>)
+								(fn: <span class="lumen-keyword">Function</span>) = <br>
+								&nbsp;&nbsp;&nbsp;&nbsp; <span class="lumen-keyword">Functor</span>.fmap fn fc
 							</code>
 						</div>
 
