@@ -192,7 +192,8 @@ code {
 
 
 #ide-img {
-	left: calc(100vw - 400px);
+	left: calc(100vw - 450px);
+	border-bottom: solid 1px rgb(60, 60, 60);
   display: block;
   position: relative;
 }
