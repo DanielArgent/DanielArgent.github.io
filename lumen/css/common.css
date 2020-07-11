@@ -1,0 +1,160 @@
+:root {
+  --bg-color: #000000;
+  --fg-color: #ffffff;
+
+  --violet: rgb(207, 143, 255);
+  --blue: rgb(40, 168, 234);
+	--green: rgb(105, 229, 110);
+	--red: #E81123;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+
+  padding: 0;
+
+  background-color: var(--bg-color);
+  color: var(--fg-color);
+}
+
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-nav .nav-link .active {
+  color: var(--fg-color);
+  padding: 1em;
+}
+
+.navbar-dark .navbar-toggler {
+  margin: 0.5em 1em 0.5em auto;
+  border: none;
+}
+
+.navbar-dark .navbar-toggler.collapsed .navbar-toggler-icon {
+  background-image: url(../img/toggler.svg);
+}
+
+.navbar-dark .navbar-toggler .navbar-toggler-icon {
+  background-image: url(../img/toggler-close.svg);
+  transition: 0.2s;
+}
+
+button:focus {
+  /* Remove default Bootstrap outline */
+  outline: none;
+}
+
+
+.navbar-dark .navbar-brand {
+  margin-left: 1em;
+  color: var(--fg-color);
+  font-weight: 600;
+}
+
+.list-group-item.active {
+  background-color: #000000;
+  border-color: #000000;
+}
+
+body {
+	background-color: var(--bg-color);
+	color: var(--fg-color);
+  font-family: 'Cairo', sans-serif;
+}
+
+#wrapper>section {
+  padding: 2em 2em;
+}
+
+.btn-default {
+  color: #ffffff;
+}
+
+.btn-default:hover {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+footer {
+  background-color: #252525;
+}
+
+code {
+  color: #000000;
+}
+
+.example-code {
+  display: block;
+  color: #ebebeb;
+  padding: 1rem;
+}
+
+.lumen-keyword {
+  color: var(--violet)
+}
+
+.lumen-constant {
+  color: rgb(255, 73, 73);
+}
+
+.lumen-comment {
+  color: var(--green);
+}
+
+.lumen-text {
+  color: var(--blue);
+}
+
+
+.navbar-dark .navbar-nav .bg-hover-violet:hover {
+  background-color: var(--violet);
+  color: var(--bg-color);
+
+  transition: .3s;
+}
+
+.navbar-dark .navbar-nav .bg-hover-green:hover {
+  background-color: var(--green);
+  color: var(--bg-color);
+
+  transition: .3s;
+}
+
+.navbar-dark .navbar-nav .bg-hover-blue:hover {
+  background-color: var(--blue);
+  color: var(--bg-color);
+
+  transition: .3s;
+}
+
+.fg-violet,
+.fg-violet>a,
+.fg-violet>a:hover {
+  color: var(--violet);
+}
+
+.fg-blue, 
+.fg-blue>a,
+.fg-blue>a:hover {
+  color: var(--blue);
+}
+
+.fg-green, 
+.fg-green>a,
+.fg-green>a:hover {
+  color: var(--green);
+}
+
+.fg-red, 
+.fg-red>a,
+.fg-red>a:hover {
+  color: var(--red);
+}
+
+.fg-red>a:hover,
+.fg-green>a:hover,
+.fg-blue>a:hover,
+.fg-violet>a:hover {
+	text-decoration: none;
+	border-bottom: 3px solid;
+}

@@ -1,0 +1,141 @@
+:root {
+  --bg-color: #000000;
+  --fg-color: #ffffff;
+
+  --violet: rgb(207, 143, 255);
+  --blue: rgb(40, 168, 234);
+	--green: rgb(105, 229, 110);
+	--red: #E81123;
+}
+
+#wrapper {
+	position: relative;
+  top: 2em;
+}
+
+#wrapper>section>h1 {
+  font-size: 64px;
+  line-height: 80px;
+  font-weight: 600;
+  margin-top: 1em;
+}
+
+#wrapper>section>h4 {
+	margin-top: 1em;
+}
+
+.ldoc-note {
+	margin: 1em 0;
+	padding: 0.5em;
+	border-left: solid 3px;
+	border-color: var(--blue);
+}
+
+.ldoc-definition {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.ldoc-definition::before {
+	content: 'Definition:';
+	color: #4e4e4e;
+}
+
+.ldoc-definition>code {
+	white-space: nowrap;
+	overflow-x: auto;
+	border: 1px solid #4e4e4e;
+	font-size: 1.1em;
+	letter-spacing: 1px;
+	font-family: 'Cairo', sans-serif;
+	display: block;
+  color: #ebebeb;
+  padding: 1rem;
+}
+
+.ldoc-module>.ldoc-name {
+	color: var(--blue);
+	font-size: 64px;
+	line-height: 80px;
+	font-weight: 600;
+	margin-top: 1em;
+}
+
+.ldoc-module>.ldoc-name::before {
+	content: 'module ';
+}
+
+.ldoc-class {
+	margin-left: 2em;
+}
+
+.ldoc-class>.ldoc-name {
+	color: var(--red);
+}
+
+.ldoc-class>.ldoc-name::before {
+	content: 'type ';
+}
+
+.ldoc-function {
+	margin-left: 2em;
+}
+
+.ldoc-function>.ldoc-name {
+	color: var(--violet);
+}
+
+.ldoc-function>.ldoc-name::before {
+	content: 'let ';
+}
+
+.ldoc-parameters {
+	display: block;
+	margin: 1em 0;
+}
+
+.ldoc-parameters::before {
+	content: 'Arguments:';
+	color: #4e4e4e;
+}
+
+.ldoc-parameter::before {
+	content: '-'
+}
+
+.ldoc-parameter-name {
+	font-weight: bolder;
+}
+
+.ldoc-parameter-description::before {
+	content: ' - ';
+}
+
+.ldoc-parameter-type {
+	color: var(--violet);
+	font-weight: bolder;
+}
+
+.ldoc-parameter-type::before {
+	content: ': ';
+	color: var(--fg-color)
+}
+
+.ldoc-returns {
+	display: block;
+	margin: 1em 0;
+}
+
+.ldoc-returns::before {
+	content: 'Returns:';
+	color: #4e4e4e;
+}
+
+.ldoc-returns-type {
+	color: var(--violet);
+	font-weight: bolder;
+}
+
+.ldoc-returns-description::before {
+	content: '-';
+}
