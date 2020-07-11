@@ -195,7 +195,8 @@ code {
   border-bottom: solid 1px rgb(60, 60, 60);
   display: block;
   position: absolute;
-  left: 20px;
+	left: 20px;
+	height: 406px;
 }
 
 @media (min-width: 576px) {
