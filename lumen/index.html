@@ -9,8 +9,9 @@
 		rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
 		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
-	<link rel="stylesheet" href="css/index.css" />
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/common.css" />
+	<link rel="stylesheet" href="css/index.css" />
 </head>
 
 <body>
@@ -72,48 +73,48 @@
 				<div class="col-lg-6 col-md-6 mt-3 mt-md-0">
 					<h3>Everything is an expression!</h3>
 					<code class="example-code">
-						<span class="lumen-keyword">let</span> x = 7<br>
-						println (<span class="lumen-keyword">if</span> x &gt; 9: <span class="lumen-text">"x &gt; 9"</span> 
-						<span class="lumen-keyword">else</span>: <span class="lumen-text">"x &lt;= 9"</span>) <span class="lumen-comment">//=&gt; "x &lt;= 9"</span>
+						<span class="ldoc-keyword">let</span> x = 7<br>
+						println (<span class="ldoc-keyword">if</span> x &gt; 9: <span class="ldoc-text">"x &gt; 9"</span> 
+						<span class="ldoc-keyword">else</span>: <span class="ldoc-text">"x &lt;= 9"</span>) <span class="ldoc-comment">//=&gt; "x &lt;= 9"</span>
           </code>
 				</div>
 
 				<div class="col-lg-6 col-md-6 mt-3 mt-md-0">
 					<h3>Pattern matching</h3>
 					<code class="example-code">
-            <span class="lumen-keyword">let</span> persons = [[<span
-              class="lumen-text"
+            <span class="ldoc-keyword">let</span> persons = [[<span
+              class="ldoc-text"
               >"Alex"</span
-            >, 20], [<span class="lumen-text">"Maya"</span>, 21]]<br />
+            >, 20], [<span class="ldoc-text">"Maya"</span>, 21]]<br />
             <br />
-            <span class="lumen-keyword">for</span> [name, age]
-            <span class="lumen-keyword">in</span> persons:<br />
+            <span class="ldoc-keyword">for</span> [name, age]
+            <span class="ldoc-keyword">in</span> persons:<br />
             &nbsp;&nbsp;print
-            <span class="lumen-text">"Name: \(name) Age: \(age)"</span>
+            <span class="ldoc-text">"Name: \(name) Age: \(age)"</span>
           </code>
 				</div>
 
 				<div class="col-lg-6 col-md-6 mt-3">
 					<h3>Generators</h3>
 					<code class="example-code">
-            <span class="lumen-keyword">let</span> factorials () =<br />
-            &nbsp;&nbsp;<span class="lumen-keyword">let</span> factorial 0 =
+            <span class="ldoc-keyword">let</span> factorials () =<br />
+            &nbsp;&nbsp;<span class="ldoc-keyword">let</span> factorial 0 =
             1<br />
-            &nbsp;&nbsp;<span class="lumen-keyword">let</span> factorial n = n *
-            <span class="lumen-keyword">rec</span> (n - 1)<br />
+            &nbsp;&nbsp;<span class="ldoc-keyword">let</span> factorial n = n *
+            <span class="ldoc-keyword">rec</span> (n - 1)<br />
             <br />
-            &nbsp;&nbsp;<span class="lumen-keyword">for</span> i
-            <span class="lumen-keyword">in</span> 1..<span
-              class="lumen-constant"
+            &nbsp;&nbsp;<span class="ldoc-keyword">for</span> i
+            <span class="ldoc-keyword">in</span> 1..<span
+              class="ldoc-constant"
               >inf</span
             >:<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;<span class="lumen-keyword">yield</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="ldoc-keyword">yield</span>
             factorial i <br /><br />
-            <span class="lumen-comment"
+            <span class="ldoc-comment"
               >// This infinitie loop will be print factorials</span
             ><br />
-            <span class="lumen-keyword">for</span> i
-            <span class="lumen-keyword">in</span> factorials ():<br />
+            <span class="ldoc-keyword">for</span> i
+            <span class="ldoc-keyword">in</span> factorials ():<br />
             &nbsp;&nbsp;println i <br />
           </code>
 				</div>
@@ -122,13 +123,13 @@
 					<h3>Tail recursion</h3>
 					<code class="example-code">
 
-						<span class="lumen-comment">// Factorial with tail recursion and helper function</span><br>
-						<span class="lumen-keyword">let</span> fact n =<br>
-						&nbsp;&nbsp;<span class="lumen-keyword">let</span> fact 0 acc = acc<br>
-						&nbsp;&nbsp;<span class="lumen-keyword">let</span> fact n acc = <span class="lumen-keyword">tailrec</span> (n-1) (acc*n)<br>
+						<span class="ldoc-comment">// Factorial with tail recursion and helper function</span><br>
+						<span class="ldoc-keyword">let</span> fact n =<br>
+						&nbsp;&nbsp;<span class="ldoc-keyword">let</span> fact 0 acc = acc<br>
+						&nbsp;&nbsp;<span class="ldoc-keyword">let</span> fact n acc = <span class="ldoc-keyword">tailrec</span> (n-1) (acc*n)<br>
 						&nbsp;&nbsp;fact n 1<br>
 						<br>
-						println (fact 5) <span class="lumen-comment">//=&gt; 120</span>
+						println (fact 5) <span class="ldoc-comment">//=&gt; 120</span>
           </code>
 				</div>
 			</div>

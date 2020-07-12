@@ -6,6 +6,7 @@
   --blue: rgb(40, 168, 234);
 	--green: rgb(105, 229, 110);
 	--red: #E81123;
+	--orange: #FF8C00;
 }
 
 .navbar {
@@ -89,19 +90,23 @@ code {
   padding: 1rem;
 }
 
-.lumen-keyword {
+.ldoc-keyword {
   color: var(--violet)
 }
 
-.lumen-constant {
-  color: rgb(255, 73, 73);
+.ldoc-type {
+  color: var(--red)
 }
 
-.lumen-comment {
+.ldoc-constant {
+  color: var(--orange);
+}
+
+.ldoc-comment {
   color: var(--green);
 }
 
-.lumen-text {
+.ldoc-text {
   color: var(--blue);
 }
 
@@ -126,6 +131,14 @@ code {
 
   transition: .3s;
 }
+
+.navbar-dark .navbar-nav .bg-hover-red:hover {
+  background-color: var(--red);
+  color: var(--bg-color);
+
+  transition: .3s;
+}
+
 
 .fg-violet,
 .fg-violet>a,

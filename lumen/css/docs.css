@@ -24,11 +24,22 @@
 	margin-top: 1em;
 }
 
+.ldoc-name {
+	word-break: break-word;
+}
+
 .ldoc-note {
 	margin: 1em 0;
 	padding: 0.5em;
 	border-left: solid 3px;
 	border-color: var(--blue);
+}
+
+.ldoc-warn {
+	margin: 1em 0;
+	padding: 0.5em;
+	border-left: solid 3px;
+	border-color: var(--orange);
 }
 
 .ldoc-definition,
@@ -95,6 +106,18 @@
 	content: 'let ';
 }
 
+.ldoc-const {
+	margin-left: 2em;
+}
+
+.ldoc-const>.ldoc-name {
+	color: var(--orange);
+}
+
+.ldoc-const>.ldoc-name::before {
+	content: 'let ';
+}
+
 .ldoc-parameters {
 	display: block;
 	margin: 1em 0;
@@ -118,7 +141,7 @@
 }
 
 .ldoc-parameter-type {
-	color: var(--violet);
+	color: var(--red);
 	font-weight: bolder;
 }
 
@@ -138,7 +161,7 @@
 }
 
 .ldoc-returns-type {
-	color: var(--violet);
+	color: var(--red);
 	font-weight: bolder;
 }
 
