@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Module Prlude</title>
+	<title>Module Prelude</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
 	<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap"
@@ -32,48 +32,48 @@
 			</div>
 
 			<div class="navbar-nav ml-auto">
-				<a class="nav-item nav-link bg-hover-red">v0.8</a>
+				<a class="nav-item nav-link bg-hover-red">0.8-α</a>
 			</div>
 		</div>
 	</nav>
 
 	<div id="wrapper">
 		<section>
-			<div class="ldoc-module" id="m-prelude">
-				<h1 class="ldoc-name">Prelude</h1>
+			<div class="ldoc-module" id="prelude">
+				<h1 class="ldoc-name">prelude</h1>
 
 				<div class="ldoc-description">
-					Contains base modules, types, functions and constants.
+					Contains base types, functions and constants.
 				</div>
 
-				<div class="ldoc-note">
-					This module opens in any others by default.
+				<div class="ldoc-note ldoc-info">
+					This module imported in any others by default.
 				</div>
 
-				<div class="ldoc-const" id="const-true">
+				<div class="ldoc-const" id="true">
 					<h3 class="ldoc-name">true</h3>
 
 					<div class="ldoc-description">
-						Logical value of type <a class="ldoc-type" href="#v-Bool">Bool</a>.
+						Logical value of type <a class="ldoc-type" href="#Bool">Bool</a>.
 					</div>
 
 					<div class="ldoc-definition">
 						<code>
-							<span class="ldoc-keyword">let</span> true = <a class="ldoc-type" href="#v-Bool">Bool</a>.<a class="ldoc-type" href="#v-Bool-True">True</a>
+							<span class="ldoc-keyword">let</span> true = <a class="ldoc-type" href="#Bool">Bool</a>.<a class="ldoc-type" href="#Bool-True">True</a>
 						</code>
 					</div>
 				</div>
 
-				<div class="ldoc-const" id="const-false">
+				<div class="ldoc-const" id="false">
 					<h3 class="ldoc-name">false</h3>
 
 					<div class="ldoc-description">
-						Logical value of type <a class="ldoc-type" href="#v-Bool">Bool</a>.
+						Logical value of type <a class="ldoc-type" href="#Bool">Bool</a>.
 					</div>
 
 					<div class="ldoc-definition">
 						<code>
-							<span class="ldoc-keyword">let</span> false = <a class="ldoc-type" href="#v-Bool">Bool</a>.<a class="ldoc-type" href="#v-Bool-False">False</a>
+							<span class="ldoc-keyword">let</span> false = <a class="ldoc-type" href="#Bool">Bool</a>.<a class="ldoc-type" href="#Bool-False">False</a>
 						</code>
 					</div>
 				</div>
@@ -82,35 +82,35 @@
 					<h3 class="ldoc-name">inf</h3>
 
 					<div class="ldoc-description">
-						Infinity value of type <a class="ldoc-type" href="#v-Number">Number</a>.
+						Infinity value of type <a class="ldoc-type" href="#Number">Number</a>.
 					</div>
 
 					<div class="ldoc-definition">
 						<code>
-							<span class="ldoc-keyword">let</span> inf = <a class="ldoc-type" href="#v-Number">Number</a>.<a class="ldoc-type" href="#v-Number-Inf">Inf</a>
+							<span class="ldoc-keyword">let</span> inf = <a class="ldoc-type" href="#Number">Number</a>.<a class="ldoc-type" href="#Number-Inf">Inf</a>
 						</code>
 					</div>
 				</div>
 
-				<div class="ldoc-const" id="const-nan">
+				<div class="ldoc-const" id="nan">
 					<h3 class="ldoc-name">nan</h3>
 
 					<div class="ldoc-description">
-						Not-a-number value of type <a class="ldoc-type" href="#v-Number">Number</a>.
+						Not-a-number value of type <a class="ldoc-type" href="#Number">Number</a>.
 					</div>
 
 					<div class="ldoc-definition">
 						<code>
-							<span class="ldoc-keyword">let</span> nan = <a class="ldoc-type" href="#v-Number">Number</a>.<a class="ldoc-type" href="#v-Number-Inf">NaN</a>
+							<span class="ldoc-keyword">let</span> nan = <a class="ldoc-type" href="#Number">Number</a>.<a class="ldoc-type" href="#Number-Inf">NaN</a>
 						</code>
 					</div>
 				</div>
 
-				<div class="ldoc-const" id="const-pi">
+				<div class="ldoc-const" id="pi">
 					<h3 class="ldoc-name">pi</h3>
 
 					<div class="ldoc-description">
-						PI constant of type <a class="ldoc-type" href="#v-Number">Number</a>.
+						PI constant of type <a class="ldoc-type" href="#Number">Number</a>.
 					</div>
 
 					<div class="ldoc-definition">
@@ -120,7 +120,7 @@
 					</div>
 				</div>
 
-				<div class="ldoc-const" id="const-e">
+				<div class="ldoc-const" id="e">
 					<h3 class="ldoc-name">e</h3>
 
 					<div class="ldoc-description">
@@ -134,7 +134,7 @@
 					</div>
 				</div>
 
-				<div class="ldoc-function" id="f-print">
+				<div class="ldoc-function" id="print">
 					<h3 class="ldoc-name">print</h3>
 
 					<div class="ldoc-description">
@@ -149,7 +149,7 @@
 					</div>
 
 					<div class="ldoc-returns">
-						<a class="ldoc-returns-type" href="#v-Unit">
+						<a class="ldoc-returns-type" href="#Unit">
 							Unit
 						</a>
 					</div>
@@ -162,12 +162,12 @@
 					</div>
 				</div>
 
-				<div class="ldoc-function" id="f-println">
+				<div class="ldoc-function" id="println">
 					<h3 class="ldoc-name">println</h3>
 
 					<div class="ldoc-description">
-						Print value into standart output and put <a class="fg-red" href="#v-Text">Text</a>.<a
-							href="#v-Text-NL">NL</a> at the end.
+						Print value into standart output and put <a class="fg-red" href="#Text">Text</a>.<a href="#Text-NL">NL</a>
+						at the end.
 					</div>
 
 					<div class="ldoc-parameters">
@@ -178,21 +178,21 @@
 					</div>
 
 					<div class="ldoc-returns">
-						<a class="ldoc-returns-type" href="#v-Unit">
+						<a class="ldoc-returns-type" href="#Unit">
 							Unit
 						</a>
 					</div>
 
-					<div class="ldoc-definition">
+					<div class="ldoc-possible-definition">
 						<code>
 						<span class="ldoc-keyword">let</span> print x = <br>
-						&nbsp;&nbsp;&nbsp;&nbsp;<a href="#f-print">print</a> x<br>
-						&nbsp;&nbsp;&nbsp;&nbsp;<a href="#f-print">print</a> <a class="ldoc-type" href="#v-Text">Text</a>.<a href="#v-Text-NL">NL</a>
+						&nbsp;&nbsp;&nbsp;&nbsp;<a href="#print">print</a> x<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;<a href="#print">print</a> <a class="ldoc-type" href="#Text">Text</a>.<a href="#Text-NL">NL</a>
 					</code>
 					</div>
 				</div>
 
-				<div class="ldoc-function" id="f-read">
+				<div class="ldoc-function" id="read">
 					<h3 class="ldoc-name">read</h3>
 
 					<div class="ldoc-description">
@@ -200,7 +200,7 @@
 					</div>
 
 					<div class="ldoc-returns">
-						<a class="ldoc-returns-type" href="#v-Text">
+						<a class="ldoc-returns-type" href="#Text">
 							Text
 						</a>
 						<a class="ldoc-returns-description">
@@ -216,7 +216,7 @@
 					</div>
 				</div>
 
-				<div class="ldoc-function" id="f-readWith">
+				<div class="ldoc-function" id="readWith">
 					<h3 class="ldoc-name">readWith</h3>
 
 					<div class="ldoc-description">
@@ -231,7 +231,7 @@
 					</div>
 
 					<div class="ldoc-returns">
-						<a class="ldoc-returns-type" href="#v-Text">
+						<a class="ldoc-returns-type" href="#Text">
 							Text
 						</a>
 						<a class="ldoc-returns-description">
@@ -239,21 +239,21 @@
 						</a>
 					</div>
 
-					<div class="ldoc-definition ldoc-possible-definition">
+					<div class="ldoc-possible-definition">
 						<code>
 						<span class="ldoc-keyword">let</span> readWith prompt = <br>
-						&nbsp;&nbsp;&nbsp;&nbsp;<a href="#f-print">print</a> prompt<br>
-						&nbsp;&nbsp;&nbsp;&nbsp;<a href="#f-read">read</a> ()
+						&nbsp;&nbsp;&nbsp;&nbsp;<a href="#print">print</a> prompt<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;<a href="#read">read</a> ()
 					</code>
 					</div>
 				</div>
 
-				<div class="ldoc-function" id="f-assert">
+				<div class="ldoc-function" id="assert">
 					<h3 class="ldoc-name">assert</h3>
 
 					<div class="ldoc-description">
-						Check given value. If given value true - then return
-						<a class="ldoc-type" href="#v-Unit">Unit</a>, else - throws an exception.
+						Check given value. If given value <a class="ldoc-constant" href="#true">true</a> - then return
+						<a class="ldoc-type" href="#Unit">Unit</a>, else - throws an exception.
 					</div>
 
 					<div class="ldoc-parameters">
@@ -264,7 +264,7 @@
 					</div>
 
 					<div class="ldoc-returns">
-						<a class="ldoc-returns-type" href="#v-Text">
+						<a class="ldoc-returns-type" href="#Unit">
 							Unit
 						</a>
 						<a class="ldoc-returns-description">
@@ -272,23 +272,23 @@
 						</a>
 					</div>
 
-					<div class="ldoc-warn">
-						This function raises unexceptable exception.
+					<div class="ldoc-note ldoc-warn">
+						This function raises system exception.
 					</div>
 
 					<div class="ldoc-definition">
 						<code>
-						<span class="ldoc-keyword">let</span> assert condition = <br>
-						&nbsp;&nbsp;&nbsp;&nbsp;...
-					</code>
+							<span class="ldoc-keyword">let</span> assert condition = <br>
+							&nbsp;&nbsp;&nbsp;&nbsp;...
+						</code>
 					</div>
 				</div>
 
-				<div class="ldoc-function" id="f-functionIsNotImplementedForType">
+				<div class="ldoc-function" id="functionIsNotImplementedForType">
 					<h3 class="ldoc-name">functionIsNotImplementedForType</h3>
 
 					<div class="ldoc-description">
-						Throws unexceptable exception.
+						Raise system exception.
 					</div>
 
 					<div class="ldoc-parameters">
@@ -303,13 +303,11 @@
 					</div>
 
 					<div class="ldoc-returns">
-						<span class="ldoc-returns-type">
-							never
-						</span>
+						<span class="ldoc-returns-type">never</span>
 					</div>
 
 					<div class="ldoc-warn">
-						This function raises unexceptable exception.
+						This function raises system exception.
 					</div>
 
 					<div class="ldoc-note">
@@ -324,7 +322,7 @@
 					</div>
 				</div>
 
-				<div class="ldoc-class" id="c-Exception">
+				<div class="ldoc-class" id="Exception">
 					<h2 class="ldoc-name">Exception</h2>
 
 					<div class="ldoc-description">
@@ -338,11 +336,11 @@
 						</code>
 					</div>
 
-					<div class="ldoc-function">
+					<div class="ldoc-function" id="Exception-message">
 						<h3 class="ldoc-name">message</h3>
 
 						<div class="ldoc-description">
-							Required function to implement <span class="fg-red">Exception</span> class
+							Required function to implement <a class="fg-red" href="#Exception">Exception</a> class
 						</div>
 
 						<div class="ldoc-parameters">
@@ -354,9 +352,7 @@
 						</div>
 
 						<div class="ldoc-returns">
-							<span class="ldoc-returns-type">
-								Text
-							</span>
+							<a class="ldoc-returns-type" href="#Text">Text</a>
 							<span class="ldoc-returns-description">
 								a string representation of an error
 							</span>
@@ -368,15 +364,14 @@
 									&nbsp;&nbsp;&nbsp;&nbsp;<span class="ldoc-text">"exception raised"</span> 
 								</code>
 						</div>
-
 					</div>
 				</div>
 
-				<div class="ldoc-class" id="c-Cloneable">
+				<div class="ldoc-class" id="Cloneable">
 					<h2 class="ldoc-name">Cloneable</h2>
 
 					<div class="ldoc-description">
-						Class for cloneable objects.
+						Class for cloneable values.
 					</div>
 
 					<div class="ldoc-definition">
@@ -387,44 +382,41 @@
 					</div>
 
 					<div class="ldoc-requirements">
-						<div class="ldoc-function">
+						<div class="ldoc-function" id="Cloneable-clone">
 							<h3 class="ldoc-name">clone</h3>
 
 							<div class="ldoc-description">
-								Required function to implement <span class="fg-red">Cloneable</span> class.
-								Make a non-deep copy of an object.
+								Required function to implement <a class="fg-red" href="#Cloneable">Cloneable</a> class.
+								Make a non-deep copy of a value.
 							</div>
 
 							<div class="ldoc-parameters">
 								<div class="ldoc-parameter">
 									<span class="ldoc-parameter-name">self</span>
 									<span class="ldoc-parameter-type">'T</span>
-									<span class="ldoc-parameter-description">cloneable object</span>
+									<span class="ldoc-parameter-description">cloneable value</span>
 								</div>
 							</div>
 
 							<div class="ldoc-returns">
-								<span class="ldoc-returns-type">
-									'T
-								</span>
+								<span class="ldoc-returns-type">'T</span>
 								<span class="ldoc-returns-description">
-									non-deep copy of a given object.
+									non-deep copy of a given value.
 								</span>
 							</div>
 
 							<div class="ldoc-definition">
 								<code>
 									<span class="ldoc-keyword">let</span> clone (self: <span class="ldoc-keyword">'T</span>) = <br>
-									&nbsp;&nbsp;&nbsp;&nbsp;<a href="#f-functionIsNotImplementedForType">functionIsNotImplementedForType</a> 
+									&nbsp;&nbsp;&nbsp;&nbsp;<a href="#functionIsNotImplementedForType">functionIsNotImplementedForType</a> 
 									<span class="ldoc-text">"Cloneable.clone"</span> <span class="ldoc-keyword">'T</span>
 								</code>
 							</div>
-
 						</div>
 					</div>
 				</div>
 
-				<div class="ldoc-class" id="c-Functor">
+				<div class="ldoc-class" id="Functor">
 					<h2 class="ldoc-name">Functor</h2>
 
 					<div class="ldoc-description">
@@ -439,7 +431,7 @@
 					</div>
 
 					<div class="ldoc-requirements">
-						<div class="ldoc-function" id="c-Functor-fmap">
+						<div class="ldoc-function" id="Functor-fmap">
 							<h3 class="ldoc-name">fmap</h3>
 
 							<div class="ldoc-description">
@@ -451,7 +443,7 @@
 							<div class="ldoc-parameters">
 								<div class="ldoc-parameter">
 									<span class="ldoc-parameter-name">fn</span>
-									<span class="ldoc-parameter-type">Function</span>
+									<a class="ldoc-parameter-type" href="#Function">Function</a>
 									<span class="ldoc-parameter-description">function to apply</span>
 								</div>
 								<div class="ldoc-parameter">
@@ -472,21 +464,20 @@
 
 							<div class="ldoc-definition">
 								<code>
-									<span class="ldoc-keyword">let</span> fmap (fn: <span class="ldoc-keyword">Function</span>) 
+									<span class="ldoc-keyword">let</span> fmap (fn: <a class="ldoc-keyword" href="#Function">Function</a>) 
 									(fc: <span class="ldoc-keyword">'T</span>) = <br>
-									&nbsp;&nbsp;&nbsp;&nbsp;<a href="#f-functionIsNotImplementedForType">functionIsNotImplementedForType</a> 
+									&nbsp;&nbsp;&nbsp;&nbsp;<a href="#functionIsNotImplementedForType">functionIsNotImplementedForType</a> 
 									<span class="ldoc-text">"Functor.fmap"</span> <span class="ldoc-keyword">'T</span>
 								</code>
 							</div>
-
 						</div>
 					</div>
 
-					<div class="ldoc-function">
+					<div class="ldoc-function" id="Functor--fmap">
 						<h3 class="ldoc-name">&gt;&gt;-</h3>
 
 						<div class="ldoc-description">
-							Alias for <a class="fg-red" href="#c-Functor">Functor</a>.<a href="#c-Functor-fmap">fmap</a>, but with
+							Alias for <a class="fg-red" href="#Functor">Functor</a>.<a href="#Functor-fmap">fmap</a>, but with
 							flip argument position
 						</div>
 
@@ -498,7 +489,7 @@
 							</div>
 							<div class="ldoc-parameter">
 								<span class="ldoc-parameter-name">fn</span>
-								<span class="ldoc-parameter-type">Function</span>
+								<a class="ldoc-parameter-type" href="#Function">Function</a>
 								<span class="ldoc-parameter-description">function to apply</span>
 							</div>
 						</div>
@@ -515,19 +506,19 @@
 						<div class="ldoc-definition">
 							<code>
 								<span class="ldoc-keyword">let</span> &gt;&gt; (fc: <span class="ldoc-keyword">'T</span>)
-								(fn: <span class="ldoc-keyword">Function</span>) = <br>
-								&nbsp;&nbsp;&nbsp;&nbsp; <span class="ldoc-keyword">'T</span>.<a href="#c-Functor-fmap"></a>fmap fn fc
+								(fn: <a class="ldoc-keyword" href="#Function">Function</a>) = <br>
+								&nbsp;&nbsp;&nbsp;&nbsp; <span class="ldoc-keyword">'T</span>.<a href="#Functor-fmap"></a>fmap fn fc
 							</code>
 						</div>
 
 					</div>
 				</div>
 
-				<div class="ldoc-class" id="c-Format">
+				<div class="ldoc-class" id="Format">
 					<h2 class="ldoc-name">Format</h2>
 
 					<div class="ldoc-description">
-						Format class uses to represent an object string interpolation
+						Format class uses to represent an value string interpolation
 					</div>
 
 					<div class="ldoc-definition">
@@ -538,11 +529,11 @@
 					</div>
 
 					<div class="ldoc-requirements">
-						<div class="ldoc-function" id="f-Format-format">
+						<div class="ldoc-function" id="Format-format">
 							<h3 class="ldoc-name">format</h3>
 
 							<div class="ldoc-description">
-								Required function to implement <a class="fg-red" href="#c-Format">Format</a> class.
+								Required function to implement <a class="fg-red" href="#Format">Format</a> class.
 								Takes an object to represent and string, that describes required format.
 							</div>
 
@@ -554,13 +545,13 @@
 								</div>
 								<div class="ldoc-parameter">
 									<span class="ldoc-parameter-name">fstr</span>
-									<a class="ldoc-parameter-type" href="#v-Text">Text</a>
+									<a class="ldoc-parameter-type" href="#Text">Text</a>
 									<span class="ldoc-parameter-description">describes required format</span>
 								</div>
 							</div>
 
 							<div class="ldoc-returns">
-								<a class="ldoc-returns-type" href="#v-Text">
+								<a class="ldoc-returns-type" href="#Text">
 									Text
 								</a>
 								<span class="ldoc-returns-description">
@@ -571,8 +562,8 @@
 							<div class="ldoc-definition">
 								<code>
 									<span class="ldoc-keyword">let</span> format (self: <span class="ldoc-keyword">'T'</span>) 
-									(fstr: <a class="ldoc-keyword" href="#v-Text">Text</a>) = <br>
-									&nbsp;&nbsp;&nbsp;&nbsp;<a href="#f-functionIsNotImplementedForType">functionIsNotImplementedForType</a>
+									(fstr: <a class="ldoc-keyword" href="#Text">Text</a>) = <br>
+									&nbsp;&nbsp;&nbsp;&nbsp;<a href="#functionIsNotImplementedForType">functionIsNotImplementedForType</a>
 									<span class="ldoc-text">"Functor.fmap"</span> <span class="ldoc-keyword">'T</span>
 								</code>
 							</div>
@@ -580,7 +571,7 @@
 					</div>
 				</div>
 
-				<div class="ldoc-class" id="c-Ord">
+				<div class="ldoc-class" id="Ord">
 					<h2 class="ldoc-name">Ord</h2>
 
 					<div class="ldoc-description">
@@ -597,8 +588,8 @@
 					<div class="ldoc-example">
 						<code>
 							<span class="ldoc-keyword">type</span> NumWrap = NumWrap a<br>
-							&nbsp;&nbsp;&nbsp;&nbsp;<span class="ldoc-keyword">implements</span> Ord<br>
-							&nbsp;&nbsp;&nbsp;&nbsp;<span class="ldoc-comment">// Implementation of Ord mixin</span><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;<span class="ldoc-keyword">implements</span> <a class="fg-red" href="#c-Ord">Ord</a><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;<span class="ldoc-comment">// Implementation of Ord class</span><br>
 							&nbsp;&nbsp;&nbsp;&nbsp;<span class="ldoc-keyword">let</span> compare y x =<br>
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ldoc-keyword">if</span> x.a &lt; y.a:<br>
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ldoc-keyword">return</span> -1<br>
@@ -612,9 +603,9 @@
 							println (w1 &lt; w2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ldoc-comment">//-&gt; true</span><br>
 							println (w1 &gt; w2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ldoc-comment">//-&gt; false</span><br>
 							println (w1 &gt;= w2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ldoc-comment">//-&gt; false</span><br>
-							println (w1.min w2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ldoc-comment">//-&gt; 0</span><br>
-							println (w1.max w2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ldoc-comment">//-&gt; 7</span><br>
-							println (w1.compare w2) <span class="ldoc-comment">//-&gt; -1</span>
+							println (<a class="fg-red" href="#Ord">Ord</a>.<a href="#Ord-min">min</a> w1 w2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ldoc-comment">//-&gt; 0</span><br>
+							println (<a class="fg-red" href="#Ord">Ord</a>.<a href="#Ord-max">max</a> w1 w2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ldoc-comment">//-&gt; 7</span><br>
+							println (<a class="fg-red" href="#Ord">NumWrap</a>.compare w1 w2) <span class="ldoc-comment">//-&gt; -1</span>
 						</code>
 					</div>
 
@@ -660,7 +651,7 @@
 						</div>
 					</div>
 
-					<div class="ldoc-function" id="c-Ord--spaceship">
+					<div class="ldoc-function" id="Ord--spaceship">
 						<h3 class="ldoc-name">&lt;=&gt;</h3>
 
 						<div class="ldoc-description">
@@ -697,7 +688,7 @@
 
 					</div>
 
-					<div class="ldoc-function" id="c-Ord--lt">
+					<div class="ldoc-function" id="Ord--lt">
 						<h3 class="ldoc-name">&lt;</h3>
 
 						<div class="ldoc-description">
@@ -722,7 +713,8 @@
 								Bool
 							</a>
 							<span class="ldoc-returns-description">
-								return <a class="ldoc-constant" href="#const-true">true</a> when x &lt; y and <a class="ldoc-constant" href="#const-false">false</a> otherwise
+								return <a class="ldoc-constant" href="#const-true">true</a> when x &lt; y and <a class="ldoc-constant"
+									href="#const-false">false</a> otherwise
 							</span>
 						</div>
 
@@ -735,7 +727,7 @@
 
 					</div>
 
-					<div class="ldoc-function" id="c-Ord--gt">
+					<div class="ldoc-function" id="Ord--gt">
 						<h3 class="ldoc-name">&gt;</h3>
 
 						<div class="ldoc-description">
@@ -760,7 +752,8 @@
 								Bool
 							</a>
 							<span class="ldoc-returns-description">
-								return <a class="ldoc-constant" href="#const-true">true</a> when x &gt; y and <a class="ldoc-constant" href="#const-false">false</a> otherwise
+								return <a class="ldoc-constant" href="#const-true">true</a> when x &gt; y and <a class="ldoc-constant"
+									href="#const-false">false</a> otherwise
 							</span>
 						</div>
 
@@ -772,7 +765,7 @@
 						</div>
 					</div>
 
-					<div class="ldoc-function" id="c-Ord--lteq">
+					<div class="ldoc-function" id="Ord--lteq">
 						<h3 class="ldoc-name">&lt;=</h3>
 
 						<div class="ldoc-description">
@@ -797,7 +790,8 @@
 								Bool
 							</a>
 							<span class="ldoc-returns-description">
-								return <a class="ldoc-constant" href="#const-true">true</a> when x &lt;= y and <a class="ldoc-constant" href="#const-false">false</a> otherwise
+								return <a class="ldoc-constant" href="#const-true">true</a> when x &lt;= y and <a class="ldoc-constant"
+									href="#const-false">false</a> otherwise
 							</span>
 						</div>
 
@@ -809,7 +803,7 @@
 						</div>
 					</div>
 
-					<div class="ldoc-function" id="c-Ord--gteq">
+					<div class="ldoc-function" id="Ord--gteq">
 						<h3 class="ldoc-name">&gt;=</h3>
 
 						<div class="ldoc-description">
@@ -834,7 +828,8 @@
 								Bool
 							</a>
 							<span class="ldoc-returns-description">
-								return <a class="ldoc-constant" href="#const-true">true</a> when x &gt;= y and <a class="ldoc-constant" href="#const-false">false</a> otherwise
+								return <a class="ldoc-constant" href="#const-true">true</a> when x &gt;= y and <a class="ldoc-constant"
+									href="#const-false">false</a> otherwise
 							</span>
 						</div>
 
@@ -846,7 +841,7 @@
 						</div>
 					</div>
 
-					<div class="ldoc-function" id="c-Ord-min">
+					<div class="ldoc-function" id="Ord-min">
 						<h3 class="ldoc-name">min</h3>
 
 						<div class="ldoc-description">
@@ -883,7 +878,7 @@
 						</div>
 					</div>
 
-					<div class="ldoc-function" id="c-Ord-max">
+					<div class="ldoc-function" id="Ord-max">
 						<h3 class="ldoc-name">max</h3>
 
 						<div class="ldoc-description">
@@ -920,7 +915,7 @@
 						</div>
 					</div>
 
-					<div class="ldoc-function" id="c-Ord-between">
+					<div class="ldoc-function" id="Ord-between">
 						<h3 class="ldoc-name">between</h3>
 
 						<div class="ldoc-description">
@@ -962,7 +957,7 @@
 						</div>
 					</div>
 
-					<div class="ldoc-function" id="c-Ord-betweenInEx">
+					<div class="ldoc-function" id="Ord-betweenInEx">
 						<h3 class="ldoc-name">betweenInEx</h3>
 
 						<div class="ldoc-description">
@@ -1004,7 +999,7 @@
 						</div>
 					</div>
 
-					<div class="ldoc-function" id="c-Ord-betweenExIn">
+					<div class="ldoc-function" id="Ord-betweenExIn">
 						<h3 class="ldoc-name">betweenExIn</h3>
 
 						<div class="ldoc-description">
@@ -1046,7 +1041,7 @@
 						</div>
 					</div>
 
-					<div class="ldoc-function" id="c-Ord-betweenExEx">
+					<div class="ldoc-function" id="Ord-betweenExEx">
 						<h3 class="ldoc-name">betweenExEx</h3>
 
 						<div class="ldoc-description">
@@ -1110,13 +1105,14 @@
 
 							<div class="ldoc-description">
 								Required function to implement <a class="fg-red" href="#c-Collection">Collection</a> class.
+								Make Stream value from 'T value.
 							</div>
 
 							<div class="ldoc-parameters">
 								<div class="ldoc-parameter">
 									<span class="ldoc-parameter-name">self</span>
 									<span class="ldoc-parameter-type">'T</span>
-									<span class="ldoc-parameter-description">self object</span>
+									<span class="ldoc-parameter-description">self value</span>
 								</div>
 							</div>
 
@@ -1138,43 +1134,201 @@
 							</div>
 
 						</div>
+
+						<div class="ldoc-function" id="c-Collection-fromStream">
+							<h3 class="ldoc-name">fromStream</h3>
+
+							<div class="ldoc-description">
+								Required function to implement <a class="fg-red" href="#c-Collection">Collection</a> class.
+								Make value of type 'T from Stream.
+							</div>
+
+							<div class="ldoc-parameters">
+								<div class="ldoc-parameter">
+									<span class="ldoc-parameter-name">stream</span>
+									<a class="ldoc-parameter-type" href="#v-Stream">Stream</a>
+									<span class="ldoc-parameter-description">stream to convert</span>
+								</div>
+							</div>
+
+							<div class="ldoc-returns">
+								<span class="ldoc-returns-type">
+									'T
+								</span>
+							</div>
+
+							<div class="ldoc-definition">
+								<code>
+									<span class="ldoc-keyword">let</span> toStream (stream: <a class="ldoc-type" href="#v-Stream">Stream</a>)  = <br>
+									&nbsp;&nbsp;&nbsp;&nbsp;<a href="#f-functionIsNotImplementedForType">functionIsNotImplementedForType</a> 
+									<span class="ldoc-text">"Collection.toStream"</span> <span class="ldoc-keyword">'T</span>
+								</code>
+							</div>
+
+						</div>
 					</div>
 
-					<div class="ldoc-function">
-						<h3 class="ldoc-name">&gt;&gt;-</h3>
+					<div class="ldoc-function" id="c-Collection--ustar">
+						<h3 class="ldoc-name">*</h3>
 
 						<div class="ldoc-description">
-							Alias for <a class="fg-red" href="#c-Functor">Functor</a>.<a href="#c-Functor-fmap">fmap</a>, but with
-							flip argument position
+							Returns length of stream.
+						</div>
+
+						<div class="ldoc-warn">
+							This function iterate over each element of collection.
+							Do not call this function on infinity collections.
 						</div>
 
 						<div class="ldoc-parameters">
 							<div class="ldoc-parameter">
-								<span class="ldoc-parameter-name">fc</span>
-								<span class="ldoc-parameter-type">'T</span>
-								<span class="ldoc-parameter-description">container value</span>
-							</div>
-							<div class="ldoc-parameter">
-								<span class="ldoc-parameter-name">fn</span>
-								<span class="ldoc-parameter-type">Function</span>
-								<span class="ldoc-parameter-description">function to apply</span>
+								<span class="ldoc-parameter-name">self</span>
+								<a class="ldoc-parameter-type" href="#v-Stream">Stream</a>
+
 							</div>
 						</div>
 
 						<div class="ldoc-returns">
-							<span class="ldoc-returns-type">
-								'T
-							</span>
+							<a class="ldoc-returns-type" href="#t-Number">
+								Number
+							</a>
 							<span class="ldoc-returns-description">
-								new container value with saved structure.
+								length of stream.
 							</span>
 						</div>
 
 						<div class="ldoc-definition">
 							<code>
-								<span class="ldoc-keyword">let</span> &gt;&gt; (fc: <span class="ldoc-keyword">'T</span>)
-								(fn: <span class="ldoc-keyword">Function</span>) = <br>
-								&nbsp;&nbsp;&nbsp;&nbsp; <span class="ldoc-keyword">'T</span>.<a href="#c-Functor-fmap"></a>fmap fn fc
+								<span class="ldoc-keyword">let</span> * (self: <a class="ldoc-type" href="#v-Stream">Stream</a>)  = <br>
+								&nbsp;&nbsp;&nbsp;&nbsp;...
+							</code>
+						</div>
+
+					</div>
+
+					<div class="ldoc-function" id="c-Collection--slash">
+						<h3 class="ldoc-name">/</h3>
+
+						<div class="ldoc-description">
+							Alias for <a class="fg-red" href="#c-Collection">Collection</a>.foldl.
+						</div>
+
+						<div class="ldoc-warn">
+							This function iterate over each element of collection.
+							Do not call this function on infinity collections.
+						</div>
+
+						<div class="ldoc-parameters">
+							<div class="ldoc-parameter">
+								<span class="ldoc-parameter-name">self</span>
+								<a class="ldoc-parameter-type" href="#c-Collection">Collection</a>
+								<span class="ldoc-parameter-description">collection to fold</span>
+							</div>
+
+							<div class="ldoc-parameter">
+								<span class="ldoc-parameter-name">foldf</span>
+								<a class="ldoc-parameter-type" href="#t-Function">Function</a>
+								<span class="ldoc-parameter-description">folder function</span>
+							</div>
+						</div>
+
+						<div class="ldoc-returns">
+							<a class="ldoc-returns-type">
+								'Y
+							</a>
+							<span class="ldoc-returns-description">
+								folded value
+							</span>
+						</div>
+
+						<div class="ldoc-definition">
+							<code>
+								<span class="ldoc-keyword">let</span> / (self: <a class="ldoc-type" href="#c-Collection">Collection</a>) (foldf: <a class="ldoc-type" href="#t-Function">Function</a>)  = <a class="fg-red" href="#c-Collection">Collection</a>.foldl
+							</code>
+						</div>
+
+					</div>
+
+					<div class="ldoc-function" id="c-Collection--star">
+						<h3 class="ldoc-name">*</h3>
+
+						<div class="ldoc-description">
+							Alias for <a class="fg-red" href="#c-Collection">Collection</a>.join.
+						</div>
+
+						<div class="ldoc-warn">
+							This function iterate over each element of collection.
+							Do not call this function on infinity collections.
+						</div>
+
+						<div class="ldoc-parameters">
+							<div class="ldoc-parameter">
+								<span class="ldoc-parameter-name">self</span>
+								<a class="ldoc-parameter-type" href="#c-Collection">Collection</a>
+								<span class="ldoc-parameter-description">collection to fold</span>
+							</div>
+
+							<div class="ldoc-parameter">
+								<span class="ldoc-parameter-name">sep</span>
+								<a class="ldoc-parameter-type" href="#t-Text">Text</a>
+								<span class="ldoc-parameter-description">separator</span>
+							</div>
+						</div>
+
+						<div class="ldoc-returns">
+							<a class="ldoc-returns-type">
+								Text
+							</a>
+							<span class="ldoc-returns-description">
+								concatenated string.
+							</span>
+						</div>
+
+						<div class="ldoc-definition">
+							<code>
+								<span class="ldoc-keyword">let</span> * (self: <a class="ldoc-type" href="#c-Collection">Collection</a>) (foldf: <a class="ldoc-type" href="#t-Text">Text</a>)  = <a class="fg-red" href="#c-Collection">Collection</a>.join
+							</code>
+						</div>
+
+					</div>
+
+					<div class="ldoc-function" id="c-Collection--star-num">
+						<h3 class="ldoc-name">*</h3>
+
+						<div class="ldoc-description">
+							Alias for <a class="fg-red" href="#c-Collection">Collection</a>.repeat.
+						</div>
+
+						<div class="ldoc-note">
+							You can call this function with infinity collection, but it is meaningless.
+						</div>
+
+						<div class="ldoc-parameters">
+							<div class="ldoc-parameter">
+								<span class="ldoc-parameter-name">self</span>
+								<a class="ldoc-parameter-type" href="#c-Collection">Collection</a>
+								<span class="ldoc-parameter-description">collection to fold</span>
+							</div>
+
+							<div class="ldoc-parameter">
+								<span class="ldoc-parameter-name">count</span>
+								<a class="ldoc-parameter-type ldoc-possible-type" href="#t-Number">Int</a>
+								<span class="ldoc-parameter-description">count of times to repeat</span>
+							</div>
+						</div>
+
+						<div class="ldoc-returns">
+							<a class="ldoc-returns-type">
+								Collection
+							</a>
+							<span class="ldoc-returns-description">
+								repeated collection.
+							</span>
+						</div>
+
+						<div class="ldoc-definition">
+							<code>
+								<span class="ldoc-keyword">let</span> * (self: <a class="ldoc-type" href="#c-Collection">Collection</a>) (foldf: <a class="ldoc-type" href="#t-Number">Int</a>)  = <a class="fg-red" href="#c-Collection">Collection</a>.repeat
 							</code>
 						</div>
 

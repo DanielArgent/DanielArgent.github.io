@@ -11,48 +11,6 @@
   --neg-half-cube-size: -3em;
 }
 
-.navbar {
-  position: fixed;
-  width: 100%;
-  z-index: 2;
-
-  padding: 0;
-
-  background-color: var(--bg-color);
-  color: var(--fg-color);
-}
-
-.navbar-dark .navbar-nav .nav-link,
-.navbar-dark .navbar-nav .nav-link .active {
-  color: var(--fg-color);
-  padding: 1em;
-}
-
-.navbar-dark .navbar-toggler {
-  margin: 0.5em 1em 0.5em auto;
-  border: none;
-}
-
-.navbar-dark .navbar-toggler.collapsed .navbar-toggler-icon {
-  background-image: url(../img/toggler.svg);
-}
-
-.navbar-dark .navbar-toggler .navbar-toggler-icon {
-  background-image: url(../img/toggler-close.svg);
-  transition: 0.2s;
-}
-
-button:focus {
-  /* Remove default Bootstrap outline */
-  outline: none;
-}
-
-.navbar-dark .navbar-brand {
-  margin-left: 1em;
-  color: var(--fg-color);
-  font-weight: 600;
-}
-
 .list-group-item.active {
   background-color: #000000;
   border-color: #000000;

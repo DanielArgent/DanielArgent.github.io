@@ -2,6 +2,8 @@
   --bg-color: #000000;
   --fg-color: #ffffff;
 
+	--additive-color: #4e4e4e;
+
   --violet: rgb(207, 143, 255);
   --blue: rgb(40, 168, 234);
 	--green: rgb(105, 229, 110);
@@ -32,36 +34,44 @@
 	margin: 1em 0;
 	padding: 0.5em;
 	border-left: solid 3px;
+}
+
+.ldoc-info {
 	border-color: var(--blue);
 }
 
 .ldoc-warn {
-	margin: 1em 0;
-	padding: 0.5em;
-	border-left: solid 3px;
 	border-color: var(--orange);
 }
 
+.ldoc-possible-definition,
 .ldoc-definition,
 .ldoc-example {
 	margin-top: 1em;
 	margin-bottom: 1em;
 }
 
+.ldoc-possible-definition::before {
+	content: 'Possible definition:';
+	color: var(--additive-color);
+}
+
 .ldoc-definition::before {
 	content: 'Definition:';
-	color: #4e4e4e;
+	color: var(--additive-color);
 }
 
 .ldoc-example::before {
 	content: 'Example:';
-	color: #4e4e4e;
+	color: var(--additive-color);
 }
 
-.ldoc-definition>code, .ldoc-example>code {
+.ldoc-possible-definition>code, 
+.ldoc-definition>code, 
+.ldoc-example>code {
 	white-space: nowrap;
 	overflow-x: auto;
-	border: 1px solid #4e4e4e;
+	border: 1px solid var(--additive-color);
 	font-size: 1.1em;
 	letter-spacing: 1px;
 	font-family: 'Cairo', sans-serif;
@@ -82,7 +92,9 @@
 	content: 'module ';
 }
 
-.ldoc-class {
+.ldoc-class,
+.ldoc-function,
+.ldoc-const {
 	margin-left: 2em;
 }
 
@@ -94,20 +106,12 @@
 	content: 'type ';
 }
 
-.ldoc-function {
-	margin-left: 2em;
-}
-
 .ldoc-function>.ldoc-name {
 	color: var(--violet);
 }
 
 .ldoc-function>.ldoc-name::before {
 	content: 'let ';
-}
-
-.ldoc-const {
-	margin-left: 2em;
 }
 
 .ldoc-const>.ldoc-name {
@@ -125,7 +129,7 @@
 
 .ldoc-parameters::before {
 	content: 'Arguments:';
-	color: #4e4e4e;
+	color: var(--additive-color);
 }
 
 .ldoc-parameter::before {
@@ -157,7 +161,7 @@
 
 .ldoc-returns::before {
 	content: 'Returns:';
-	color: #4e4e4e;
+	color: var(--additive-color);
 }
 
 .ldoc-returns-type {
