@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 
 <head>
-	<title>Module Prelude</title>
+	<title>Модуль Prelude</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
 	<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap"
@@ -11,8 +11,8 @@
 		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-	<link rel="stylesheet" href="../../../../css/common.css" />
-	<link rel="stylesheet" href="../../../../css/docs.css" />
+	<link rel="stylesheet" href="../../../../../css/common.css" />
+	<link rel="stylesheet" href="../../../../../css/docs.css" />
 </head>
 
 <body>
@@ -1653,20 +1653,20 @@
 						<h3 class="ldoc-name">/</h3>
 
 						<div class="ldoc-description">
-							Split text on a parts with equal length.
+							Разбивает текст на части одинаковой длины.
 						</div>
 
 						<div class="ldoc-parameters">
 							<div class="ldoc-parameter">
 								<span class="ldoc-parameter-name">self</span>
 								<a class="ldoc-parameter-type" href="#Text">Text</a>
-								<span class="ldoc-parameter-description">text value to repeat.</span>
+								<span class="ldoc-parameter-description">текст для разбивки.</span>
 							</div>
 
 							<div class="ldoc-parameter">
 								<span class="ldoc-parameter-name">other</span>
 								<a class="ldoc-parameter-type" href="#Number">Number</a>
-								<span class="ldoc-parameter-description">maximum length of the part.</span>
+								<span class="ldoc-parameter-description">максимальная длина части.</span>
 							</div>
 						</div>
 
@@ -1675,8 +1675,73 @@
 								Array
 							</a>
 							<span class="ldoc-returns-description">
-								parts of original text.
+								массив, содержащий части исходного текста, не превышающие по длине
+								параметр <span class="ldoc-parameter-name">other</span>.
 							</span>
+						</div>
+
+						<div class="ldoc-note ldoc-warn">
+							В случае если длина исходного теста не делится на максимальную длину части
+							нацело, последний элемент возвращаемого массива будет остатком, имеющим 
+							длину меньше чем
+							максимальная длина части.
+						</div>
+
+						<div class="ldoc-definition">
+							<code>
+								<span class="ldoc-keyword">let</span> / (self: <a class="ldoc-type" href="#Text">Text</a>) (other: <a class="ldoc-type" href="#Number">Number</a>) = <br>
+								&nbsp;&nbsp;&nbsp;&nbsp;...
+							</code>
+						</div>
+					</div>
+
+					<div class="ldoc-function" id="Text-getIndex">
+						<h3 class="ldoc-name">getIndex</h3>
+
+						<div class="ldoc-description">
+							Используется для получения подстрок текста.
+							Если первый параметр - это 
+							массив, содержащий один элемент и этот элемент является числом, то возвращается
+							символ с данным индексом (если индекс за пределом строки - выбрасывается исключение).
+							Если первый параметр - это 
+							массив, содержащий один элемент и этот элемент является предикатом, то возвращается
+							строка с отфильтрованными символами.
+							Если первый параметр - это 
+							массив, содержащий один элемент и этот элемент реализует 
+							<a class="ldoc-type" href="#Collection">Collection</a>, то возвращается
+							строка, содержащая все символы, соответствующие индексам, полученным из 
+							этого элемента.
+						</div>
+
+						<div class="ldoc-parameters">
+							<div class="ldoc-parameter">
+								<span class="ldoc-parameter-name">self</span>
+								<a class="ldoc-parameter-type" href="#Text">Text</a>
+								<span class="ldoc-parameter-description">текст для разбивки.</span>
+							</div>
+
+							<div class="ldoc-parameter">
+								<span class="ldoc-parameter-name">other</span>
+								<a class="ldoc-parameter-type" href="#Number">Number</a>
+								<span class="ldoc-parameter-description">максимальная длина части.</span>
+							</div>
+						</div>
+
+						<div class="ldoc-returns">
+							<a class="ldoc-returns-type" href="#Array">
+								Array
+							</a>
+							<span class="ldoc-returns-description">
+								массив, содержащий части исходного текста, не превышающие по длине
+								параметр <span class="ldoc-parameter-name">other</span>.
+							</span>
+						</div>
+
+						<div class="ldoc-note ldoc-warn">
+							В случае если длина исходного теста не делится на максимальную длину части
+							нацело, последний элемент возвращаемого массива будет остатком, имеющим 
+							длину меньше чем
+							максимальная длина части.
 						</div>
 
 						<div class="ldoc-definition">

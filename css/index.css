@@ -1,0 +1,134 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#welcome-screen {
+    height: 100vh;
+    background: #E5E5E5;
+}
+
+#welcome-screen>.container {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+#avatar {
+    height: 80vh;
+}
+
+.title {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.title-x>h1 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 72px;
+    line-height: 96px;
+    z-index: 1;
+    position: relative;
+}
+
+.title-x {
+    position: relative;
+}
+
+#accent-rect {
+    position: absolute;
+    width: 675px;
+    height: 31px;
+    right: -10px;
+    top: 155px;
+    z-index: 0;
+
+    background: linear-gradient(90deg, #CE08FF 15.1%, #00A0FB 98.96%);
+}
+
+.title-x>h2 {
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 85px;
+
+    color: #000000;
+    z-index: 1;
+    position: relative;
+}
+
+#accent-rect-2 {
+    position: absolute;
+    width: 355px;
+    height: 31px;
+    right: -10px;
+    top: 52px;
+    z-index: 0;
+
+    background: linear-gradient(90deg, #CE08FF 15.1%, #00A0FB 98.96%);
+}
+
+#skills {
+    padding: 120px 0;
+}
+
+#skills .title-x{
+    width: fit-content;
+}
+
+#major-skills {
+    margin-top: 100px;
+    display: flex;
+}
+
+
+.skills-col {
+    flex: 1 0 auto;
+}
+
+.skill {
+    margin-top: 36px;
+    margin-bottom: 36px;
+}
+
+.skill-name {
+    font-family: Segoe UI;
+font-style: normal;
+font-weight: bold;
+font-size: 36px;
+line-height: 48px;
+/* identical to box height */
+
+
+color: #000000;
+}
+
+.skill-progress {
+    margin-top: 12px;
+    max-width: 380px;
+    height: 13px;
+    background: linear-gradient(90deg, #CE08FF 15.1%, #00A0FB 98.96%);
+
+}
+
+.skill-value {
+    background: #C4C4C4;
+    height: 13px;
+    float: right;
+}
+
+.vertical-title {
+    font-weight: bold;
+font-size: 36px;
+line-height: 48px;
+/* identical to box height */
+
+letter-spacing: 0.05em;
+
+color: #000000;
+
+transform:  rotate(90deg) translateX(50%);
+height: fit-content;
+}
+}
