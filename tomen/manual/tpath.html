@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+    <title>Tomen Documentation</title>
+    <meta name="description" content="Tomen - TOML parser for .NET Documentation" />
+
+    <link rel="stylesheet" href="../styles/normalize.css" />
+    <link rel="stylesheet" href="../styles/manual.css" />
+    <script src="https://kit.fontawesome.com/8811fec66d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/styles/a11y-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+        .fa {
+            width: 24px;
+        }
+
+        .fa-check {
+            color: green;
+        }
+
+        .fa-times {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="nav">
+            <div class="nav__header">
+                <div class="nav__header__title">Tomen Documentation</div>
+            </div>
+            <h3 class="nav__title">Content</h3>
+
+            <div class="nav__items">
+                <a href="index.html" class="nav-item">Getting Started</a>
+                <a href="datatypes.html" class="nav-item">Data Types</a>
+                <a href="" class="nav-item nav-item--selected">TPath</a>
+            </div>
+        </nav>
+
+        <main>
+            <div class="content">
+                <h1>TPath</h1>
+
+                <p>
+                    TPath is a special language designed to make it even easier to work with TOML. Take a look:
+                </p>
+                <div class="code-example">
+                    <pre><code class="language-toml"># data.toml
+
+[person]
+name.first = "Denis"
+name.last = "Tsvikevich"
+</code></pre>
+                </div>
+                <div class="code-example">
+                    <pre><code class="language-csharp">TomlTable table = Tomen.Tomen.ReadFile("data.toml");
+
+Console.WriteLine(table.Path("person.name.first").AsString()); // "Denis"</code></pre>
+                </div>
+
+                <p>
+                    As you can see, Path is an extension method of TomenValue and TPath 
+                    is a string parameter in this method. Instead of <code class="language-csharp">Path</code> method you can 
+                    use it's generic version <code class="language-csharp">Path&lt;T&gt;</code>: parameter T is a type that returns
+                    when TPath evaluated:
+                </p>
+
+                <div class="code-example">
+                    <pre><code class="language-csharp">TomlTable table = Tomen.Tomen.ReadFile("data.toml");
+
+Console.WriteLine(table.Path&lt;string&gt;("person.name.first")); // path returns System.String!</code></pre>
+                </div>
+
+                <p>Instead of key name you can use indices:</p>
+                <div class="code-example">
+                    <pre><code class="language-csharp">TomlTable table = Tomen.Tomen.ReadFile("data.toml");
+
+Console.WriteLine(table.Path&lt;string&gt;("person.name[0]")); // same as person.name.first</code></pre>
+                </div>
+
+                <p>
+                    If you want to select all values of the table, you can use <code>*</code> operator.
+                    This operator returns <code>TomlArray</code> when used with table.
+                </p>
+                <div class="code-example">
+                    <pre><code class="language-csharp">TomlTable table = Tomen.Tomen.ReadFile("data.toml");
+
+// note: returned array is casted to string[]
+string[] name = table.Path&lt;string[]&gt;("person.name.*");
+Console.WriteLine(name[0]) // Denis
+Console.WriteLine(name[1]) // Tsvikevich</code></pre>
+                </div>
+        </main>
+    </div>
+</body>
+
+</html>

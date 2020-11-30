@@ -1,244 +1,189 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1"
-    />
+<html lang="en">
 
-    <title>Tomen / Документация</title>
-    <meta name="description" content="Tomen документация" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
 
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-      crossorigin="anonymous"
-    />
-		<link rel="stylesheet" href="../css/index.css" />
-		<link rel="stylesheet" href="../css/bootstrap-social-gh-pages/assets/css/font-awesome.css" />
+  <title>Tomen Documentation</title>
+  <meta name="description" content="Tomen - TOML parser for .NET Documentation" />
 
-		<style>
-			.fa-check {
-				color: green;
-			}
+  <link rel="stylesheet" href="../styles/normalize.css" />
+  <link rel="stylesheet" href="../styles/manual.css" />
+  <script src="https://kit.fontawesome.com/8811fec66d.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/styles/a11y-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <style>
+    .fa {
+      width: 24px;
+    }
 
-			.fa-times {
-				color: red;
-			}
-		</style>
-  </head>
+    .fa-check {
+      color: green;
+    }
 
-  <body>
-    <nav class="navbar navbar-dark navbar-expand-lg">
-      <span class="navbar-brand mb-0 h1">Tomen</span>
+    .fa-times {
+      color: red;
+    }
+  </style>
+</head>
 
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+<body>
+  <div class="container">
+    <nav class="nav">
+      <div class="nav__header">
+        <div class="nav__header__title">Tomen Documentation</div>
+      </div>
+      <h3 class="nav__title">Content</h3>
 
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-item nav-link" href="../index.html">Home</a>
-          <a class="nav-item nav-link active" href="">Documentation</a>
-          <a class="nav-item nav-link" href="#">Download</a>
-        </div>
+      <div class="nav__items">
+        <a href="" class="nav-item nav-item--selected">Getting Started</a>
+        <a href="datatypes.html" class="nav-item">Data Types</a>
+        <a href="tpath.html" class="nav-item">TPath</a>
       </div>
     </nav>
 
-    <div class="container-fluid fill" style="margin-top: 1rem;">
-      <div class="row">
-        <div class="col-lg-3 col-md-3">
-          <div class="list-group">
-            <a href="" class="list-group-item list-group-item-action active">
-              Введение
-            </a>
-            <a href="datatypes.html" class="list-group-item list-group-item-action"
-              >Типы данных</a
-            >
-            <a href="#" class="list-group-item list-group-item-action"
-              >Чтение и запись</a
-            >
-            <a href="#" class="list-group-item list-group-item-action"
-              >Конвертация в/из XML</a
-            >
-          </div>
+    <main>
+      <div class="content">
+        <h1>Getting Started</h1>
+        <p>
+          Tomen allows you work easilly with TOML in your .NET applications. You can read your
+          data in TOMl format and read this format into .NET objects back. There are also
+          converter XML/TOML.
+        </p>
+
+        <h2>Supported features</h2>
+
+        <p>
+        <ul style="list-style: none;">
+          <li>
+            <span class="fa fa-check"></span>
+            Comments
+          </li>
+          <li>
+            <span class="fa fa-check"></span>
+            Quoted keys
+          </li>
+          <li>
+            <span class="fa fa-check"></span>
+            Dotted keys
+          </li>
+          <li>
+            <span class="fa fa-check"></span>
+            Basic strings
+          </li>
+          <li>
+            <span class="fa fa-check"></span>
+            Multi-line basic strings
+          </li>
+          <li>
+            <span class="fa fa-check"></span>
+            Literal strings
+          </li>
+          <li>
+            <span class="fa fa-check"></span>
+            Multi-line literal strings
+          </li>
+          <li>
+            <span class="fa fa-check"></span>
+            Integers
+          </li>
+          <li>
+            <span class="fa fa-check"></span>
+            Floats
+          </li>
+          <li>
+            <span class="fa fa-check"></span>
+            Booleans
+          </li>
+          <li>
+            <span class="fa fa-check"></span>
+            Offset Date-Time
+          </li>
+          <li>
+            <span class="fa fa-check"></span>
+            Local Date-Time
+          </li>
+          <li>
+            <span class="fa fa-check"></span>
+            Local Date
+          </li>
+          <li>
+            <span class="fa fa-check"></span>
+            Local Time
+          </li>
+          <li>
+            <span class="fa fa-check"></span>
+            Arrays
+          </li>
+          <li>
+            <span class="fa fa-check"></span>
+            Tables
+          </li>
+          <li>
+            <span class="fa fa-times"></span>
+            Inline Tables
+          </li>
+          <li>
+            <span class="fa fa-times"></span>
+            Arrays of Tables
+          </li>
+        </ul>
+        </p>
+
+        <h2>Installation</h2>
+
+        В файле <code>data.toml</code> содержится следующая разметка:
+        <div class="code-example">
+          <pre><code class="language-toml">numbers = [1.5, 2.3]
+
+[person]
+name = "Alex"
+has_hand = true</pre>
+          </pre>
+          </code>
         </div>
-        <div class="col-lg-9 col-md-9">
-          <h2>Введение</h2>
-          <p>
-            Эта библиотека позволяет вам работать с языком TOML в ваших .NET
-            приложениях. Вы с лёгкостью можете записывать данные в этот формат,
-            а также читать данные в специальные объекты. Кроме того, реализована
-            полноценная поддержка конвертации между форматами TOML и XML.
-          </p>
+        Мы можем прочитать из него данные при помощи метода
+        <code>ReadFile</code> следующим образом:
+        <div class="code-example">
+          <pre><code class="language-csharp">TomlTable table = Lumen.Tomen.Tomen.ReadFile("data.toml");
 
-          <h2>Поддерживаемые возможности</h2>
+var numbers = table["numbers"] as TomlArray;
 
-          <p>
-            <ul style="list-style: none;">
-              <li>
-                <span class="fa fa-check"></span>
-                Комментарии
-              </li>
-              <li>
-								<span class="fa fa-check"></span>
-                Ключи в кавычках
-              </li>
-              <li>
-                <span class="fa fa-check"></span>
-                Ключи с точкой
-              </li>
-              <li>
-                <span class="fa fa-check"></span>
-                Строки в двойных кавычках
-              </li>
-              <li>
-                <span class="fa fa-check"></span>
-                Многострочные строки
-              </li>
-              <li>
-                <span class="fa fa-check"></span>
-                Сырые строки
-              </li>
-              <li>
-								<span class="fa fa-check"></span>
-                Многострочные сырые строки
-              </li>
-              <li>
-                <span class="fa fa-check"></span>
-                Целые числа
-              </li>
-              <li>
-                <span class="fa fa-check"></span>
-                Числа с плавающей точкой
-              </li>
-              <li>
-								<span class="fa fa-check"></span>
-                Логические значения
-              </li>
-              <li>
-								<span class="fa fa-check"></span>
-                Таблицы
-              </li>
-              <li>
-								<span class="fa fa-times"></span>
-                Встроенные таблицы
-              </li>
-              <li>
-                <span class="fa fa-times"></span>
-                Даты и время
-              </li>
-              <li>
-								<span class="fa fa-check"></span>
-                Массивы
-              </li>
-              <li>
-                <span class="fa fa-times"></span>
-                Массивы таблиц
-              </li>
-            </ul>
-          </p>
+foreach(var i in numbers)
+Console.WriteLine((i as TomlTable).Value);
 
-          <h2 class="c-title c-article__title">Начало работы</h2>
+var person = table["person"] as TomlTable;
+Console.WriteLine((table["name"] as TomlString).Value);
+Console.WriteLine((table["has_hand"] as TomlBool).Value);</code></pre>
+        </div>
+        Запись данных в файл обеспечивает метод <code>WriteFile</code>:
+        <div class="code-example">
+          <code>
+              <span class="keyword">TomlTable</span> table =
+              <span class="keyword">new TomlTable</span> {<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;[<span class="string">"x"</span>] =
+              <span class="keyword">new TomlInt</span>(5),<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;[<span class="string">"y"</span>] =
+              <span class="keyword">new TomlInt</span>(6)<br />
+              }<br /><br />
 
-            В файле <code>data.toml</code> содержится следующая разметка:
-            <div class="code-example">
-              <code>
-                numbers = [1.5, 2.3]<br /><br />
-
-                [<span class="keyword">person</span>]<br />
-                name = <span class="string">"Alex"</span><br />
-                has_hand = <span class="keyword">true</span>
-              </code>
-            </div>
-            Мы можем прочитать из него данные при помощи метода
-            <code>ReadFile</code> следующим образом:
-            <div class="code-example">
-              <code>
-                <span class="keyword">TomlTable</span> table = Lumen.Tomen.<span
-                  class="keyword"
-                  >Tomen</span
-                >.ReadFile(<span class="string">"data.toml"</span>);<br /><br />
-
-                <span class="keyword">var</span> numbers = table[<span
-                  class="string"
-                  >"numbers"</span
-                >] <span class="keyword">as TomlArray</span><br />
-
-                <span class="keyword">foreach</span>(<span class="keyword"
-                  >var</span
-                >
-                i <span class="keyword">in</span> numbers) <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">Console</span
-                >.WriteLine((i
-                <span class="keyword">as TomlTable</span>).Value);<br /><br />
-
-                <span class="keyword">var</span> person = table[<span
-                  class="string"
-                  >"person"</span
-                >] <span class="keyword">as TomlTable</span><br />
-                <span class="keyword">Console</span>.WriteLine((table[<span
-                  class="string"
-                  >"name"</span
-                >] <span class="keyword">as TomlString</span>).Value);<br />
-                <span class="keyword">Console</span>.WriteLine((table[<span
-                  class="string"
-                  >"has_hand"</span
-                >] <span class="keyword">as TomlBool</span>).Value);
-              </code>
-            </div>
-            Запись данных в файл обеспечивает метод <code>WriteFile</code>:
-            <div class="code-example">
-              <code>
-                <span class="keyword">TomlTable</span> table =
-                <span class="keyword">new TomlTable</span> {<br />
-                &nbsp;&nbsp;&nbsp;&nbsp;[<span class="string">"x"</span>] =
-                <span class="keyword">new TomlInt</span>(5),<br />
-                &nbsp;&nbsp;&nbsp;&nbsp;[<span class="string">"y"</span>] =
-                <span class="keyword">new TomlInt</span>(6)<br />
-                }<br /><br />
-
-                Lumen.Tomen.<span class="keyword">Tomen</span
-                >.WriteFile("output.toml", table);
-              </code>
-            </div>
-            После выполнения этот код создаст файл <code>output.toml</code> со
-            следующим содержимым:
-            <div class="code-example">
-              <code>
-                x = 5<br />
-                y = 6
-              </code>
-            </div>
-          </div>
+              Lumen.Tomen.<span class="keyword">Tomen</span
+              >.WriteFile("output.toml", table);
+            </code>
+        </div>
+        После выполнения этот код создаст файл <code>output.toml</code> со
+        следующим содержимым:
+        <div class="code-example">
+          <code>
+              x = 5<br />
+              y = 6
+            </code>
         </div>
       </div>
-		</div>
-		
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    </main>
+  </div>
+</body>
+
 </html>

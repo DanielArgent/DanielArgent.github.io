@@ -1,0 +1,20 @@
+[
+  {
+    "login": "guest",
+    "password": "",
+    "userInfo": {
+      "name": "Guest",
+      "type": "guest",
+      "avatar": "./assets/guest-avatar.svg"
+    }
+  },
+  {
+    "login": "denis",
+    "password": "12345",
+    "userInfo": {
+      "name": "Denis",
+      "type": "admin",
+      "avatar": "https://steamuserimages-a.akamaihd.net/ugc/1022823184772141814/EB9D57E0404D5053B630A6A31A46124875255698/?imw=512&amp;imh=512&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true"
+    }
+  }
+]

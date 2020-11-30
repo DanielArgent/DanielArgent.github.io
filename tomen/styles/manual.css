@@ -1,0 +1,76 @@
+:root {
+	--background-color: #141414;
+    --foreground-color: #969696;
+    
+    --nav--background-color: #222222;
+
+	--accent: #57DB8E;
+	--accent-darker: #2DD272;
+	--accent-darker-x2: #24A85B;
+
+	--welcome-screen__title-font-size: 96px;
+	--welcome-screen__title__subtitle-font-size: 22px;
+
+	--grid-item__title-font-size: 34px;
+	--grid-item__content-font-size: 18px;
+
+	--navigation-panel__title-font-size: 34px;
+	--navigation-panel__content-font-size: 18px;
+
+	--footer__content-font-size: 18px;
+
+
+	--padding: 0 100px;
+	--grid-item--max-width: 300px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: var(--background-color);
+    color: var(--foreground-color);
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.container {
+   
+}
+
+.nav {
+    background-color: var(--nav--background-color);
+
+    padding: 20px 10px;
+
+    position: fixed;
+    width: 25vw;
+    height: 100vh;
+}
+
+.nav-item {
+    display: block;
+    padding: 10px 5px;
+    color: var(--foreground-color);
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.nav-item--selected {
+    background-color: #2f2f2f;
+}
+
+main {
+    left: 25vw;
+    width: 75vw;
+    position: absolute;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+.content {
+    overflow-y: visible;
+    padding: 20px;
+}
