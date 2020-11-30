@@ -4,7 +4,7 @@ email: dtsvikevich@mail.ru
 description: >-
   Welcome to my personal blog about IT, web and others topics!
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://danielargent.github.io/base/"
+url: "https://danielargent.github.io/blog"
 twitter_username: agroholism
 github_username:  danielargent
 
@@ -12,10 +12,6 @@ github_username:  danielargent
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-
-google_analytics_id: UA-1111111111-1
-webmaster_verifications:
-  yandex: 69936454
 
 # Build settings
 include: [_pages]
