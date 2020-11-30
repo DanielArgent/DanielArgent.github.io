@@ -3,8 +3,8 @@ author: Denis Tsvikevich
 email: dtsvikevich@mail.ru
 description: >-
   Welcome to my personal blog about IT, web and others topics!
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://danielargent.github.io/blog"
+baseurl: "/blog" # the subpath of your site, e.g. /blog
+url: "https://danielargent.github.io"
 twitter_username: agroholism
 github_username:  danielargent
 
