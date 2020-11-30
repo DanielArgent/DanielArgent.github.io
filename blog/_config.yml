@@ -1,0 +1,28 @@
+title: Denis Tsvikevich's Blog
+author: Denis Tsvikevich
+email: dtsvikevich@mail.ru
+description: >-
+  Welcome to my personal blog about IT, web and others topics!
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://danielargent.github.io/base/"
+twitter_username: agroholism
+github_username:  danielargent
+
+# Build settings
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+google_analytics_id: UA-1111111111-1
+webmaster_verifications:
+  yandex: 69936454
+
+# Build settings
+include: [_pages]
+markdown: kramdown
+permalink: /:year/:month/:title.html
+
+sass:
+  style: compressed
+
+exclude: [vendor]
