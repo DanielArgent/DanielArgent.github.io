@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://danielargent.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://danielargent.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-12-01T00:26:01+03:00</updated><id>https://danielargent.github.io/blog/feed.xml</id><title type="html">Denis Tsvikevich’s Blog</title><subtitle>Welcome to my personal blog about IT, web and others topics!</subtitle><author><name>Denis Tsvikevich</name></author><entry><title type="html">ISBN check digit calculation</title><link href="https://danielargent.github.io/blog/2020/11/isbn-check-digit.html" rel="alternate" type="text/html" title="ISBN check digit calculation" /><published>2020-11-30T00:00:00+03:00</published><updated>2020-11-30T00:00:00+03:00</updated><id>https://danielargent.github.io/blog/2020/11/isbn-check-digit</id><content type="html" xml:base="https://danielargent.github.io/blog/2020/11/isbn-check-digit.html">&lt;p&gt;Today we will learn how to calculate SBN, ISBN-10 &amp;amp; ISBN-13 check digit and write these algorithms in JavaScript&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://danielargent.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://danielargent.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-12-01T00:30:09+03:00</updated><id>https://danielargent.github.io/blog/feed.xml</id><title type="html">Denis Tsvikevich’s Blog</title><subtitle>Welcome to my personal blog about IT, web and others topics!</subtitle><author><name>Denis Tsvikevich</name></author><entry><title type="html">ISBN check digit calculation</title><link href="https://danielargent.github.io/blog/2020/11/isbn-check-digit.html" rel="alternate" type="text/html" title="ISBN check digit calculation" /><published>2020-11-30T00:00:00+03:00</published><updated>2020-11-30T00:00:00+03:00</updated><id>https://danielargent.github.io/blog/2020/11/isbn-check-digit</id><content type="html" xml:base="https://danielargent.github.io/blog/2020/11/isbn-check-digit.html">&lt;p&gt;Today we will learn how to calculate SBN, ISBN-10 &amp;amp; ISBN-13 check digit and write these algorithms in JavaScript&lt;/p&gt;
 
 &lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
@@ -7,13 +7,13 @@
 &lt;p&gt;ISBN based upon 9-digit &lt;strong&gt;SBN (Standard Book Number)&lt;/strong&gt; created in 1965. There are two types of
 ISBN. First, called &lt;strong&gt;ISBN-10&lt;/strong&gt; (10 means 10-digit) is also deprecated format, developed by ISO was published in 1970. ISBN-10 consists of four parts:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/isbn-1.svg&quot; alt=&quot;ISBN-10 structrue&quot; title=&quot;ISBN-10 structrue&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/isbn-1.svg&quot; alt=&quot;ISBN-10 structrue&quot; title=&quot;ISBN-10 structrue&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The most interesting part for us is the last - check digit. A &lt;strong&gt;check digit&lt;/strong&gt; is a form of redundancy check used for error detection on identification numbers. It should be noted here that the last digit can be the letter X, which represents the value 10.&lt;/p&gt;
 
 &lt;p&gt;Currently active (since 2007) standart, &lt;strong&gt;ISBN-13&lt;/strong&gt;, is looks very similar to ISBN-10. The difference is that ISBN-13 also have &lt;a href=&quot;https://en.wikipedia.org/wiki/International_Article_Number&quot;&gt;EAN prefix&lt;/a&gt; (always 978 or 979) and check digit can not be a letter X.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/isbn-2.svg&quot; alt=&quot;ISBN-13 structrue&quot; title=&quot;ISBN-13 structrue&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/isbn-2.svg&quot; alt=&quot;ISBN-13 structrue&quot; title=&quot;ISBN-13 structrue&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;To learn more about ISBN you can &lt;a href=&quot;https://www.isbn-international.org/&quot;&gt;visit International ISBN Agency site&lt;/a&gt;. There is a comparison table of ISBN formats:&lt;/p&gt;
 

@@ -18,13 +18,13 @@ comments: true
 ISBN based upon 9-digit **SBN (Standard Book Number)** created in 1965. There are two types of
 ISBN. First, called **ISBN-10** (10 means 10-digit) is also deprecated format, developed by ISO was published in 1970. ISBN-10 consists of four parts:
 
-![ISBN-10 structrue](/assets/images/isbn-1.svg "ISBN-10 structrue")
+![ISBN-10 structrue]({{site.baseurl}}/assets/images/isbn-1.svg "ISBN-10 structrue")
 
 The most interesting part for us is the last - check digit. A **check digit** is a form of redundancy check used for error detection on identification numbers. It should be noted here that the last digit can be the letter X, which represents the value 10.
 
 Currently active (since 2007) standart, **ISBN-13**, is looks very similar to ISBN-10. The difference is that ISBN-13 also have [EAN prefix][1] (always 978 or 979) and check digit can not be a letter X.
 
-![ISBN-13 structrue](/assets/images/isbn-2.svg "ISBN-13 structrue")
+![ISBN-13 structrue]({{site.baseurl}}/assets/images/isbn-2.svg "ISBN-13 structrue")
 
 To learn more about ISBN you can [visit International ISBN Agency site][2]. There is a comparison table of ISBN formats:
 
