@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>ISBN check digit calculation | Denis Tsvikevich’s Blog</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="ISBN check digit calculation" />
+<meta name="author" content="Denis Tsvikevich" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Today we will learn how to calculate SBN, ISBN-10 &amp; ISBN-13 check digit and write these algorithms in JavaScript" />
+<meta property="og:description" content="Today we will learn how to calculate SBN, ISBN-10 &amp; ISBN-13 check digit and write these algorithms in JavaScript" />
+<link rel="canonical" href="https://danielargent.github.io/base//2020/11/isbn-check-digit.html" />
+<meta property="og:url" content="https://danielargent.github.io/base//2020/11/isbn-check-digit.html" />
+<meta property="og:site_name" content="Denis Tsvikevich’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-11-30T00:00:00+03:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ISBN check digit calculation" />
+<meta name="yandex-verification" content="69936454" />
+<script type="application/ld+json">
+{"headline":"ISBN check digit calculation","dateModified":"2020-11-30T00:00:00+03:00","datePublished":"2020-11-30T00:00:00+03:00","url":"https://danielargent.github.io/base//2020/11/isbn-check-digit.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://danielargent.github.io/base//2020/11/isbn-check-digit.html"},"@type":"BlogPosting","author":{"@type":"Person","name":"Denis Tsvikevich"},"description":"Today we will learn how to calculate SBN, ISBN-10 &amp; ISBN-13 check digit and write these algorithms in JavaScript","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L6T0X3RS4K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-L6T0X3RS4K');
+</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+  (function (m, e, t, r, i, k, a) {
+    m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+    m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+  })
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+  ym(69936454, "init", {
+    clickmap: true,
+    trackLinks: true,
+    accurateTrackBounce: true
+  });
+</script>
+<noscript>
+  <div><img src="https://mc.yandex.ru/watch/69936454" style="position:absolute; left:-9999px;" alt="" /></div>
+</noscript>
+<!-- /Yandex.Metrika counter -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link 
+    href='https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:300,400,900,400italic'
+    rel='stylesheet'
+    type='text/css'>
+
+  <link 
+    rel="stylesheet" 
+    href="/assets/css/main.css">
+
+  <link 
+    rel="canonical" 
+    href="https://danielargent.github.io/base//2020/11/isbn-check-digit.html">
+
+  <link 
+    rel="alternate"
+    type="application/rss+xml"
+    title="Denis Tsvikevich's Blog"
+    href="https://danielargent.github.io/base//feed.xml">
+</head>
+  <body>
+    <main class="container">
+      <div class="page">
+  <header class="page__header">
+  <h1><code>Denis Tsvikevich's Blog</code></h1>
+
+  
+  
+  <p>
+    <a href="/">Home</a>
+    <span class="separate"></span>
+    <a href="/about/">About</a>
+    <span class="separate"></span>
+    <a href="/feed.xml">RSS</a>
+  </p>
+</header>
+
+  <div class="page__main">
+    <article class="article">
+  <header class="article__header">
+    <h1 class="article__title">ISBN check digit calculation</h1>
+    <p class="article__time"><time datetime="2020-11-30T00:00:00+03:00" itemprop="datePublished">Nov 30, 2020</time></p>
+  </header>
+
+  <!-- Post Tags -->
+  <ul class="tags">
+    
+      <li class="tag">algorithms</li>
+    
+      <li class="tag">javascript</li>
+    
+  </ul>
+
+  <div class="article__main">
+    <p>Today we will learn how to calculate SBN, ISBN-10 &amp; ISBN-13 check digit and write these algorithms in JavaScript</p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p><strong>ISBN (International Standard Book Number)</strong> is a unique numeric book identifier, required for the distribution of the book in retail chains and automation of work with the publication.</p>
+
+<p>ISBN based upon 9-digit <strong>SBN (Standard Book Number)</strong> created in 1965. There are two types of
+ISBN. First, called <strong>ISBN-10</strong> (10 means 10-digit) is also deprecated format, developed by ISO was published in 1970. ISBN-10 consists of four parts:</p>
+
+<p><img src="/assets/images/isbn-1.svg" alt="ISBN-10 structrue" title="ISBN-10 structrue" /></p>
+
+<p>The most interesting part for us is the last - check digit. A <strong>check digit</strong> is a form of redundancy check used for error detection on identification numbers. It should be noted here that the last digit can be the letter X, which represents the value 10.</p>
+
+<p>Currently active (since 2007) standart, <strong>ISBN-13</strong>, is looks very similar to ISBN-10. The difference is that ISBN-13 also have <a href="https://en.wikipedia.org/wiki/International_Article_Number">EAN prefix</a> (always 978 or 979) and check digit can not be a letter X.</p>
+
+<p><img src="/assets/images/isbn-2.svg" alt="ISBN-13 structrue" title="ISBN-13 structrue" /></p>
+
+<p>To learn more about ISBN you can <a href="https://www.isbn-international.org/">visit International ISBN Agency site</a>. There is a comparison table of ISBN formats:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Standart</th>
+      <th>Length</th>
+      <th>EAN prefix</th>
+      <th>X as check digit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SBN</td>
+      <td>9</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>ISBN-10</td>
+      <td>10</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>ISBN-13</td>
+      <td>13</td>
+      <td>Yes</td>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="sbn-check-digit">SBN check digit</h2>
+<p>To calculate SBN check digit you can convert SBN to ISBN-10 and calculate ISBN-10 check digit 
+(it will be same as SBN check digit).</p>
+
+<h2 id="isbn-10-check-digit">ISBN-10 check digit</h2>
+<p>ISBN-10 check digit must range from 0 to 10 (X). To calculate ISBN-10 check digit you can use following
+formula:</p>
+
+<p class="formula">
+  @d_10=[11 - (sum_(i=1)^9 (11-i)*d_i) mod 11] mod 11@
+</p>
+
+<p>for example, lets eval check digit of ISBN-10 123-456-789-_:</p>
+
+<p class="formula">
+  @d_10=[11 - (10 * 1 + 9 * 2 + 8 * 3 + 7 * 4 + 6 * 5 + 5 * 6 + 4 * 7 + 3 * 8 + 2 * 9) mod 11] mod 11@
+  @d_10=(11 - 210 mod 11) mod 11 = (11 - 1) mod 11 = 10@
+</p>
+
+<p>so check digit is X and ISBN-10 is 123-456-789-X.</p>
+
+<p>JavaScript implementation:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/**
+ * Converts ISBN string to digit array (X in ISBN-10 also supported)
+ *
+ * @param {string} isbn - ISBN string representation
+ * @returns {number[]} array of digits, converted to numbers
+ */</span>
+<span class="kd">function</span> <span class="nx">toIsbnDigits</span><span class="p">(</span><span class="nx">isbn</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">[...</span><span class="nx">isbn</span><span class="p">].</span><span class="nx">map</span><span class="p">(</span><span class="nx">char</span> <span class="o">=&gt;</span> 
+        <span class="nx">char</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">()</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">x</span><span class="dl">"</span> <span class="p">?</span> <span class="mi">10</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">.</span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">char</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="cm">/**
+ * Calculates check digit of ISBN-10
+ *
+ * @param {number[]} digits - ISBN-10 digit array
+ * @returns {number} check digit of ISBN-10
+ */</span>
+<span class="kd">function</span> <span class="nx">checkDigitIsbn10</span><span class="p">(</span><span class="nx">digits</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">9</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">sum</span> <span class="o">+=</span> <span class="p">(</span><span class="mi">10</span> <span class="o">-</span> <span class="nx">i</span><span class="p">)</span> <span class="o">*</span> <span class="nx">digits</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+    <span class="p">}</span>
+
+    <span class="kd">let</span> <span class="nx">digit</span> <span class="o">=</span> <span class="p">(</span><span class="mi">11</span> <span class="o">-</span> <span class="p">(</span><span class="nx">sum</span> <span class="o">%</span> <span class="mi">11</span><span class="p">))</span> <span class="o">%</span> <span class="mi">11</span><span class="p">;</span>
+    <span class="k">return</span> <span class="nx">digit</span> <span class="o">===</span> <span class="mi">10</span> <span class="p">?</span> <span class="dl">"</span><span class="s2">X</span><span class="dl">"</span> <span class="p">:</span> <span class="nx">digit</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">checkDigitIsbn10</span><span class="p">(</span><span class="nx">toIsbnDigits</span><span class="p">(</span><span class="dl">"</span><span class="s2">123456789</span><span class="dl">"</span><span class="p">)));</span> <span class="c1">//=&gt; X</span>
+</code></pre></div></div>
+
+<h2 id="isbn-13-check-digit">ISBN-13 check digit</h2>
+<p>Let</p>
+
+<p class="formula">
+  @"alter"(x) = {(1, ;, odd),(2, ;, even):}@
+</p>
+
+<p>then ISBN-13 check digit equals</p>
+
+<p class="formula">
+  @d_13=[10 - (sum_(i=1)^12 "alter"(i)*d_i) mod 10] mod 10@
+</p>
+
+<p>JavaScript implementation:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/**
+ * Converts ISBN-13 string to digit array
+ *
+ * @param {string} isbn - ISBN-13 string representation
+ * @returns {number[]} array of digits, converted to numbers
+ */</span>
+<span class="kd">function</span> <span class="nx">toIsbnDigits</span><span class="p">(</span><span class="nx">isbn</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">[...</span><span class="nx">isbn</span><span class="p">].</span><span class="nx">map</span><span class="p">(</span><span class="nx">char</span> <span class="o">=&gt;</span> <span class="nb">Number</span><span class="p">.</span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">char</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="cm">/**
+ * Calculates check sum of ISBN-13
+ *
+ * @param {number[]} digits - ISBN-13 digit array
+ * @returns {number} check sum of ISBN-13
+ */</span>
+<span class="kd">function</span> <span class="nx">checksumIsbn13</span><span class="p">(</span><span class="nx">digits</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Helper function, returns 1 if x is odd, 3 otherwise</span>
+    <span class="kd">function</span> <span class="nx">factor</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">(</span><span class="nx">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">===</span> <span class="mi">1</span><span class="p">)</span> <span class="p">?</span> <span class="mi">1</span> <span class="p">:</span> <span class="mi">3</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">let</span> <span class="nx">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">12</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">sum</span> <span class="o">+=</span> <span class="nx">factor</span><span class="p">(</span><span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="nx">digits</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="p">(</span><span class="mi">10</span> <span class="o">-</span> <span class="p">(</span><span class="nx">sum</span> <span class="o">%</span> <span class="mi">10</span><span class="p">))</span> <span class="o">%</span> <span class="mi">10</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Thank you for reading!</p>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+<script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<script>
+  MathJax = {
+      loader: {
+    load: ['input/asciimath']
+  },
+    asciimath: {
+      delimiters: [['@', '@']]
+    }
+};
+</script>
+
+
+  </div>
+  
+  <!-- Previous / Next Buttons -->
+  <div class="pagenav">
+    
+    
+  </div>
+</article>
+
+  </div>
+  <footer class="page__footer">
+  <p>&copy; Denis Tsvikevich 2020</p>
+  <p>
+    
+      <a href="https://twitter.com/agroholism">Twitter</a>
+      
+        <span class="separate"></span>
+      
+    
+
+    
+      <a href="https://github.com/danielargent">Github</a>
+    
+  </p>
+</footer>
+
+</div>
+
+    </main>
+    
+  </body>
+</html>
