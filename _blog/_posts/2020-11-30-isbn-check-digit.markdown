@@ -1,10 +1,9 @@
 ---
+title: ISBN check digit calculation
 layout: post
-title: "ISBN check digit calculation"
-description: >
-  Today we will learn how to calculate SBN, ISBN-10 & ISBN-13 check digit and write these algorithms
-  in JavaScript
-date:   2020-11-30
+description: Today we will learn how to calculate SBN, ISBN-10 & ISBN-13 check digit
+  and write these algorithms in JavaScript
+date: '2020-11-30'
 tags: algorithms javascript
 comments: true
 ---
@@ -34,9 +33,22 @@ SBN          | 9      | No         | Yes              |
 ISBN-10      | 10     | No         | Yes              |
 ISBN-13      | 13     | Yes        | No               |
 
+It is possible to convert SBN to ISBN-10: just add prefix 0 to SBN:
+
+```
+SBN: 12345678-9
+ISBN-10: 012345678-9
+```
+Also you can convert ISBN-10 to ISBN-13 by adding prefix 978 and **recalculating check digit**:
+```
+ISBN-10: 012345678-9
+ISBN-13: 978-012345678-6
+```
+
+![ISBN coversion scheme]({{ 'assets/images/isbn-conversion-scheme.svg' | relative_url }} "ISBN coversion scheme")
 ## SBN check digit
 To calculate SBN check digit you can convert SBN to ISBN-10 and calculate ISBN-10 check digit 
-(it will be same as SBN check digit).
+(it will be the same as SBN check digit).
 
 ## ISBN-10 check digit
 ISBN-10 check digit must range from 0 to 10 (X). To calculate ISBN-10 check digit you can use following
@@ -134,7 +146,8 @@ function checksumIsbn13(digits) {
 }
 ```
 
-Thank you for reading!
+
+*Thank you for reading!*
 
 [1]: https://en.wikipedia.org/wiki/International_Article_Number
 [2]: https://www.isbn-international.org/

@@ -12,6 +12,7 @@ github_username:  danielargent
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Build settings
 include: [_pages]
