@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://danielargent.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://danielargent.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-12-01T00:30:09+03:00</updated><id>https://danielargent.github.io/blog/feed.xml</id><title type="html">Denis Tsvikevich’s Blog</title><subtitle>Welcome to my personal blog about IT, web and others topics!</subtitle><author><name>Denis Tsvikevich</name></author><entry><title type="html">ISBN check digit calculation</title><link href="https://danielargent.github.io/blog/2020/11/isbn-check-digit.html" rel="alternate" type="text/html" title="ISBN check digit calculation" /><published>2020-11-30T00:00:00+03:00</published><updated>2020-11-30T00:00:00+03:00</updated><id>https://danielargent.github.io/blog/2020/11/isbn-check-digit</id><content type="html" xml:base="https://danielargent.github.io/blog/2020/11/isbn-check-digit.html">&lt;p&gt;Today we will learn how to calculate SBN, ISBN-10 &amp;amp; ISBN-13 check digit and write these algorithms in JavaScript&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://danielargent.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://danielargent.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-12-01T04:59:40+03:00</updated><id>https://danielargent.github.io/blog/feed.xml</id><title type="html">Denis Tsvikevich’s Blog</title><subtitle>Welcome to my personal blog about IT, web and others topics!</subtitle><author><name>Denis Tsvikevich</name></author><entry><title type="html">ISBN check digit calculation</title><link href="https://danielargent.github.io/blog/2020/11/isbn-check-digit.html" rel="alternate" type="text/html" title="ISBN check digit calculation" /><published>2020-11-30T00:00:00+03:00</published><updated>2020-11-30T00:00:00+03:00</updated><id>https://danielargent.github.io/blog/2020/11/isbn-check-digit</id><content type="html" xml:base="https://danielargent.github.io/blog/2020/11/isbn-check-digit.html">&lt;p&gt;Today we will learn how to calculate SBN, ISBN-10 &amp;amp; ISBN-13 check digit and write these algorithms in JavaScript&lt;/p&gt;
 
 &lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
@@ -48,9 +48,20 @@ ISBN. First, called &lt;strong&gt;ISBN-10&lt;/strong&gt; (10 means 10-digit) is 
   &lt;/tbody&gt;
 &lt;/table&gt;
 
+&lt;p&gt;It is possible to convert SBN to ISBN-10: just add prefix 0 to SBN:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;SBN: 12345678-9
+ISBN-10: 012345678-9
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Also you can convert ISBN-10 to ISBN-13 by adding prefix 978 and &lt;strong&gt;recalculating check digit&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ISBN-10: 012345678-9
+ISBN-13: 978-012345678-6
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/isbn-conversion-scheme.svg&quot; alt=&quot;ISBN coversion scheme&quot; title=&quot;ISBN coversion scheme&quot; /&gt;&lt;/p&gt;
 &lt;h2 id=&quot;sbn-check-digit&quot;&gt;SBN check digit&lt;/h2&gt;
 &lt;p&gt;To calculate SBN check digit you can convert SBN to ISBN-10 and calculate ISBN-10 check digit 
-(it will be same as SBN check digit).&lt;/p&gt;
+(it will be the same as SBN check digit).&lt;/p&gt;
 
 &lt;h2 id=&quot;isbn-10-check-digit&quot;&gt;ISBN-10 check digit&lt;/h2&gt;
 &lt;p&gt;ISBN-10 check digit must range from 0 to 10 (X). To calculate ISBN-10 check digit you can use following
@@ -146,7 +157,7 @@ formula:&lt;/p&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Thank you for reading!&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Thank you for reading!&lt;/em&gt;&lt;/p&gt;
 
 &lt;script src=&quot;https://polyfill.io/v3/polyfill.min.js?features=es6&quot;&gt;&lt;/script&gt;
 

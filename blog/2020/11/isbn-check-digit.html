@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="ISBN check digit calculation" />
 <script type="application/ld+json">
-{"headline":"ISBN check digit calculation","dateModified":"2020-11-30T00:00:00+03:00","datePublished":"2020-11-30T00:00:00+03:00","url":"https://danielargent.github.io/blog/2020/11/isbn-check-digit.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://danielargent.github.io/blog/2020/11/isbn-check-digit.html"},"@type":"BlogPosting","author":{"@type":"Person","name":"Denis Tsvikevich"},"description":"Today we will learn how to calculate SBN, ISBN-10 &amp; ISBN-13 check digit and write these algorithms in JavaScript","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","url":"https://danielargent.github.io/blog/2020/11/isbn-check-digit.html","headline":"ISBN check digit calculation","dateModified":"2020-11-30T00:00:00+03:00","datePublished":"2020-11-30T00:00:00+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://danielargent.github.io/blog/2020/11/isbn-check-digit.html"},"author":{"@type":"Person","name":"Denis Tsvikevich"},"description":"Today we will learn how to calculate SBN, ISBN-10 &amp; ISBN-13 check digit and write these algorithms in JavaScript","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -154,9 +154,20 @@ ISBN. First, called <strong>ISBN-10</strong> (10 means 10-digit) is also depreca
   </tbody>
 </table>
 
+<p>It is possible to convert SBN to ISBN-10: just add prefix 0 to SBN:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SBN: 12345678-9
+ISBN-10: 012345678-9
+</code></pre></div></div>
+<p>Also you can convert ISBN-10 to ISBN-13 by adding prefix 978 and <strong>recalculating check digit</strong>:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ISBN-10: 012345678-9
+ISBN-13: 978-012345678-6
+</code></pre></div></div>
+
+<p><img src="/blog/assets/images/isbn-conversion-scheme.svg" alt="ISBN coversion scheme" title="ISBN coversion scheme" /></p>
 <h2 id="sbn-check-digit">SBN check digit</h2>
 <p>To calculate SBN check digit you can convert SBN to ISBN-10 and calculate ISBN-10 check digit 
-(it will be same as SBN check digit).</p>
+(it will be the same as SBN check digit).</p>
 
 <h2 id="isbn-10-check-digit">ISBN-10 check digit</h2>
 <p>ISBN-10 check digit must range from 0 to 10 (X). To calculate ISBN-10 check digit you can use following
@@ -252,7 +263,7 @@ formula:</p>
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p>Thank you for reading!</p>
+<p><em>Thank you for reading!</em></p>
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 
