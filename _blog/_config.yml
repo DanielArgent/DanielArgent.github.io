@@ -1,12 +1,13 @@
 title: Denis Tsvikevich's Blog
-author: Denis Tsvikevich
-email: dtsvikevich@mail.ru
+author:
+  name: Denis Tsvikevich
+  twitter: argohoism
+  github: danielargent
+  email: dtsvikevich@gmail.com
 description: >-
   Welcome to my personal blog about IT, web and others topics!
-baseurl: "/blog" # the subpath of your site, e.g. /blog
+baseurl: "/blog"
 url: "https://danielargent.github.io"
-twitter_username: agroholism
-github_username:  danielargent
 
 # Build settings
 plugins:

@@ -1,15 +1,15 @@
 <footer class="page__footer">
-  <p>&copy; {{ site.author }} {{ 'now' | date: '%Y' }}</p>
+  <p>&copy; {{ site.author.name }} {{ 'now' | date: '%Y' }}</p>
   <p>
-    {% if site.twitter_username %}
-      <a href="https://twitter.com/{{ site.twitter_username }}">Twitter</a>
-      {% if site.github_username %}
+    {% if site.author.twitter %}
+      <a href="https://twitter.com/{{ site.author.twitter }}">Twitter</a>
+      {% if site.author.github %}
         <span class="separate"></span>
       {% endif %}
     {% endif %}
 
-    {% if site.github_username %}
-      <a href="https://github.com/{{ site.github_username }}">Github</a>
+    {% if site.author.github %}
+      <a href="https://github.com/{{ site.author.github }}">Github</a>
     {% endif %}
   </p>
 </footer>
