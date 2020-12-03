@@ -2,11 +2,11 @@
    Archives
    ========================================================================== */
 
-.archives {
+.page-section, .archives {
     margin-bottom: 10rem;
 }
 
-.archives__year {
+.page-section h2, .archives__year {
     margin-bottom: 2.5rem;
     @include fs--heading-1;
 }
