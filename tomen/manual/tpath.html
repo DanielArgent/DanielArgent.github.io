@@ -14,33 +14,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/styles/a11y-dark.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <style>
-        .fa {
-            width: 24px;
-        }
-
-        .fa-check {
-            color: green;
-        }
-
-        .fa-times {
-            color: red;
-        }
-    </style>
 </head>
 
 <body>
     <div class="container">
         <nav class="nav">
             <div class="nav__header">
+                <img class="nav__header__logo" src="../resources/images/logo.svg"/>
                 <div class="nav__header__title">Tomen Documentation</div>
             </div>
-            <h3 class="nav__title">Content</h3>
 
             <div class="nav__items">
                 <a href="index.html" class="nav-item">Getting Started</a>
                 <a href="datatypes.html" class="nav-item">Data Types</a>
-                <a href="" class="nav-item nav-item--selected">TPath</a>
+                <a href="reading-toml.html" class="nav-item">Reading TOML</a>
+                <a href="tpath.html" class="nav-item nav-item--selected">TPath</a>
             </div>
         </nav>
 
@@ -66,9 +54,11 @@ Console.WriteLine(table.Path("person.name.first").AsString()); // "Denis"</code>
                 </div>
 
                 <p>
-                    As you can see, Path is an extension method of TomenValue and TPath 
-                    is a string parameter in this method. Instead of <code class="language-csharp">Path</code> method you can 
-                    use it's generic version <code class="language-csharp">Path&lt;T&gt;</code>: parameter T is a type that returns
+                    As you can see, Path is an extension method of TomenValue and TPath
+                    is a string parameter in this method. Instead of <code class="language-csharp">Path</code> method
+                    you can
+                    use it's generic version <code class="language-csharp">Path&lt;T&gt;</code>: parameter T is a type
+                    that returns
                     when TPath evaluated:
                 </p>
 

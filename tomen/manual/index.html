@@ -8,6 +8,8 @@
   <title>Tomen Documentation</title>
   <meta name="description" content="Tomen - TOML parser for .NET Documentation" />
 
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,500;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles/normalize.css" />
   <link rel="stylesheet" href="../styles/manual.css" />
   <script src="https://kit.fontawesome.com/8811fec66d.js" crossorigin="anonymous"></script>
@@ -15,16 +17,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
   <style>
-    .fa {
-      width: 24px;
-    }
-
-    .fa-check {
+    .plus-icon {
+      font-weight: bold;
       color: green;
-    }
-
-    .fa-times {
-      color: red;
     }
   </style>
 </head>
@@ -33,13 +28,16 @@
   <div class="container">
     <nav class="nav">
       <div class="nav__header">
-        <div class="nav__header__title">Tomen Documentation</div>
+        <img class="nav__header__logo" src="../resources/images/logo.svg"/>
+        <div class="nav__header__title">
+          Tomen Documentation
+        </div>
       </div>
-      <h3 class="nav__title">Content</h3>
 
       <div class="nav__items">
         <a href="" class="nav-item nav-item--selected">Getting Started</a>
         <a href="datatypes.html" class="nav-item">Data Types</a>
+        <a href="reading-toml.html" class="nav-item">Reading TOML</a>
         <a href="tpath.html" class="nav-item">TPath</a>
       </div>
     </nav>
@@ -58,129 +56,82 @@
         <p>
         <ul style="list-style: none;">
           <li>
-            <span class="fa fa-check"></span>
+            <span class="plus-icon">+</span>
             Comments
           </li>
           <li>
-            <span class="fa fa-check"></span>
+            <span class="plus-icon">+</span>
             Quoted keys
           </li>
           <li>
-            <span class="fa fa-check"></span>
+            <span class="plus-icon">+</span>
             Dotted keys
           </li>
           <li>
-            <span class="fa fa-check"></span>
+            <span class="plus-icon">+</span>
             Basic strings
           </li>
           <li>
-            <span class="fa fa-check"></span>
+            <span class="plus-icon">+</span>
             Multi-line basic strings
           </li>
           <li>
-            <span class="fa fa-check"></span>
+            <span class="plus-icon">+</span>
             Literal strings
           </li>
           <li>
-            <span class="fa fa-check"></span>
+            <span class="plus-icon">+</span>
             Multi-line literal strings
           </li>
           <li>
-            <span class="fa fa-check"></span>
+            <span class="plus-icon">+</span>
             Integers
           </li>
           <li>
-            <span class="fa fa-check"></span>
+            <span class="plus-icon">+</span>
             Floats
           </li>
           <li>
-            <span class="fa fa-check"></span>
+            <span class="plus-icon">+</span>
             Booleans
           </li>
           <li>
-            <span class="fa fa-check"></span>
+            <span class="plus-icon">+</span>
             Offset Date-Time
           </li>
           <li>
-            <span class="fa fa-check"></span>
+            <span class="plus-icon">+</span>
             Local Date-Time
           </li>
           <li>
-            <span class="fa fa-check"></span>
+            <span class="plus-icon">+</span>
             Local Date
           </li>
           <li>
-            <span class="fa fa-check"></span>
+            <span class="plus-icon">+</span>
             Local Time
           </li>
           <li>
-            <span class="fa fa-check"></span>
+            <span class="plus-icon">+</span>
             Arrays
           </li>
           <li>
-            <span class="fa fa-check"></span>
+            <span class="plus-icon">+</span>
             Tables
           </li>
           <li>
-            <span class="fa fa-times"></span>
+            <span class="plus-icon">+</span>
             Inline Tables
           </li>
           <li>
-            <span class="fa fa-times"></span>
+            <span class="plus-icon">+</span>
             Arrays of Tables
           </li>
         </ul>
         </p>
 
         <h2>Installation</h2>
-
-        В файле <code>data.toml</code> содержится следующая разметка:
-        <div class="code-example">
-          <pre><code class="language-toml">numbers = [1.5, 2.3]
-
-[person]
-name = "Alex"
-has_hand = true</pre>
-          </pre>
-          </code>
-        </div>
-        Мы можем прочитать из него данные при помощи метода
-        <code>ReadFile</code> следующим образом:
-        <div class="code-example">
-          <pre><code class="language-csharp">TomlTable table = Lumen.Tomen.Tomen.ReadFile("data.toml");
-
-var numbers = table["numbers"] as TomlArray;
-
-foreach(var i in numbers)
-Console.WriteLine((i as TomlTable).Value);
-
-var person = table["person"] as TomlTable;
-Console.WriteLine((table["name"] as TomlString).Value);
-Console.WriteLine((table["has_hand"] as TomlBool).Value);</code></pre>
-        </div>
-        Запись данных в файл обеспечивает метод <code>WriteFile</code>:
-        <div class="code-example">
-          <code>
-              <span class="keyword">TomlTable</span> table =
-              <span class="keyword">new TomlTable</span> {<br />
-              &nbsp;&nbsp;&nbsp;&nbsp;[<span class="string">"x"</span>] =
-              <span class="keyword">new TomlInt</span>(5),<br />
-              &nbsp;&nbsp;&nbsp;&nbsp;[<span class="string">"y"</span>] =
-              <span class="keyword">new TomlInt</span>(6)<br />
-              }<br /><br />
-
-              Lumen.Tomen.<span class="keyword">Tomen</span
-              >.WriteFile("output.toml", table);
-            </code>
-        </div>
-        После выполнения этот код создаст файл <code>output.toml</code> со
-        следующим содержимым:
-        <div class="code-example">
-          <code>
-              x = 5<br />
-              y = 6
-            </code>
-        </div>
+        
       </div>
     </main>
   </div>
