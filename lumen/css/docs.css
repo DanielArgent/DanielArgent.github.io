@@ -72,9 +72,9 @@
 	white-space: nowrap;
 	overflow-x: auto;
 	border: 1px solid var(--additive-color);
-	font-size: 1.1em;
+	font-size: 1em;
 	letter-spacing: 1px;
-	font-family: 'Cairo', sans-serif;
+	font-family: 'IBM Plex Mono', sans-serif;
 	display: block;
   color: #ebebeb;
   padding: 1rem;

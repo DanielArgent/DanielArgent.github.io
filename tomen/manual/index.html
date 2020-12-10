@@ -9,11 +9,11 @@
   <meta name="description" content="Tomen - TOML parser for .NET Documentation" />
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,500;0,700;1,400&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="../styles/normalize.css" />
   <link rel="stylesheet" href="../styles/manual.css" />
-  <script src="https://kit.fontawesome.com/8811fec66d.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/styles/a11y-dark.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/styles/sunburst.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
   <style>
@@ -28,7 +28,7 @@
   <div class="container">
     <nav class="nav">
       <div class="nav__header">
-        <img class="nav__header__logo" src="../resources/images/logo.svg"/>
+        <img class="nav__header__logo" src="../resources/images/logo.svg" />
         <div class="nav__header__title">
           Tomen Documentation
         </div>
@@ -53,7 +53,6 @@
 
         <h2>Supported features</h2>
 
-        <p>
         <ul style="list-style: none;">
           <li>
             <span class="plus-icon">+</span>
@@ -128,11 +127,46 @@
             Arrays of Tables
           </li>
         </ul>
-        </p>
 
         <h2>Installation</h2>
-        
+
+        <p>
+          Package Manager:
+        </p>
+
+        <div class="code-example">
+          <pre><code>Install-Package Tomen -Version 1.0.0</code></pre>
+        </div>
+
+        <p>
+          .NET CLI:
+        </p>
+
+        <div class="code-example">
+          <pre><code>dotnet add package Tomen --version 1.0.0</code></pre>
+        </div>
+
+        <p>
+          Package Reference:
+        </p>
+
+        <div class="code-example">
+          <pre><code>&lt;PackageReference Include="Tomen" Version="0.9.1" /&gt;</code></pre>
+        </div>
+
       </div>
+
+      <div class="nav-links">
+        <div></div>
+
+        <a href="reading-toml.html" class="nav-link nav-link__next">
+            <div class="nav-link-info">
+                <div class="nav-link-info__name">next</div>
+                <div class="nav-link-info__title">Reading TOML</div>
+            </div>
+            <img class="nav-link__arrow" src="../resources/images/next.svg" />
+        </a>
+    </div>
     </main>
   </div>
 </body>

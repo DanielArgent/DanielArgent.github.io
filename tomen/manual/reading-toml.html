@@ -8,10 +8,12 @@
     <title>Reading TOML | Tomen Documentation</title>
     <meta name="description" content="How to read TOML file using Tomen" />
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,500;0,700;1,400&display=swap"
+      rel="stylesheet">
     <link rel="stylesheet" href="../styles/normalize.css" />
     <link rel="stylesheet" href="../styles/manual.css" />
-    <script src="https://kit.fontawesome.com/8811fec66d.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/styles/a11y-dark.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/styles/sunburst.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 </head>
@@ -54,6 +56,25 @@ Console.WriteLine(table.Path("person.name.first").AsString()); // "Denis"</code>
 
 Console.WriteLine(table["x"].AsInt()); // 9</code></pre>
                 </div>
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html" class="nav-link nav-link__prev">
+                    <img class="nav-link__arrow" src="../resources/images/next.svg" />
+                    <div class="nav-link-info">
+                        <div class="nav-link-info__name">prev</div>
+                        <div class="nav-link-info__title">Getting Started</div>
+                    </div>
+                </a>
+
+                <a href="tpath.html" class="nav-link nav-link__next">
+                    <div class="nav-link-info">
+                        <div class="nav-link-info__name">next</div>
+                        <div class="nav-link-info__title">TPath</div>
+                    </div>
+                    <img class="nav-link__arrow" src="../resources/images/next.svg" />
+                </a>
+            </div>
         </main>
     </div>
 </body>

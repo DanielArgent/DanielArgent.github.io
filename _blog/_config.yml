@@ -16,7 +16,6 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
-# Build settings
 include: [_pages]
 markdown: kramdown
 permalink: /:year/:month/:title.html

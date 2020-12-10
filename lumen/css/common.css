@@ -60,7 +60,7 @@ button:focus {
 body {
 	background-color: var(--bg-color);
 	color: var(--fg-color);
-  font-family: 'Cairo', sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
 #wrapper>section {

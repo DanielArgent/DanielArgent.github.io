@@ -30,8 +30,8 @@
 
 body {
 	font-family: 'Roboto', sans-serif;
-	background-color: #111111;
-    color: var(--foreground-color);
+	background-color: rgb(250, 250, 250);
+    color: #000000;
     font-size: 16px;
     line-height: 22px;
 }
@@ -101,4 +101,57 @@ main {
 
 code {
     border-radius: 3px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.nav-link {
+    display: flex;
+    color: #000;
+    text-decoration: none;
+    font-weight: bolder;
+    justify-content: space-between;
+    align-items: center;
+
+    /*border: 1px solid #222222;*/
+    box-shadow: 0px 2px 4px #c9c9c9;
+    border-radius: 3px;
+    padding: 10px 20px;
+    min-width: 200px;
+
+    transition: color .3s;
+}
+
+.nav-link:hover {
+    color: var(--accent-darker-x2)
+}
+
+.nav-link:hover .nav-link__arrow {
+    transform: translateX(5px);
+}
+
+.nav-link__prev:hover .nav-link__arrow {
+    transform: translateX(-5px) rotate(180deg);
+}
+
+.nav-link__arrow {
+    height: 30px;
+    transition: transform .3s;
+}
+
+.nav-link-info__name {
+    color: rgb(134, 134, 134);
+    font-size: smaller;
+}
+
+.nav-link__prev .nav-link-info {
+    text-align: right;
+}
+
+.nav-link__prev .nav-link__arrow {
+    transform: rotate(180deg);
 }
