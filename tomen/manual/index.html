@@ -32,6 +32,7 @@
         <div class="nav__header__title">
           Tomen Documentation
         </div>
+        <div class="nav-header__menu-toggle">Menu</div>
       </div>
 
       <div class="nav__items">
@@ -169,6 +170,16 @@
     </div>
     </main>
   </div>
+
+  <script>
+    document
+      .querySelector(".nav-header__menu-toggle")
+      .addEventListener("click", function (event) {
+        document
+          .querySelector(".nav__items")
+          .classList.toggle("nav__items_opened")
+      });
+  </script>
 </body>
 
 </html>

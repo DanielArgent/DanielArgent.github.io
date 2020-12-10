@@ -36,10 +36,6 @@ body {
     line-height: 22px;
 }
 
-.container {
-   
-}
-
 .nav {
     background-color: #000000;
 
@@ -154,4 +150,42 @@ code {
 
 .nav-link__prev .nav-link__arrow {
     transform: rotate(180deg);
+}
+
+.nav-header__menu-toggle {
+    margin-left: auto;
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 950px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav {
+        height: auto;
+        position: initial;
+        width: auto;
+    }
+
+    .nav__items {
+        display: none;
+    }
+
+    main {
+        position: initial;
+        width: 100%;
+        overflow-x: auto;
+        height: auto;
+    }
+
+    .nav-header__menu-toggle {
+        display: block;
+    }
+
+    .nav__items_opened {
+        display: block;
+    }
 }
