@@ -112,9 +112,10 @@ code {
     font-weight: bolder;
     justify-content: space-between;
     align-items: center;
+    background-color: rgb(238, 238, 238);
 
     /*border: 1px solid #222222;*/
-    box-shadow: 0px 2px 4px #c9c9c9;
+    box-shadow: 0px 2px 4px #b1b1b1;
     border-radius: 3px;
     padding: 10px 20px;
     min-width: 200px;
