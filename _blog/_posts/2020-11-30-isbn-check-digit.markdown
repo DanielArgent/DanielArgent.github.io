@@ -103,7 +103,7 @@ console.log(checkDigitIsbn10(toIsbnDigits("123456789"))); //=> X
 Let
 
 <p class="formula">
-  @"alter"(x) = {(1, ;, odd),(2, ;, even):}@
+  @"alter"(x) = {(1, ;, odd),(3, ;, even):}@
 </p>
 
 then ISBN-13 check digit equals

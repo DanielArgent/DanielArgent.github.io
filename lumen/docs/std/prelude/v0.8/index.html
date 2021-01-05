@@ -28,7 +28,7 @@
 			<div class="navbar-nav">
 				<a class="nav-item nav-link bg-hover-violet" href="../../../../index.html">Home</a>
 				<a class="nav-item nav-link bg-hover-blue" href="../../../index.html">Documentation</a>
-				<a class="nav-item nav-link bg-hover-green" href="#">Download</a>
+				<!--a class="nav-item nav-link bg-hover-green" href="#">Download</a-->
 			</div>
 
 			<div class="navbar-nav ml-auto">
@@ -207,8 +207,8 @@
 					</div>
 				</div>
 
-				<div class="ldoc-function" id="read">
-					<h3 class="ldoc-name">read</h3>
+				<div class="ldoc-function" id="readln">
+					<h3 class="ldoc-name">readln</h3>
 
 					<div class="ldoc-description">
 						Read string from standart output.
@@ -225,14 +225,14 @@
 
 					<div class="ldoc-definition">
 						<code>
-						<span class="ldoc-keyword">let</span> read () = <br>
+						<span class="ldoc-keyword">let</span> readln () = <br>
 						&nbsp;&nbsp;&nbsp;&nbsp;...
 					</code>
 					</div>
 				</div>
 
 				<div class="ldoc-function" id="readWith">
-					<h3 class="ldoc-name">readWith</h3>
+					<h3 class="ldoc-name">readlnWith</h3>
 
 					<div class="ldoc-description">
 						Print prompt string and read string from standart output.
@@ -256,46 +256,10 @@
 
 					<div class="ldoc-possible-definition">
 						<code>
-						<span class="ldoc-keyword">let</span> readWith prompt = <br>
+						<span class="ldoc-keyword">let</span> readlnWith prompt = <br>
 						&nbsp;&nbsp;&nbsp;&nbsp;<a href="#print">print</a> prompt<br>
-						&nbsp;&nbsp;&nbsp;&nbsp;<a href="#read">read</a> ()
+						&nbsp;&nbsp;&nbsp;&nbsp;<a href="#readln">readln</a> ()
 					</code>
-					</div>
-				</div>
-
-				<div class="ldoc-function" id="assert">
-					<h3 class="ldoc-name">assert</h3>
-
-					<div class="ldoc-description">
-						Check given value. If given value <a class="ldoc-constant" href="#true">true</a> - then return
-						<a class="ldoc-type" href="#Unit">Unit</a>, else - throws an exception.
-					</div>
-
-					<div class="ldoc-parameters">
-						<div class="ldoc-parameter">
-							<span class="ldoc-parameter-name">condition</span>
-							<span class="ldoc-parameter-description">value to assert.</span>
-						</div>
-					</div>
-
-					<div class="ldoc-returns">
-						<a class="ldoc-returns-type" href="#Unit">
-							Unit
-						</a>
-						<a class="ldoc-returns-description">
-							in case of success.
-						</a>
-					</div>
-
-					<div class="ldoc-note ldoc-warn">
-						This function raises system exception.
-					</div>
-
-					<div class="ldoc-definition">
-						<code>
-							<span class="ldoc-keyword">let</span> assert condition = <br>
-							&nbsp;&nbsp;&nbsp;&nbsp;...
-						</code>
 					</div>
 				</div>
 
@@ -447,12 +411,12 @@
 
 					<div class="ldoc-requirements">
 						<div class="ldoc-function" id="Functor-fmap">
-							<h3 class="ldoc-name">fmap</h3>
+							<h3 class="ldoc-name">map</h3>
 
 							<div class="ldoc-description">
 								Required function to implement <a class="fg-red" href="#Functor">Functor</a> class.
 								Apply given function to each element of given container and returns
-								new container value with saved structure.
+								new container value with the same structure.
 							</div>
 
 							<div class="ldoc-parameters">
@@ -479,20 +443,20 @@
 
 							<div class="ldoc-definition">
 								<code>
-									<span class="ldoc-keyword">let</span> fmap (fn: <a class="ldoc-keyword" href="#Function">Function</a>) 
+									<span class="ldoc-keyword">let</span> map (fn: <a class="ldoc-keyword" href="#Function">Function</a>) 
 									(fc: <span class="ldoc-keyword">'T</span>) = <br>
 									&nbsp;&nbsp;&nbsp;&nbsp;<a href="#functionIsNotImplementedForType">functionIsNotImplementedForType</a> 
-									<span class="ldoc-text">"Functor.fmap"</span> <span class="ldoc-keyword">'T</span>
+									<span class="ldoc-text">"Functor.map"</span> <span class="ldoc-keyword">'T</span>
 								</code>
 							</div>
 						</div>
 					</div>
 
 					<div class="ldoc-function" id="Functor-gtgtminus">
-						<h3 class="ldoc-name">&gt;&gt;-</h3>
+						<h3 class="ldoc-name">&gt;&gt;</h3>
 
 						<div class="ldoc-description">
-							Alias for <a class="fg-red" href="#Functor">Functor</a>.<a href="#Functor-fmap">fmap</a>, but with
+							Alias for <a class="fg-red" href="#Functor">Functor</a>.<a href="#Functor-fmap">map</a>, but with
 							flip argument position
 						</div>
 
@@ -529,10 +493,10 @@
 					</div>
 
 					<div class="ldoc-function" id="Functor-minusltlt">
-						<h3 class="ldoc-name">-&lt;&lt;</h3>
+						<h3 class="ldoc-name">&lt;&lt;</h3>
 
 						<div class="ldoc-description">
-							Alias for <a class="fg-red" href="#Functor">Functor</a>.<a href="#Functor-fmap">fmap</a>
+							Alias for <a class="fg-red" href="#Functor">Functor</a>.<a href="#Functor-fmap">map</a>
 						</div>
 
 						<div class="ldoc-parameters">
@@ -562,7 +526,7 @@
 								<span class="ldoc-keyword">let</span> -&lt;&lt;
 								(fn: <a class="ldoc-keyword" href="#Function">Function</a>)
 								(fc: <span class="ldoc-keyword">'T</span>) = <br>
-								&nbsp;&nbsp;&nbsp;&nbsp; <span class="ldoc-keyword">'T</span>.<a href="#Functor-fmap">fmap</a>
+								&nbsp;&nbsp;&nbsp;&nbsp; <span class="ldoc-keyword">'T</span>.<a href="#Functor-fmap">map</a>
 							</code>
 						</div>
 
@@ -584,8 +548,8 @@
 					</div>
 
 					<div class="ldoc-requirements">
-						<div class="ldoc-function" id="Applicative-liftA">
-							<h3 class="ldoc-name">liftA</h3>
+						<div class="ldoc-function" id="Applicative-lift">
+							<h3 class="ldoc-name">lift</h3>
 
 							<div class="ldoc-description">
 								Required function to implement <a class="fg-red" href="#Applicative">Applicative</a> class.
@@ -615,20 +579,20 @@
 
 							<div class="ldoc-definition">
 								<code>
-									<span class="ldoc-keyword">let</span> liftA (fn: <a class="ldoc-keyword" href="#Function">Function</a>) 
+									<span class="ldoc-keyword">let</span> lift (fn: <a class="ldoc-keyword" href="#Function">Function</a>) 
 									(fc: <span class="ldoc-keyword">'T</span>) = <br>
 									&nbsp;&nbsp;&nbsp;&nbsp;<a href="#functionIsNotImplementedForType">functionIsNotImplementedForType</a> 
-									<span class="ldoc-text">"Applicative.liftA"</span> <span class="ldoc-keyword">'T</span>
+									<span class="ldoc-text">"Applicative.lift"</span> <span class="ldoc-keyword">'T</span>
 								</code>
 							</div>
 						</div>
 					</div>
 
 					<div class="ldoc-function" id="Applicative-ltstargt">
-						<h3 class="ldoc-name">&lt;*&gt;</h3>
+						<h3 class="ldoc-name">&gt;&gt;-</h3>
 
 						<div class="ldoc-description">
-							Alias for <a class="fg-red" href="#Applicative">Applicative</a>.<a href="#Applicative-liftA">liftA</a>, but with
+							Alias for <a class="fg-red" href="#Applicative">Applicative</a>.<a href="#Applicative-lift">lift</a>, but with
 							flip argument position
 						</div>
 
@@ -656,9 +620,9 @@
 
 						<div class="ldoc-definition">
 							<code>
-								<span class="ldoc-keyword">let</span> &lt;*&gt; (fc: <span class="ldoc-keyword">'T</span>)
+								<span class="ldoc-keyword">let</span> &gt;&gt;- (fc: <span class="ldoc-keyword">'T</span>)
 								(fn: <a class="ldoc-keyword" href="#Function">Function</a>) = <br>
-								&nbsp;&nbsp;&nbsp;&nbsp; <span class="ldoc-keyword">'T</span>.<a href="#Applicative-liftA">liftA</a> fn fc
+								&nbsp;&nbsp;&nbsp;&nbsp; <span class="ldoc-keyword">'T</span>.<a href="#Applicative-lift">lift</a> fn fc
 							</code>
 						</div>
 

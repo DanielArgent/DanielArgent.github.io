@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://dtsvikevich.ru/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://dtsvikevich.ru/blog/" rel="alternate" type="text/html" /><updated>2020-12-03T20:32:34+03:00</updated><id>https://dtsvikevich.ru/blog/feed.xml</id><title type="html">Denis Tsvikevich’s Blog</title><subtitle>Welcome to my personal blog about IT, web and others topics!</subtitle><author><name>Denis Tsvikevich</name><email>dtsvikevich@gmail.com</email></author><entry><title type="html">ISBN check digit calculation</title><link href="https://dtsvikevich.ru/blog/2020/11/isbn-check-digit.html" rel="alternate" type="text/html" title="ISBN check digit calculation" /><published>2020-11-30T00:00:00+03:00</published><updated>2020-11-30T00:00:00+03:00</updated><id>https://dtsvikevich.ru/blog/2020/11/isbn-check-digit</id><content type="html" xml:base="https://dtsvikevich.ru/blog/2020/11/isbn-check-digit.html">&lt;p&gt;Today we will learn how to calculate SBN, ISBN-10 &amp;amp; ISBN-13 check digit and write these algorithms in JavaScript&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://dtsvikevich.ru/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://dtsvikevich.ru/blog/" rel="alternate" type="text/html" /><updated>2021-01-05T04:39:11+03:00</updated><id>https://dtsvikevich.ru/blog/feed.xml</id><title type="html">Denis Tsvikevich’s Blog</title><subtitle>Welcome to my personal blog about IT, web and others topics!</subtitle><author><name>Denis Tsvikevich</name><email>dtsvikevich@gmail.com</email></author><entry><title type="html">ISBN check digit calculation</title><link href="https://dtsvikevich.ru/blog/2020/11/isbn-check-digit.html" rel="alternate" type="text/html" title="ISBN check digit calculation" /><published>2020-11-30T00:00:00+03:00</published><updated>2020-11-30T00:00:00+03:00</updated><id>https://dtsvikevich.ru/blog/2020/11/isbn-check-digit</id><content type="html" xml:base="https://dtsvikevich.ru/blog/2020/11/isbn-check-digit.html">&lt;p&gt;Today we will learn how to calculate SBN, ISBN-10 &amp;amp; ISBN-13 check digit and write these algorithms in JavaScript&lt;/p&gt;
 
 &lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
@@ -115,7 +115,7 @@ formula:&lt;/p&gt;
 &lt;p&gt;Let&lt;/p&gt;
 
 &lt;p class=&quot;formula&quot;&gt;
-  @&quot;alter&quot;(x) = {(1, ;, odd),(2, ;, even):}@
+  @&quot;alter&quot;(x) = {(1, ;, odd),(3, ;, even):}@
 &lt;/p&gt;
 
 &lt;p&gt;then ISBN-13 check digit equals&lt;/p&gt;
