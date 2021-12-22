@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Супер секретная страница!!!</title>
+
+    <meta name="description" content="не каждый может войти">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
+    <style>
+        @font-face {
+            font-family: DTM;
+            src: url('./DTM-Mono.woff') format('woff'), url('./DTM-Mono.ttf') format('ttf');
+        }
+
+        body {
+            color: #fff;
+            background-color: #000;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 24px;
+            overflow-x: hidden;
+        }
+
+        .welcome {
+            font-family: DTM;
+            font-size: 72px;
+            min-height: 90vh;
+
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .welcome-message {
+            padding: 0 20px;
+        }
+
+        .cyan {
+            color: #0ff;
+        }
+
+        .magenta {
+            color: #f0f;
+        }
+
+        .yellow {
+            color: #ff0;
+        }
+
+        .container {
+            margin: 0 20px;
+            max-width: 500px;
+        }
+
+        .stripe {
+            background: repeating-linear-gradient(
+                90deg,
+                #000,
+                #000 20px,
+                #fff 20px,
+                #fff 40px
+            );
+            height: 20px;
+        }
+
+        .stripe-2 {
+            background: repeating-linear-gradient(
+                90deg,
+                #fff,
+                #fff 20px,
+                #000 20px,
+                #000 40px
+            );
+            height: 20px;
+        }
+
+        .anim {
+            margin-top: 50px;
+            width: 130px;
+            animation: x infinite 10s linear;
+        }
+
+        @keyframes x {
+            0% {
+                transform: translateX(-30vw);
+            }
+
+            100% {
+                transform: translateX(100vw);
+            }
+        }
+
+        .img {
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        p {
+            margin-bottom: 30px;
+        }
+
+        .lg {
+            font-size: 48px;
+            font-weight: 900;
+        }
+
+        .sm {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome">
+        <div class="welcome-message">
+            <div class="cyan">HELLO,</div>
+            <div class="magenta">FERK.</div>
+        </div>
+
+        <img src="./nyan.png" class="anim" alt="">
+
+        <div class="stripe"></div>
+        <div class="stripe-2"></div>
+    </div>
+
+    <div class="container">
+        <p>
+            я намекал на то, что ты мне нравишься, но никогда не говорил этого прямо.
+        </p>
+
+        <p>
+            сейчас же я говорю это, пусть и таким странным (но крутым) образом.
+        </p>
+    </div>
+
+    <img src="cat.jpg" class="img" alt="">
+
+    <div class="container">
+        <p>
+            знаешь, что ещё круто?
+        </p>
+
+        <p class="lg">
+            ТЫ
+        </p>
+
+        <p>
+            я не знаю тебя так хорошо, как хотелось бы, но мне хватает всего нескольких вещей.
+        </p>
+
+        <p class="sm yellow">
+            например, твоей привычки смотреть “мимо” собеседника. это очень необычно и прикольно. так же как и замечать, что, лишь мельком, но ты посмотришь и снова отведёшь взгляд.
+        </p>
+
+        <p class="sm yellow">
+            а встреча с тобой взглядом - это одно из самых приятных чувств в моей жизни (даже если один глаз слегка опухший).
+        </p>
+    </div>
+
+    <img src="cat2.jpg" class="img" alt="">
+
+    <div class="container">
+        <p>
+            я не знаю, что ты чувствуешь ко мне. будет круто, если нечто подобное.
+        </p>
+        <p>
+            хотелось бы проводить с тобой больше времени. как дурак мечтаю о взаимности)
+        </p>
+        <p>
+            скажи - что чувствуешь ты?
+        </p>
+
+        <p class="lg">
+            P.S.
+        </p>
+
+        <p class="sm yellow">
+            что-бы ты не решил, не подумай, что я взваливаю на тебя какую-либо ответственность. я хочу, чтобы всё было лайтово.
+        </p>
+    </div>
+</body>
+</html>
