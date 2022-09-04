@@ -1,0 +1,2 @@
+document.querySelectorAll(".anchor-button").forEach((t=>{t.addEventListener("click",(async t=>{const n=t.target;if(console.log(n),n instanceof HTMLButtonElement&&null!==n.parentElement){document.location.origin;const t=n.parentElement.getAttribute("id");await navigator.clipboard.writeText(`${document.location.origin}${document.location.pathname}#${t}`)}}))}));
+//# sourceMappingURL=metrics.4cbac15d.js.map
