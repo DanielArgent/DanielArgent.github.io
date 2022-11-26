@@ -1,0 +1,25 @@
+.researches-block {
+  height: 200px;
+  background-color: #37e2d5;
+  border-radius: 1rem;
+  margin: 1rem 0;
+  font-family: Russo One, sans-serif;
+  position: relative;
+}
+
+.researches-block__link {
+  color: #590696;
+  font-size: 3rem;
+  line-height: 1;
+  text-decoration: none;
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+}
+
+.page {
+  max-width: 80ch;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=index.bc245469.css.map */

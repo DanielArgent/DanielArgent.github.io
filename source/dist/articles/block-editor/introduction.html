@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Общее устройство блочного редактора</title>
+  <meta name="description" content="Several important metrics related to questions, answer variants, and quiz itself as well as their semantic meaning are described here. No implementation notes provided in this article as they can vary depends on used environment.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/articles/testing-system/metrics.eaa2d609.css">
+</head>
+<body>
+<h1>Общее устройство блочного редактора</h1>
+
+<p class="information">
+  by <span itemprop="author">Denis Tsvikevich</span>
+  <time datetime="2022-09-07" itemprop="datePublished">September 7, 2022</time>
+</p>
+
+<section>
+  <h2>Понятие блока</h2>
+
+  <p>
+    Данный редактор разрабатывался с целью упрощения создания и изменения веб-контента.
+    Очевидно, что редактор должен играть по правилам веб-платформы и быть блочным.
+  </p>
+
+  <p>
+    Блок — это абстрактный компонент, являющийся частью статьи. блок (как правило) располагается в вертикальном потоке
+    других блоков и занимает всю доступную ему ширину.
+  </p>
+
+  <p>
+    <dfn>Блок</dfn> обретает смысл только при его <dfn>специализации</dfn>, то есть наделении его рядом свойств
+    (в том числе, семантическими) с целью исполнения каких-либо функций.
+  </p>
+</section>
+
+<section>
+  <h2>Параграф</h2>
+
+  <p>
+    Одна из важнейших специализаций блока — параграф. <dfn>Параграф</dfn> — это блок, цель которого —
+    представлять текст. Эта цель достигается наличием у параграфа <b>текста</b> и <b>атрибутов</b>.
+  </p>
+
+  <p>
+    Текст — это собственно содержимое данного блока, представленное простой строкой.
+  </p>
+
+  <p>
+    Атрибуты — это список сущностей, каждая из которых добавляет ряд свойств тексту:
+  </p>
+
+  <ul>
+    <li>
+      <p>Атрибуты форматирования — характеризуются отсутствием семантики</p>
+      <ol>
+        <li>Жирный текст</li>
+        <li>Курсивный текст</li>
+        <li>Подчёркнутый текст</li>
+        <li>Зачёркнутый текст</li>
+        <li>Выделенный текст</li>
+        <li>Надстрочный текст</li>
+        <li>Подстрочный текст</li>
+      </ol>
+    </li>
+
+    <li>
+      <p>Аттрибуты дополнительной семантики</p>
+    </li>
+  </ul>
+</section>
+
+<script src="/introduction.5efd2283.js"></script></body>
+</html>

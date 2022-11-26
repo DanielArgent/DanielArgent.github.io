@@ -1,0 +1,561 @@
+@font-face {
+  font-family: Libertinus;
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url("../../Libertinus-regular.f219372c.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Libertinus;
+  font-style: italic;
+  font-weight: normal;
+  font-display: swap;
+  src: url("../../Libertinus-italic.604204a9.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Libertinus;
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url("../../Libertinus-bold.c8521cb5.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Libertinus;
+  font-style: italic;
+  font-weight: bold;
+  font-display: swap;
+  src: url("../../Libertinus-bold-italic.cfed490d.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Libertinus;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../../Libertinus-semibold.c564be91.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Libertinus;
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../../Libertinus-semibold-italic.53f89b86.woff2") format("woff2");
+}
+
+*, :before, :after {
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, p, ul[class], ol[class], li, figure, figcaption, dl, dd {
+  margin: 0;
+}
+
+html {
+  font-size: 1rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  max-width: 80ch;
+  min-height: 100vh;
+  counter-reset: theorem;
+  counter-reset: definition;
+  counter-reset: sidenote-counter;
+  color: #1b1818;
+  text-rendering: optimizelegibility;
+  background-color: #f9fafb;
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+  font-family: Libertinus, Georgia, Cambria, Times New Roman, Times, serif;
+  line-height: 1.8;
+  overflow-x: hidden;
+}
+
+p {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  margin-top: 1rem;
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
+  text-underline-offset: 3px;
+}
+
+a:link {
+  color: #1660f3;
+}
+
+a:visited {
+  color: #7824ff;
+}
+
+a:focus {
+  outline-offset: 2px;
+  outline: 2px solid #1660f3;
+}
+
+mjx-container:focus-visible {
+  outline: 2px solid #1660f3;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+textarea {
+  width: 100%;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+code, pre, pre, kbd {
+  font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  font-size: 85%;
+}
+
+pre {
+  max-width: 100%;
+  background: #e8edf2;
+  border-radius: 4px;
+  padding: 1rem 1.4rem;
+  overflow: auto;
+}
+
+pre code {
+  font-size: 95%;
+  position: relative;
+}
+
+kbd {
+  background: #fff;
+  border: 1px solid #afb3b6;
+  border-radius: 2px;
+  padding: 2px 4px;
+  font-size: 75%;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: auto;
+  max-width: 100%;
+  counter-increment: caption;
+  border-top: 2.27px solid #000;
+  border-bottom: 2.27px solid #000;
+  overflow-x: auto;
+}
+
+table tr > th[scope="col"] {
+  border-bottom: 1.36px solid #000;
+}
+
+table tr > th[scope="row"] {
+  border-right: 1.36px solid #000;
+}
+
+table > tbody > tr:first-child > td, table > tbody > tr:first-child > th {
+  border-top: 1.36px solid #000;
+}
+
+table > tbody > tr:last-child > td, table > tbody > tr:last-child > th {
+  border-bottom: 1.36px solid #000;
+}
+
+th, td {
+  text-align: left;
+  padding: .5rem;
+  line-height: 1.1;
+}
+
+caption {
+  text-align: left;
+  width: 100%;
+  margin-left: 0;
+  padding: 0 .25em .25em;
+  font-size: .923em;
+}
+
+caption:before {
+  content: "Table " counter(caption) ". ";
+  font-weight: bold;
+}
+
+.scroll-wrapper {
+  padding: 0 2px;
+  overflow-x: auto;
+}
+
+.scroll-wrapper > table td {
+  white-space: nowrap;
+}
+
+h1:first-child {
+  text-align: center;
+}
+
+nav ol {
+  counter-reset: item;
+  padding-left: 2rem;
+}
+
+nav li {
+  display: block;
+}
+
+nav li:before {
+  content: counters(item, ".") " ";
+  counter-increment: item;
+  padding-right: .85rem;
+}
+
+dl dd {
+  text-align: center;
+}
+
+.theorem {
+  counter-increment: theorem;
+  margin: 12px 0;
+  font-style: italic;
+  display: block;
+}
+
+.theorem:before {
+  content: "Theorem " counter(theorem) ". ";
+  font-style: normal;
+  font-weight: bold;
+}
+
+.lemma {
+  counter-increment: theorem;
+  margin: 12px 0;
+  font-style: italic;
+  display: block;
+}
+
+.lemma:before {
+  content: "Lemma " counter(theorem) ". ";
+  font-style: normal;
+  font-weight: bold;
+}
+
+.proof {
+  margin: 12px 0;
+  font-style: normal;
+  display: block;
+  position: relative;
+}
+
+.proof:before {
+  content: "Proof. " attr(title);
+  font-style: italic;
+}
+
+.proof:after {
+  content: "◾️";
+  position: absolute;
+  bottom: -2px;
+  right: -12px;
+}
+
+.definition {
+  counter-increment: definition;
+  margin: 12px 0;
+  font-style: normal;
+  display: block;
+}
+
+.definition:before {
+  content: "Definition " counter(definition) ". ";
+  font-style: normal;
+  font-weight: bold;
+}
+
+.information {
+  text-align: center;
+  margin: .85rem 0;
+  font-variant-caps: small-caps;
+}
+
+.information time {
+  display: block;
+}
+
+.sidenote {
+  float: right;
+  clear: right;
+  width: 18vw;
+  margin-bottom: 1em;
+  margin-right: -20vw;
+  font-size: .8rem;
+}
+
+.sidenote.left {
+  float: left;
+  margin-bottom: 1em;
+  margin-left: -20vw;
+}
+
+.sidenote:target {
+  border: 1.5px solid #ddd688;
+  padding: 0 .5rem;
+  scroll-margin-block-start: 10rem;
+}
+
+.sidenote-number {
+  counter-increment: sidenote-counter;
+}
+
+.sidenote-number:after, .sidenote:before {
+  vertical-align: baseline;
+  position: relative;
+}
+
+.sidenote-number:after {
+  content: counter(sidenote-counter);
+  font-size: .7rem;
+  top: -.5rem;
+  left: .1rem;
+}
+
+.sidenote-number ~ .sidenote:before {
+  content: counter(sidenote-counter) " ";
+  font-size: .7rem;
+  top: -.5rem;
+}
+
+label.sidenote-toggle:not(.sidenote-number) {
+  display: none;
+}
+
+blockquote .sidenote {
+  width: 18vw;
+  margin-right: -24vw;
+}
+
+label.sidenote-toggle {
+  cursor: pointer;
+  display: inline;
+}
+
+input.sidenote-toggle {
+  display: none;
+}
+
+@media (max-width: 1050px) {
+  label.sidenote-toggle:not(.sidenote-number) {
+    display: inline;
+  }
+
+  .sidenote {
+    display: none;
+  }
+
+  .sidenote-toggle:checked + .sidenote {
+    float: left;
+    clear: both;
+    width: 95%;
+    margin: .5rem 1.25rem 1rem .5rem;
+    display: block;
+    left: 1rem;
+  }
+
+  blockquote .sidenote {
+    width: 16vw;
+    margin-right: -25vw;
+  }
+}
+
+.footnotes p {
+  text-align: left;
+  margin-bottom: .4rem;
+  font-size: 85%;
+  line-height: 1.5;
+}
+
+.footnotes {
+  border-top: 1px solid #636363;
+}
+
+.abstract, .abstract p {
+  text-align: center;
+  margin-top: 0;
+}
+
+.abstract {
+  margin: 2.25rem 0;
+}
+
+.abstract > h2 {
+  margin-bottom: -.2rem;
+  font-size: 1rem;
+}
+
+.latex span:nth-child(1) {
+  text-transform: uppercase;
+  vertical-align: .28em;
+  margin-left: -.48em;
+  margin-right: -.15em;
+  font-size: .75em;
+  line-height: 1ex;
+}
+
+.latex span:nth-child(2) {
+  text-transform: uppercase;
+  vertical-align: -.5ex;
+  margin-left: -.1667em;
+  margin-right: -.125em;
+  line-height: 1ex;
+}
+
+h1 {
+  margin-bottom: 1.625rem;
+  font-size: 2.5rem;
+  line-height: 3.25rem;
+}
+
+h2 {
+  margin-top: 3rem;
+  font-size: 1.7rem;
+  line-height: 2rem;
+}
+
+h3 {
+  margin-top: 2.5rem;
+  font-size: 1.4rem;
+}
+
+h4 {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+
+h5 {
+  margin-top: 1.8rem;
+  font-size: 1rem;
+}
+
+h6 {
+  margin-top: 2.5rem;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: normal;
+}
+
+h3, h4, h5, h6 {
+  line-height: 1.625rem;
+}
+
+h1 + h2 {
+  margin-top: 1.625rem;
+}
+
+h2 + h3, h3 + h4, h4 + h5 {
+  margin-top: .8rem;
+}
+
+h5 + h6 {
+  margin-top: -.8rem;
+}
+
+h2, h3, h4, h5, h6 {
+  margin-bottom: .8rem;
+  position: relative;
+}
+
+h2:hover .anchor-button, h3:hover .anchor-button, h4:hover .anchor-button, h5:hover .anchor-button, h6:hover .anchor-button {
+  opacity: 1;
+}
+
+.anchor-button {
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  opacity: 0;
+  background-color: #0000;
+  border: none;
+  padding: 0;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  transform: translateY(-50%);
+}
+
+.anchor-button:focus {
+  opacity: 1;
+  outline-offset: -2px;
+  outline: 2px solid #1660f3;
+}
+
+.anchor-button:after {
+  content: "";
+  width: 30px;
+  height: 20px;
+  filter: saturate(0);
+  background-image: url("data:image/svg+xml,%3Csvg%20height%3D%2216%22%20width%3D%2216%22%20viewBox%3D%220%200%2080%2080%22%20fill%3D%22hsl%28220%2C%2090%25%2C%2052%25%29%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0D%0A%20%20%20%20%3Cpath%20d%3D%22M29.298%2C63.471l-4.048%2C4.02c-3.509%2C3.478-9.216%2C3.481-12.723%2C0c-1.686-1.673-2.612-3.895-2.612-6.257%20%20%20s0.927-4.585%2C2.611-6.258l14.9-14.783c3.088-3.062%2C8.897-7.571%2C13.131-3.372c1.943%2C1.93%2C5.081%2C1.917%2C7.01-0.025%20%20%20c1.93-1.942%2C1.918-5.081-0.025-7.009c-7.197-7.142-17.834-5.822-27.098%2C3.37L5.543%2C47.941C1.968%2C51.49%2C0%2C56.21%2C0%2C61.234%20%20%20s1.968%2C9.743%2C5.544%2C13.292C9.223%2C78.176%2C14.054%2C80%2C18.887%2C80c4.834%2C0%2C9.667-1.824%2C13.348-5.476l4.051-4.021%20%20%20c1.942-1.928%2C1.953-5.066%2C0.023-7.009C34.382%2C61.553%2C31.241%2C61.542%2C29.298%2C63.471z%20M74.454%2C6.044%20%20%20c-7.73-7.67-18.538-8.086-25.694-0.986l-5.046%2C5.009c-1.943%2C1.929-1.955%2C5.066-0.025%2C7.009c1.93%2C1.943%2C5.068%2C1.954%2C7.011%2C0.025%20%20%20l5.044-5.006c3.707-3.681%2C8.561-2.155%2C11.727%2C0.986c1.688%2C1.673%2C2.615%2C3.896%2C2.615%2C6.258c0%2C2.363-0.928%2C4.586-2.613%2C6.259%20%20%20l-15.897%2C15.77c-7.269%2C7.212-10.679%2C3.827-12.134%2C2.383c-1.943-1.929-5.08-1.917-7.01%2C0.025c-1.93%2C1.942-1.918%2C5.081%2C0.025%2C7.009%20%20%20c3.337%2C3.312%2C7.146%2C4.954%2C11.139%2C4.954c4.889%2C0%2C10.053-2.462%2C14.963-7.337l15.897-15.77C78.03%2C29.083%2C80%2C24.362%2C80%2C19.338%20%20%20C80%2C14.316%2C78.03%2C9.595%2C74.454%2C6.044z%22%3E%3C%2Fpath%3E%0D%0A%3C%2Fsvg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.anchor-button:hover:after, .anchor-button:active:after {
+  filter: none;
+}
+
+@media screen and (max-width: 630px) {
+  .anchor-button {
+    position: initial;
+    display: inline-block;
+    transform: none;
+  }
+
+  .anchor-button:after {
+    height: 100%;
+    position: initial;
+    transform: none;
+  }
+}
+
+.inline-heading {
+  font-size: 1em;
+}
+
+a[href^="http://"]:not([href*="dtsvikevich.ru"]):after, a[href^="https://"]:not([href*="dtsvikevich.ru"]):after {
+  content: "";
+  height: 14px;
+  width: 14px;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%2224px%22%20height%3D%2224px%22%3E%0D%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%231b1818%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20d%3D%22M20%2012L20%2020%204%2020%204%204%2012%204M20%2010L20%204%2014%204M20%204L9%2015%22%3E%3C%2Fpath%3E%0D%0A%3C%2Fsvg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  position: relative;
+  bottom: 0;
+}
+
+/*# sourceMappingURL=metrics.eaa2d609.css.map */

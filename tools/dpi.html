@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is my screen DPI? – Denis Tsvikevich's Blog</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 2rem;
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        .measurement-list {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            margin: 4rem 0;
+        }
+
+        @media screen and (max-width: 492px) {
+            .measurement-list {
+                flex-direction: column;
+            }
+        }
+
+        .measurement {
+            background-color: #1f1f1f;
+            width: 12rem;
+            border-radius: 50%;
+            height: 12rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            box-shadow: 0px 0px 10px #000000b5 inset;
+        }
+
+        .measurement::before {
+            content: "";
+            width: 12.5rem;
+            height: 12.5rem;
+            top: -0.25rem;
+            left: -0.25rem;
+            position: absolute;
+            background: linear-gradient(45deg, #9c27b0, #2196f3);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .measurement-name {
+            color: #737373;
+        }
+
+        .measurement-info {
+            margin: 0;
+        }
+
+        .measurement-value {
+            font-size: 3rem;
+        }
+
+        .measurement-unit {
+            font-size: 1.5rem;
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        .description {
+            text-align: center;
+            font-size: 0.875rem;
+            color: #808080;
+        }
+
+        a {
+            color: #3178b2;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="title">DPI and device-pixel ratio</h1>
+
+    <section class="description">
+        <p>
+            Asking the world how to detect dpi of your screen? I have a good news for you –
+            the world hears you.
+        </p>
+        <p>
+            Screen DPI detection is based on the
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/resolution" rel="nofollow">resolution media query</a>.
+        </p>
+    </section>
+
+    <dl class="measurement-list">
+        <div class="measurement">
+            <dt class="measurement-name">Your screen DPI is</dt>
+            <dd class="measurement-info">
+                <span id="dpiResult" class="measurement-value"></span>
+                <span class="measurement-unit">dpi</span>
+            </dd>
+        </div>
+
+        <div class="measurement">
+            <dt class="measurement-name">Device-pixel ratio is</dt>
+            <dd class="measurement-info">
+                <span id="dppxResult" class="measurement-value"></span>
+                <span class="measurement-unit">dppx</span>
+            </dd>
+        </div>
+    </dl>
+
+
+    <script>
+        function detectDPI() {
+            for (let i = 1; true; i++) {
+                if (window.matchMedia(`(resolution: ${i}dpi)`).matches !== false) {
+                    return i;
+                }
+            }
+        }
+
+        const dpiResultContainer = document.querySelector("#dpiResult");
+        if (dpiResultContainer) {
+            dpiResultContainer.textContent = detectDPI();
+        }
+
+        const dppxResultContainer = document.querySelector("#dppxResult");
+        if (dppxResultContainer) {
+            dppxResultContainer.textContent = window.devicePixelRatio;
+        }
+    </script>
+</body>
+
+</html>
